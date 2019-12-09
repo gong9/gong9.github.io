@@ -79,12 +79,12 @@
 
 
 
-<meta name="description" content="搭建hexo博客安装gitbash 下载地址：https:&#x2F;&#x2F;git-for-windows.github.io&#x2F;  安装步骤：傻瓜式下一步  完成之后，检验打开gitbash。输入命令git version查看版本   安装nodeJshexo是基于nodeJs环境下的静态博客  下载地址：https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F;（LTS为长期维护版本，Current为最新版） 也是一路ne">
+<meta name="description" content="搭建hexo博客安装gitbash（相似于cmd，只不过我偏爱这个）  下载地址：https:&#x2F;&#x2F;git-for-windows.github.io&#x2F;  安装步骤：傻瓜式下一步  完成之后，检验打开gitbash。输入命令git version查看版本   安装nodeJshexo是基于nodeJs环境下的静态博客  下载地址：https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F;（LTS为长期维护版本，C">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo-github博客搭建">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;09&#x2F;hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA&#x2F;index.html">
 <meta property="og:site_name" content="宫家小屋">
-<meta property="og:description" content="搭建hexo博客安装gitbash 下载地址：https:&#x2F;&#x2F;git-for-windows.github.io&#x2F;  安装步骤：傻瓜式下一步  完成之后，检验打开gitbash。输入命令git version查看版本   安装nodeJshexo是基于nodeJs环境下的静态博客  下载地址：https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F;（LTS为长期维护版本，Current为最新版） 也是一路ne">
+<meta property="og:description" content="搭建hexo博客安装gitbash（相似于cmd，只不过我偏爱这个）  下载地址：https:&#x2F;&#x2F;git-for-windows.github.io&#x2F;  安装步骤：傻瓜式下一步  完成之后，检验打开gitbash。输入命令git version查看版本   安装nodeJshexo是基于nodeJs环境下的静态博客  下载地址：https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F;（LTS为长期维护版本，C">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;09&#x2F;hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA&#x2F;09.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;09&#x2F;hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA&#x2F;01.png">
@@ -95,7 +95,10 @@
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;09&#x2F;hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA&#x2F;06.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;09&#x2F;hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA&#x2F;07.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;09&#x2F;hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA&#x2F;08.png">
-<meta property="og:updated_time" content="2019-12-08T17:11:59.982Z">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;09&#x2F;hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA&#x2F;10.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;09&#x2F;hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA&#x2F;11.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;09&#x2F;hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA&#x2F;12.png">
+<meta property="og:updated_time" content="2019-12-09T03:15:33.680Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;09&#x2F;hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA&#x2F;09.png">
 
@@ -189,7 +192,7 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/%20" rel="section">
+          <a href="/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
@@ -198,12 +201,52 @@
         </li>
       
         
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
-          <a href="/archives/%20" rel="section">
+          <a href="/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            日程表
           </a>
         </li>
       
@@ -307,7 +350,8 @@
       
 
       
-        <h1 id="搭建hexo博客"><a href="#搭建hexo博客" class="headerlink" title="搭建hexo博客"></a>搭建hexo博客</h1><h2 id="安装gitbash"><a href="#安装gitbash" class="headerlink" title="安装gitbash"></a>安装gitbash</h2><ul>
+        <h1 id="搭建hexo博客"><a href="#搭建hexo博客" class="headerlink" title="搭建hexo博客"></a>搭建hexo博客</h1><h2 id="安装gitbash"><a href="#安装gitbash" class="headerlink" title="安装gitbash"></a>安装gitbash</h2><p>（相似于cmd，只不过我偏爱这个）</p>
+<ul>
 <li><p>下载地址：<a href="https://git-for-windows.github.io/" target="_blank" rel="noopener">https://git-for-windows.github.io/</a></p>
 </li>
 <li><p>安装步骤：傻瓜式下一步</p>
@@ -363,7 +407,32 @@
 <h3 id="发表自己第一篇博文"><a href="#发表自己第一篇博文" class="headerlink" title="发表自己第一篇博文"></a>发表自己第一篇博文</h3><p>命令<code>$ hexo new &quot;hexo-github博客搭建&quot;</code>，打开文件如图：</p>
 <p><img src="/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/08.png" alt></p>
 <p>可以看到刚创建的文档，均是md格式。打开即可进行编辑。</p>
-<h3 id="最后发到远端"><a href="#最后发到远端" class="headerlink" title="最后发到远端"></a>最后发到远端</h3><p>命令<code>hexo d</code>，接下来你就可以通过https：//yourname.github.io 进行访问了</p>
+<h3 id="最后发到远端"><a href="#最后发到远端" class="headerlink" title="最后发到远端"></a>最后发到远端</h3><ul>
+<li>先安装插件，gitbash命令<code>npm install hexo-deployer-git --save</code></li>
+<li>执行命令</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">hexo clean</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">hexo generate</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">hexo deploy</span></pre></td></tr></table></figure>
+
+
+
+<p>接下来你就可以通过https：//yourname.github.io 进行访问了</p>
+<p><img src="/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/10.png" alt></p>
+<h3 id="使得博文支持图片"><a href="#使得博文支持图片" class="headerlink" title="使得博文支持图片"></a>使得博文支持图片</h3><ul>
+<li>设置站点配置文件_config.yml中 post_asset_folder:true。 （ Hexo 提供了一种更方便管理 Asset 的设定：post_asset_folder当您设置post_asset_folder为true参数后，在建立文件时，Hexo会自动建立一个与文章同名的文件夹，您可以把与该文章相关的所有资源都放到那个文件夹。 ）</li>
+<li>安装插件：blog目录下gitbash命令<code>npm install https://github.com/CodeFalling/hexo-asset-image --save</code></li>
+<li>安装完成之后，新建博文。打开博文文件。发现如图：</li>
+</ul>
+<p><img src="/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/11.png" alt></p>
+<ul>
+<li>文章插入图片格式推荐</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">![](hexo-github博客搭建&#x2F;10.png)  括号内为其相对地址，小白可直接写文件名字+图片名字</span></pre></td></tr></table></figure>
+
+<h3 id="设置背景图"><a href="#设置背景图" class="headerlink" title="设置背景图"></a>设置背景图</h3><p> 在 themes/*/source/css/_custom/custom.styl 中添加如下代码： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">body&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    background:url(&#x2F;images&#x2F;bg.jpg);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    background-size:cover;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    background-repeat:no-repeat;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    background-attachment:fixed;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    background-position:center;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<p>同时找一张图片放入images文件内，记得与上述url对应名字</p>
+<p><img src="/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/12.png" alt></p>
 
       
     </div>
@@ -457,7 +526,7 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives/%20%7C%7C%20archive">
+                <a href="/archives/%7C%7Carchive">
               
                   <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">日志</span>
@@ -496,7 +565,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#搭建hexo博客"><span class="nav-number">1.</span> <span class="nav-text">搭建hexo博客</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装gitbash"><span class="nav-number">1.1.</span> <span class="nav-text">安装gitbash</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装nodeJs"><span class="nav-number">1.2.</span> <span class="nav-text">安装nodeJs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装hexo"><span class="nav-number">1.3.</span> <span class="nav-text">安装hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建一个文件夹用来存放blog的相关东西"><span class="nav-number">1.3.1.</span> <span class="nav-text">创建一个文件夹用来存放blog的相关东西</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装hexo，命令：nmp-i-g-hexo"><span class="nav-number">1.3.2.</span> <span class="nav-text">安装hexo，命令：nmp i -g hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装完成之后，用于检测是否安装成功。可查看其版本。命令hexo-v"><span class="nav-number">1.3.3.</span> <span class="nav-text">安装完成之后，用于检测是否安装成功。可查看其版本。命令hexo -v</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#初始化，命令：hexo-init-（稍作等待）-初始化完成之后打开文件可有如下"><span class="nav-number">1.3.4.</span> <span class="nav-text">初始化，命令：hexo init  （稍作等待）   初始化完成之后打开文件可有如下</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#搭桥到github"><span class="nav-number">1.3.5.</span> <span class="nav-text">搭桥到github</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建SSH"><span class="nav-number">1.3.6.</span> <span class="nav-text">创建SSH</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#打开你的blog项目，找到-config-yml文件。修改："><span class="nav-number">1.3.7.</span> <span class="nav-text">打开你的blog项目，找到_config.yml文件。修改：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#回到gitbash中，进入blog目录。分别执行以下命令：hexo-clean-hexo-generate-hexo-server"><span class="nav-number">1.3.8.</span> <span class="nav-text">回到gitbash中，进入blog目录。分别执行以下命令：hexo clean,hexo generate,hexo server.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#打开浏览器输入本地网址-http-localhost-4000"><span class="nav-number">1.3.9.</span> <span class="nav-text">打开浏览器输入本地网址 http://localhost:4000/</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改主题及主题优化"><span class="nav-number">1.4.</span> <span class="nav-text">修改主题及主题优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#修改主题"><span class="nav-number">1.4.1.</span> <span class="nav-text">修改主题</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#下载主题："><span class="nav-number">1.4.1.0.0.1.</span> <span class="nav-text">下载主题：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#配置"><span class="nav-number">1.4.1.0.0.2.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#—-config-yml文件详解"><span class="nav-number">1.4.1.0.0.3.</span> <span class="nav-text">—_config.yml文件详解</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看"><span class="nav-number">1.4.2.</span> <span class="nav-text">查看</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#发表自己第一篇博文"><span class="nav-number">1.4.3.</span> <span class="nav-text">发表自己第一篇博文</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最后发到远端"><span class="nav-number">1.4.4.</span> <span class="nav-text">最后发到远端</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#搭建hexo博客"><span class="nav-number">1.</span> <span class="nav-text">搭建hexo博客</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装gitbash"><span class="nav-number">1.1.</span> <span class="nav-text">安装gitbash</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装nodeJs"><span class="nav-number">1.2.</span> <span class="nav-text">安装nodeJs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装hexo"><span class="nav-number">1.3.</span> <span class="nav-text">安装hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建一个文件夹用来存放blog的相关东西"><span class="nav-number">1.3.1.</span> <span class="nav-text">创建一个文件夹用来存放blog的相关东西</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装hexo，命令：nmp-i-g-hexo"><span class="nav-number">1.3.2.</span> <span class="nav-text">安装hexo，命令：nmp i -g hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装完成之后，用于检测是否安装成功。可查看其版本。命令hexo-v"><span class="nav-number">1.3.3.</span> <span class="nav-text">安装完成之后，用于检测是否安装成功。可查看其版本。命令hexo -v</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#初始化，命令：hexo-init-（稍作等待）-初始化完成之后打开文件可有如下"><span class="nav-number">1.3.4.</span> <span class="nav-text">初始化，命令：hexo init  （稍作等待）   初始化完成之后打开文件可有如下</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#搭桥到github"><span class="nav-number">1.3.5.</span> <span class="nav-text">搭桥到github</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建SSH"><span class="nav-number">1.3.6.</span> <span class="nav-text">创建SSH</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#打开你的blog项目，找到-config-yml文件。修改："><span class="nav-number">1.3.7.</span> <span class="nav-text">打开你的blog项目，找到_config.yml文件。修改：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#回到gitbash中，进入blog目录。分别执行以下命令：hexo-clean-hexo-generate-hexo-server"><span class="nav-number">1.3.8.</span> <span class="nav-text">回到gitbash中，进入blog目录。分别执行以下命令：hexo clean,hexo generate,hexo server.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#打开浏览器输入本地网址-http-localhost-4000"><span class="nav-number">1.3.9.</span> <span class="nav-text">打开浏览器输入本地网址 http://localhost:4000/</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改主题及主题优化"><span class="nav-number">1.4.</span> <span class="nav-text">修改主题及主题优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#修改主题"><span class="nav-number">1.4.1.</span> <span class="nav-text">修改主题</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#下载主题："><span class="nav-number">1.4.1.0.0.1.</span> <span class="nav-text">下载主题：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#配置"><span class="nav-number">1.4.1.0.0.2.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#—-config-yml文件详解"><span class="nav-number">1.4.1.0.0.3.</span> <span class="nav-text">—_config.yml文件详解</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看"><span class="nav-number">1.4.2.</span> <span class="nav-text">查看</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#发表自己第一篇博文"><span class="nav-number">1.4.3.</span> <span class="nav-text">发表自己第一篇博文</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最后发到远端"><span class="nav-number">1.4.4.</span> <span class="nav-text">最后发到远端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使得博文支持图片"><span class="nav-number">1.4.5.</span> <span class="nav-text">使得博文支持图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置背景图"><span class="nav-number">1.4.6.</span> <span class="nav-text">设置背景图</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

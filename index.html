@@ -179,7 +179,7 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/%20" rel="section">
+          <a href="/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
@@ -188,12 +188,52 @@
         </li>
       
         
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
-          <a href="/archives/%20" rel="section">
+          <a href="/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            日程表
           </a>
         </li>
       
@@ -301,65 +341,24 @@
       
         
           
-            <h1 id="搭建hexo博客"><a href="#搭建hexo博客" class="headerlink" title="搭建hexo博客"></a>搭建hexo博客</h1><h2 id="安装gitbash"><a href="#安装gitbash" class="headerlink" title="安装gitbash"></a>安装gitbash</h2><ul>
-<li><p>下载地址：<a href="https://git-for-windows.github.io/" target="_blank" rel="noopener">https://git-for-windows.github.io/</a></p>
-</li>
-<li><p>安装步骤：傻瓜式下一步</p>
-</li>
-<li><p>完成之后，检验打开gitbash。输入命令<code>git version</code>查看版本</p>
-</li>
-</ul>
-<h2 id="安装nodeJs"><a href="#安装nodeJs" class="headerlink" title="安装nodeJs"></a>安装nodeJs</h2><p>hexo是基于nodeJs环境下的静态博客</p>
-<ul>
-<li>下载地址：<a href="https://nodejs.org/en/（LTS为长期维护版本，Current为最新版）" target="_blank" rel="noopener">https://nodejs.org/en/（LTS为长期维护版本，Current为最新版）</a></li>
-<li>也是一路next ， 过在Custom Setup这一步记得选 <code>Add to PATH</code> ,这样你就不用自己去配置电脑上环境变量了 ， 装完在按 <code>win + r</code> 快捷键调出运行，然后输入cmd确定，在cmd中输入node。检查环境，如果指令有反应。显示如图： <img src="/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/09.png" alt></li>
-</ul>
-<p>成功</p>
-<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><h3 id="创建一个文件夹用来存放blog的相关东西"><a href="#创建一个文件夹用来存放blog的相关东西" class="headerlink" title="创建一个文件夹用来存放blog的相关东西"></a>创建一个文件夹用来存放blog的相关东西</h3><h3 id="安装hexo，命令：nmp-i-g-hexo"><a href="#安装hexo，命令：nmp-i-g-hexo" class="headerlink" title="安装hexo，命令：nmp i -g hexo"></a>安装hexo，命令：nmp i -g hexo</h3><h3 id="安装完成之后，用于检测是否安装成功。可查看其版本。命令hexo-v"><a href="#安装完成之后，用于检测是否安装成功。可查看其版本。命令hexo-v" class="headerlink" title="安装完成之后，用于检测是否安装成功。可查看其版本。命令hexo -v"></a>安装完成之后，用于检测是否安装成功。可查看其版本。命令hexo -v</h3><h3 id="初始化，命令：hexo-init-（稍作等待）-初始化完成之后打开文件可有如下"><a href="#初始化，命令：hexo-init-（稍作等待）-初始化完成之后打开文件可有如下" class="headerlink" title="初始化，命令：hexo init  （稍作等待）   初始化完成之后打开文件可有如下"></a>初始化，命令：hexo init  （稍作等待）   初始化完成之后打开文件可有如下</h3><p> <img src="/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/01.png" alt></p>
-<h3 id="搭桥到github"><a href="#搭桥到github" class="headerlink" title="搭桥到github"></a>搭桥到github</h3><ul>
-<li><p>没有账号创建一个即可</p>
-</li>
-<li><p>获得账号，创建一个repo，名称规则  yourname.github.io。其中yourname是你的github名称</p>
-</li>
-<li><p>回到gitbash中，配置github的账户信息。命令  <code>git config --global user.name &quot;YourName&quot;</code> 回车，接着再输入命令 <code>git config --global user.email &quot;YourEmail&quot;</code>。（其中引号中均是你的信息）</p>
-<p><img src="/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/02.png" alt></p>
-</li>
-</ul>
-<h3 id="创建SSH"><a href="#创建SSH" class="headerlink" title="创建SSH"></a>创建SSH</h3><pre><code>在gitbash中输入：`ssh-keygen -t rsa -C &quot;youremail@example.com&quot;`，生成ssh 。回车回车即可</code></pre><p>   紧接着，输入命令<code>cd ~/.ssh</code>回车。<code>cat id_rsa.pub</code>回车。</p>
-<p>   如图： <img src="/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/03.png" alt></p>
-<p>​         将上所得放置github的SSH keys中。title随便，key即为上所得</p>
-<h3 id="打开你的blog项目，找到-config-yml文件。修改："><a href="#打开你的blog项目，找到-config-yml文件。修改：" class="headerlink" title="打开你的blog项目，找到_config.yml文件。修改："></a>打开你的blog项目，找到_config.yml文件。修改：</h3>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">deploy: </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">type: git  </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">repo:https:&#x2F;&#x2F;github.com&#x2F;YourgithubName&#x2F;YourgithubName.github.io.git </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">branch: master</span></pre></td></tr></table></figure>
+          搭建hexo博客安装gitbash（相似于cmd，只不过我偏爱这个）
 
-<h3 id="回到gitbash中，进入blog目录。分别执行以下命令：hexo-clean-hexo-generate-hexo-server"><a href="#回到gitbash中，进入blog目录。分别执行以下命令：hexo-clean-hexo-generate-hexo-server" class="headerlink" title="回到gitbash中，进入blog目录。分别执行以下命令：hexo clean,hexo generate,hexo server."></a>回到gitbash中，进入blog目录。分别执行以下命令：<code>hexo clean</code>,<code>hexo generate</code>,<code>hexo server</code>.</h3><p><img src="/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/04.png" alt></p>
-<h3 id="打开浏览器输入本地网址-http-localhost-4000"><a href="#打开浏览器输入本地网址-http-localhost-4000" class="headerlink" title="打开浏览器输入本地网址 http://localhost:4000/"></a>打开浏览器输入本地网址 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a></h3><p> <img src="/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/05.png" alt></p>
-<h2 id="修改主题及主题优化"><a href="#修改主题及主题优化" class="headerlink" title="修改主题及主题优化"></a>修改主题及主题优化</h2><h3 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a>修改主题</h3><p>我比较喜欢next主题，所以在这里以他为例：</p>
-<h6 id="下载主题："><a href="#下载主题：" class="headerlink" title="下载主题："></a>下载主题：</h6><p>gitbash命令cd到blog文件下，（推荐小白直接到blog文件夹下打开gitbash）。输入命令<code>git clone https://github.com/iissnan/hexo-theme-next themes/next</code>。过程有些慢，稍等片刻即可。完成之后你将会在blog的theme文件夹下发现多出的next主题文件</p>
-<p><img src="/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/06.png" alt></p>
-<h6 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h6><p>打开blog的_config.yml文件，找到theme。将其默认的landscape改为next。</p>
-<p> <img src="/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/07.png" alt></p>
-<h6 id="—-config-yml文件详解"><a href="#—-config-yml文件详解" class="headerlink" title="—_config.yml文件详解"></a>—_config.yml文件详解</h6><ol>
-<li>site</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"># Site</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">title: 宫家小屋    网站标题</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">subtitle: &#39;&#39;    网站副标题</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">description: &#39;&#39;			网站描述</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">keywords:				网站关键字</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">author: gong		网站作者</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">language: en			网站语言，默认为en，中文写zh-Hans</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">timezone: &#39;&#39;		网站时区</span></pre></td></tr></table></figure>
+下载地址：https://git-for-windows.github.io/
 
-<ol start="2">
-<li>URL（一般不用修改）</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"> URL</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">## If your site is put in a subdirectory, set url as &#39;http:&#x2F;&#x2F;yoursite.com&#x2F;child&#39; and root as &#39;&#x2F;child&#x2F;&#39;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">url: http:&#x2F;&#x2F;yoursite.com   网站的地址</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">root: &#x2F;		网站的根目录，存放文章</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">permalink: :year&#x2F;:month&#x2F;:day&#x2F;:title&#x2F;		文章的链接格式</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">permalink_defaults:				永久链接中每个段的默认值</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">pretty_urls:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">  trailing_index: true # Set to false to remove trailing index.html from permalinks</span></pre></td></tr></table></figure>
+安装步骤：傻瓜式下一步
 
-<ol start="3">
-<li>Directory(关于文件夹的一些设置，一般也不用修改)</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"> Directory</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">source_dir: source   资源文件夹 ，存放用户的资源文件，默认为 source</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">public_dir: public   公用文件夹 ，存放生成的静态文件，默认为 public</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">tag_dir: tags       标签目录 ，默认为 tags</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">archive_dir: archives   档案目录 ，默认为 archives</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">category_dir: categories   分类目录 ，默认为 categories</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">code_dir: downloads&#x2F;code   代码目录 ，默认为 downloads&#x2F;code</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">i18n_dir: :lang   i18n目录 ，默认为 :lang</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">skip_render:     储存站长验证文件，跳过指定文件的渲染</span></pre></td></tr></table></figure>
+完成之后，检验打开gitbash。输入命令git version查看版本
 
-<p>参考资料 <a href="https://blog.csdn.net/wsmrzx/article/details/81477926" target="_blank" rel="noopener">https://blog.csdn.net/wsmrzx/article/details/81477926</a> </p>
-<h3 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h3><p>经过上述修改完毕时候，gitbash命令：<code>hexo clean</code>,<code>hexo gen</code>,<code>hexo s</code>（这里可简写）</p>
-<h3 id="发表自己第一篇博文"><a href="#发表自己第一篇博文" class="headerlink" title="发表自己第一篇博文"></a>发表自己第一篇博文</h3><p>命令<code>$ hexo new &quot;hexo-github博客搭建&quot;</code>，打开文件如图：</p>
-<p><img src="/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/08.png" alt></p>
-<p>可以看到刚创建的文档，均是md格式。打开即可进行编辑。</p>
-<h3 id="最后发到远端"><a href="#最后发到远端" class="headerlink" title="最后发到远端"></a>最后发到远端</h3><p>命令<code>hexo d</code>，接下来你就可以通过https：//yourname.github.io 进行访问了</p>
 
-          
+安装nodeJshexo是基于nodeJs
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -439,7 +438,7 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives/%20%7C%7C%20archive">
+                <a href="/archives/%7C%7Carchive">
               
                   <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">日志</span>
