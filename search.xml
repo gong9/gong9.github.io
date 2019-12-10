@@ -1,0 +1,1467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>hexo-next 添加搜索功能</title>
+    <url>/2019/12/10/hexo-next-%E6%B7%BB%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/</url>
+    <content><![CDATA[<p>预览：</p>
+<p><img src="/2019/12/10/hexo-next-%E6%B7%BB%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/02.png" alt></p>
+<p>正题：</p>
+<ul>
+<li>安装插件，在blog的目录下执行。命令：</li>
+</ul>
+<p><code>npm install hexo-generator-searchdb --save</code></p>
+<ul>
+<li>修改站点的配置文件,添加如下：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">search:</span></pre></td></tr><tr><td class="code"><pre><span class="line">  path: search.xml</span></pre></td></tr><tr><td class="code"><pre><span class="line">  field: post</span></pre></td></tr><tr><td class="code"><pre><span class="line">  format: html</span></pre></td></tr><tr><td class="code"><pre><span class="line">  limit: 10000</span></pre></td></tr></table></figure>
+
+<ul>
+<li>修改主题配置文件</li>
+</ul>
+<p>找到 local_search 项，将它的enable修改为true。</p>
+<p><img src="/2019/12/10/hexo-next-%E6%B7%BB%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/01.png" alt></p>
+]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo博客域名绑定与SEO</title>
+    <url>/2019/12/10/hexo%E5%8D%9A%E5%AE%A2%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A%E4%B8%8ESEO/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>悟空传摘抄笔记</title>
+    <url>/2019/12/09/%E6%82%9F%E7%A9%BA%E4%BC%A0%E6%91%98%E6%8A%84%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<p><img src="/2019/12/09/%E6%82%9F%E7%A9%BA%E4%BC%A0%E6%91%98%E6%8A%84%E7%AC%94%E8%AE%B0/01.png" alt></p>
+<p>人生最有价值的时刻，不是最后的功成名就，而是对未来正充满期待与不安之时。 有未来是件很开心的事。我愿意和大家一起去见证这个未来，见证我们走过的路。</p>
+<p>​    成败，其实并不是最重要的。因为你去追求理想时你就会明白，你很可能不会成功</p>
+<p>​    最关键就在于，当你深知这一点时，你还要不要去追求。 我没有答案，也不需要答案。 </p>
+<p>​    引用我最喜欢的一首歌的歌词作为结束： 如果失去是苦，你还怕不怕付出？ 如果坠落是苦，你还要不要幸福？ </p>
+]]></content>
+      <categories>
+        <category>文摘笔记</category>
+      </categories>
+      <tags>
+        <tag>文摘</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ajax</title>
+    <url>/2019/12/09/ajax/</url>
+    <content><![CDATA[<h2 id="我将他们分为俩章"><a href="#我将他们分为俩章" class="headerlink" title="# 我将他们分为俩章"></a># 我将他们分为俩章</h2><ul>
+<li>ajax定义：其实他就是浏览器提供的一套 API，可以通过 JavaScript 调用，从而实现通过代码控制请求与响应。实现 网络编程。</li>
+<li>api的含义，API（Application Programming Interface,应用程序编程接口）是一些预先定义的函数，目的是提供应用程序与开发人员基于某软件或硬件得以访问一组例程的能力，而又无需访问源码，或理解内部工作机制的细节。（类似于DOM，浏览器为我们提供这种api，方便我们控制其节点），ajax这种api的作用方便我们进行网络编程。</li>
+</ul>
+<h2 id="开始进入ajax的学习"><a href="#开始进入ajax的学习" class="headerlink" title="开始进入ajax的学习"></a>开始进入ajax的学习</h2><h2 id="1-1-快速上手（ajax的基本结构）"><a href="#1-1-快速上手（ajax的基本结构）" class="headerlink" title="1.1 快速上手（ajax的基本结构）"></a>1.1 快速上手（ajax的基本结构）</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var xhr &#x3D; new XMLHttpRequest()#</span></pre></td></tr><tr><td class="code"><pre><span class="line">xhr.open(&#39;GET&#39;, &#39;http:&#x2F;&#x2F;day-11.io&#x2F;time.php&#39;)</span></pre></td></tr><tr><td class="code"><pre><span class="line">xhr.send()</span></pre></td></tr><tr><td class="code"><pre><span class="line"> xhr.onreadystatechange &#x3D; function () &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">      &#x2F;&#x2F; 这个事件并不是只在响应时触发，XHR 状态改变就触发</span></pre></td></tr><tr><td class="code"><pre><span class="line">      &#x2F;&#x2F; console.log(1)</span></pre></td></tr><tr><td class="code"><pre><span class="line">      if (this.readyState !&#x3D;&#x3D; 4) return</span></pre></td></tr><tr><td class="code"><pre><span class="line">      &#x2F;&#x2F; 获取响应的内容（响应体）</span></pre></td></tr><tr><td class="code"><pre><span class="line">      console.log(this.responseText)</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    </span></pre></td></tr><tr><td class="code"><pre><span class="line">最新一种事件&#x2F;&#x2F;onload 是 HTML5 中提供的 XMLHttpRequest v2.0 定义的</span></pre></td></tr><tr><td class="code"><pre><span class="line">xhr.onload &#x3D; function () &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">      console.log(this.readyState)</span></pre></td></tr><tr><td class="code"><pre><span class="line">      console.log(this.responseText)</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr></table></figure>
+
+<h2 id="1-2-readyState"><a href="#1-2-readyState" class="headerlink" title="1.2 readyState"></a>1.2 readyState</h2><ul>
+<li>对readyState值的解释</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>readyState</th>
+<th>状态描述</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>UNSENT</td>
+<td>代理（XHR）被创建，但尚未调用 open() 方法</td>
+</tr>
+<tr>
+<td>1</td>
+<td>OPENED</td>
+<td>open() 方法已经被调用，建立了连接</td>
+</tr>
+<tr>
+<td>2</td>
+<td>HEADERS_RECEIVED</td>
+<td>send() 方法已经被调用，并且已经可以获取状态行和响应头</td>
+</tr>
+<tr>
+<td>3</td>
+<td>LOADING</td>
+<td>响应体下载中， responseText 属性可能已经包含部分数据</td>
+</tr>
+<tr>
+<td>4</td>
+<td>DONE</td>
+<td>响应体下载完成，可以直接使用 responseText</td>
+</tr>
+</tbody></table>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr></table></figure>
+
+<h2 id="1-3-ajax同样遵循http协议"><a href="#1-3-ajax同样遵循http协议" class="headerlink" title="1.3 ajax同样遵循http协议"></a>1.3 ajax同样遵循http协议</h2><ul>
+<li>本质上 XMLHttpRequest 就是 JavaScript 在 Web 平台中发送 HTTP 请求的手段，所以我们发送出去的请求任然是 HTTP 请求，同样符合 HTTP 约定的格式</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"> &lt;script&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  var xhr&#x3D;new XMLHttpRequest();</span></pre></td></tr><tr><td class="code"><pre><span class="line">  xhr.open(&quot;POST&quot;,&quot;add.php&quot;)</span></pre></td></tr><tr><td class="code"><pre><span class="line">  xhr.setRequestHeader(&quot;Foo&quot;,&quot;Bar&quot;)&#x2F;&#x2F;设置一个请求头</span></pre></td></tr><tr><td class="code"><pre><span class="line">    xhr.setRequestHeader(&#39;Content-Type&#39;, &#39;application&#x2F;x-www-form-urlencoded&#39;) &#x2F;&#x2F; 一旦你的请求体是 urlencoded 格式的内容，一定要设置请求头中 Content-Type &#39;application&#x2F;x-www-form-urlencoded&#39;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  xhr.send(&#39;key1&#x3D;value1&amp;key2&#x3D;value2&#39;)&#x2F;&#x2F;以urlencoded格式设置请求体</span></pre></td></tr><tr><td class="code"><pre><span class="line">  xhr.onreadystatechange&#x3D;function()&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    if(this.readyState!&#x3D;&#x3D;4)return</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<h2 id="1-4-ajax的GET请求实例"><a href="#1-4-ajax的GET请求实例" class="headerlink" title="1.4 ajax的GET请求实例"></a>1.4 ajax的GET请求实例</h2><ul>
+<li>通常在一次GET请求过程中，参数传递都是通过url地址的?进行传参的</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var  xhr  &#x3D;  new  XMLHttpRequest()</span></pre></td></tr><tr><td class="code"><pre><span class="line"> &#x2F;&#x2F; GET 请求传递参数通常使用的是问号传参</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 这里可以在请求地址后面加上参数，从而传递数据到服务端</span></pre></td></tr><tr><td class="code"><pre><span class="line">xhr.open(&#39;GET&#39;, &#39;.&#x2F;delete.php?id&#x3D;1&#39;)</span></pre></td></tr><tr><td class="code"><pre><span class="line"> &#x2F;&#x2F; 一般在 GET 请求时无需设置响应体，可以传 null 或者干脆不传 xhr.send(null) xhr.onreadystatechange &#x3D; function () &#123;   if (this.readyState &#x3D;&#x3D;&#x3D; 4) &#123;     console.log(this.responseText)   &#125; &#125;  </span></pre></td></tr><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 一般情况下 URL 传递的都是参数性质的数据，而 POST 一般都是业务数据</span></pre></td></tr></table></figure>
+
+<h2 id="1-5-ajax的POST请求实例"><a href="#1-5-ajax的POST请求实例" class="headerlink" title="1.5 ajax的POST请求实例"></a>1.5 ajax的POST请求实例</h2><ul>
+<li>在POST请求中，都是请求体承载所要请求的数据</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">btn.onclick&#x3D;function()&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">   var username&#x3D;document.getElementById(&quot;username&quot;).value</span></pre></td></tr><tr><td class="code"><pre><span class="line">  var password&#x3D;document.getElementById(&quot;password&quot;).value</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;获取到两个input里的数据</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">   var xhr&#x3D;new XMLHttpRequest()</span></pre></td></tr><tr><td class="code"><pre><span class="line">   xhr.open(&quot;POST&quot;,&quot;login.php&quot;)</span></pre></td></tr><tr><td class="code"><pre><span class="line">   xhr.setRequestHeader(&#39;Content-Type&#39;, &#39;application&#x2F;x-www-form-urlencoded&#39;)</span></pre></td></tr><tr><td class="code"><pre><span class="line">  xhr.send(&#96;username&#x3D;$&#123;username&#125;&amp;password&#x3D;$&#123;password&#125;&#96;)</span></pre></td></tr><tr><td class="code"><pre><span class="line">  &#x2F;&#x2F;将数据传到后台</span></pre></td></tr><tr><td class="code"><pre><span class="line">  第二种格式</span></pre></td></tr><tr><td class="code"><pre><span class="line">  xhr.send(&#39;username&#x3D;&#39; + username + &#39;&amp;password&#x3D;&#39; + password)</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">   xhr.onreadystatechange&#x3D;function()&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    if(this.readyState!&#x3D;&#x3D;4)return</span></pre></td></tr><tr><td class="code"><pre><span class="line">      console.log(this.responseText)</span></pre></td></tr></table></figure>
+
+<h2 id="1-6-同步和异步"><a href="#1-6-同步和异步" class="headerlink" title="1.6 同步和异步"></a>1.6 同步和异步</h2><ul>
+<li>同步：通俗的讲，就比如一个人在一段时间。只能做一件事</li>
+<li>异步：他是在执行一些耗时的事件时不等待，而是去执行其他的事件</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">xhr.open() 方法第三个参数要求传入的是一个 bool 值，其作用就是设置此次请求是否采用异步方</span></pre></td></tr><tr><td class="code"><pre><span class="line">式执行，默认 为 true ，如果需要同步执行可以通过传递 false 实现：</span></pre></td></tr></table></figure>
+
+<h2 id="1-7-响应式数据格式"><a href="#1-7-响应式数据格式" class="headerlink" title="1.7 响应式数据格式"></a>1.7 响应式数据格式</h2><p>如果服务器返回的数据是一个复杂的数据，我们该怎么处理</p>
+<h5 id="1-XML"><a href="#1-XML" class="headerlink" title="1. XML"></a>1. XML</h5><p>一种数据描述手段 老掉牙的东西，简单演示一下，不在这里浪费时间，基本现在的项目不用了。 淘汰的原因：数据冗余太多</p>
+<h5 id="2-JSON"><a href="#2-JSON" class="headerlink" title="2. JSON"></a>2. JSON</h5><p>也是一种数据描述手段，类似于 JavaScript 字面量方式 。服务器采用JSON格式传递数据，客户端就应该按照JSON格式解析数据</p>
+<h5 id="3-处理响应数据渲染"><a href="#3-处理响应数据渲染" class="headerlink" title="3. 处理响应数据渲染"></a>3. 处理响应数据渲染</h5><p>使用模板引擎 <a href="https://aui.github.io/art-template/" target="_blank" rel="noopener">artTemplate链接</a></p>
+<ul>
+<li>模板引擎实际上就是一个 API，模板引擎有很多种，使用方式大同小异，目的为了可以更容易的将数据渲染到 HTML中</li>
+</ul>
+<h2 id="1-8-兼容方案（只用于面试问题）"><a href="#1-8-兼容方案（只用于面试问题）" class="headerlink" title="1.8 兼容方案（只用于面试问题）"></a>1.8 兼容方案（只用于面试问题）</h2><p>XMLHttpRequest 在老版本浏览器（IE5/6）中有兼容问题，可以通过另外一种方式代替</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var xhr &#x3D; window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject(&#39;Microsoft.XMLHTTP&#39;)</span></pre></td></tr></table></figure>
+
+<h2 id="1-9-进程和线程"><a href="#1-9-进程和线程" class="headerlink" title="1.9 进程和线程"></a>1.9 进程和线程</h2><ul>
+<li>进程：通俗点就是运行中的程序</li>
+<li>线程：cpu中的最小执行单元</li>
+</ul>
+<h1 id="ajax第二天"><a href="#ajax第二天" class="headerlink" title="ajax第二天"></a>ajax第二天</h1><h2 id="2-1-模板引擎实例"><a href="#2-1-模板引擎实例" class="headerlink" title="2.1 模板引擎实例"></a>2.1 模板引擎实例</h2><ul>
+<li>首先说明script标签的特点<ul>
+<li>其中的innerHTML永远不会出现在界面上</li>
+<li>他的type标签如果不是text/javascript 的话，内部的东西是不会作为JavaScript解析的</li>
+</ul>
+</li>
+<li>基本套路<ul>
+<li>选择一个模板引擎</li>
+<li>下载模板引擎的js文件</li>
+<li>引入到页面中去</li>
+<li>准备一个模板</li>
+<li>准备一个数据</li>
+<li>通过模板引擎js提供的一个方法将模板和数据整合得到渲染结果HTML</li>
+<li>将渲染结果的HTML设置到默认元素的innerHTML中</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;body&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  &lt;table id&#x3D;&quot;demo&quot;&gt;&lt;&#x2F;table&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">  &lt;!--</span></pre></td></tr><tr><td class="code"><pre><span class="line">    script 标签的特点是</span></pre></td></tr><tr><td class="code"><pre><span class="line">    1. innerHTML 永远不会显示在界面上</span></pre></td></tr><tr><td class="code"><pre><span class="line">    2. 如果 type 不等于 text&#x2F;javascript 的话，内部的内容不会作为 JavaScript 执行</span></pre></td></tr><tr><td class="code"><pre><span class="line">  --&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  </span></pre></td></tr><tr><td class="code"><pre><span class="line">  &#x2F;&#x2F;模板</span></pre></td></tr><tr><td class="code"><pre><span class="line">  &lt;script id&#x3D;&quot;tmpl&quot; type&#x3D;&quot;text&#x2F;x-art-template&quot;&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#123;&#123;each comments&#125;&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &lt;!-- each 内部 $value 拿到的是当前被遍历的那个元素 --&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &lt;tr&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">      &lt;td&gt;&#123;&#123;$value.author&#125;&#125;&lt;&#x2F;td&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">      &lt;td&gt;&#123;&#123;$value.content&#125;&#125;&lt;&#x2F;td&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">      &lt;td&gt;&#123;&#123;$value.created&#125;&#125;&lt;&#x2F;td&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &lt;&#x2F;tr&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#123;&#123;&#x2F;each&#125;&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  &lt;&#x2F;script&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  </span></pre></td></tr><tr><td class="code"><pre><span class="line">  </span></pre></td></tr><tr><td class="code"><pre><span class="line">  </span></pre></td></tr><tr><td class="code"><pre><span class="line">  </span></pre></td></tr><tr><td class="code"><pre><span class="line">  </span></pre></td></tr><tr><td class="code"><pre><span class="line">  &lt;script src&#x3D;&quot;template-web.js&quot;&gt;&lt;&#x2F;script&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  &lt;script&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    var xhr &#x3D; new XMLHttpRequest()</span></pre></td></tr><tr><td class="code"><pre><span class="line">    xhr.open(&#39;GET&#39;, &#39;test.php&#39;)</span></pre></td></tr><tr><td class="code"><pre><span class="line">    xhr.send()</span></pre></td></tr><tr><td class="code"><pre><span class="line">    xhr.onreadystatechange &#x3D; function () &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">      if (this.readyState !&#x3D;&#x3D; 4) return</span></pre></td></tr><tr><td class="code"><pre><span class="line">      var res &#x3D; JSON.parse(this.responseText)</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">      &#x2F;&#x2F; 模板所需数据</span></pre></td></tr><tr><td class="code"><pre><span class="line">      var context &#x3D; &#123; comments: res.data &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">      &#x2F;&#x2F; 借助模板引擎的API 渲染数据</span></pre></td></tr><tr><td class="code"><pre><span class="line">      var html &#x3D; template(&#39;tmpl&#39;, context)</span></pre></td></tr><tr><td class="code"><pre><span class="line">      console.log(html)</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">      document.getElementById(&#39;demo&#39;).innerHTML &#x3D; html</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">      &#x2F;&#x2F; 1. 选择一个模板引擎</span></pre></td></tr><tr><td class="code"><pre><span class="line">      &#x2F;&#x2F;  https:&#x2F;&#x2F;github.com&#x2F;tj&#x2F;consolidate.js#supported-template-engines</span></pre></td></tr><tr><td class="code"><pre><span class="line">      &#x2F;&#x2F; 2. 下载模板引擎JS文件</span></pre></td></tr><tr><td class="code"><pre><span class="line">      &#x2F;&#x2F; 3. 引入到页面中</span></pre></td></tr><tr><td class="code"><pre><span class="line">      &#x2F;&#x2F; 4. 准备一个模板</span></pre></td></tr><tr><td class="code"><pre><span class="line">      &#x2F;&#x2F; 5. 准备一个数据</span></pre></td></tr><tr><td class="code"><pre><span class="line">      &#x2F;&#x2F; 6. 通过模板引擎的JS提供的一个函数将模板和数据整合得到渲染结果HTML</span></pre></td></tr><tr><td class="code"><pre><span class="line">      &#x2F;&#x2F; 7. 将渲染结果的HTML 设置到 默认元素的 innerHTML 中</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">      &#x2F;&#x2F; var tmpl &#x3D; &#39;&#123;&#123;if user&#125;&#125;&lt;h2&gt;&#123;&#123;user.name&#125;&#125;&lt;&#x2F;h2&gt;&#123;&#123;&#x2F;if&#125;&#125;&#39;</span></pre></td></tr><tr><td class="code"><pre><span class="line">      &#x2F;&#x2F;</span></pre></td></tr><tr><td class="code"><pre><span class="line">      &#x2F;&#x2F; 为什么不在JS变量中写模板？</span></pre></td></tr><tr><td class="code"><pre><span class="line">      &#x2F;&#x2F; 1. 如果将模板写到JS中，维护不方便，不能换行，没有着色</span></pre></td></tr><tr><td class="code"><pre><span class="line">      &#x2F;&#x2F; 为什么使用script标记</span></pre></td></tr><tr><td class="code"><pre><span class="line">      &#x2F;&#x2F; 1. script不会显示在界面</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">  &lt;&#x2F;script&gt;</span></pre></td></tr></table></figure>
+
+<h2 id="2-2-ajax的封装"><a href="#2-2-ajax的封装" class="headerlink" title="2.2 ajax的封装"></a>2.2 ajax的封装</h2><ul>
+<li>首先函数就可以理解为一个想要做的事情，函数体中约定了这件事情做的过程，直到调用时才开始工作。 将函数作为参数传递就像是将一个事情交给别人，这就是委托的概念</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 封装者</span></pre></td></tr><tr><td class="code"><pre><span class="line">   &#x2F;&#x2F; &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">   function ajax (method, url, params, done) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">     method &#x3D; method.toUpperCase()</span></pre></td></tr><tr><td class="code"><pre><span class="line">     var xhr &#x3D; new XMLHttpRequest()</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">     if (typeof params &#x3D;&#x3D;&#x3D; &#39;object&#39;) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">       var tempArr &#x3D; []</span></pre></td></tr><tr><td class="code"><pre><span class="line">       for (var key in params) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">         var value &#x3D; params[key]</span></pre></td></tr><tr><td class="code"><pre><span class="line">         tempArr.push(key + &#39;&#x3D;&#39; + value)</span></pre></td></tr><tr><td class="code"><pre><span class="line">       &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">       params &#x3D; tempArr.join(&#39;&amp;&#39;)</span></pre></td></tr><tr><td class="code"><pre><span class="line">     &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">     if (method &#x3D;&#x3D;&#x3D; &#39;GET&#39;) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">       url +&#x3D; &#39;?&#39; + params</span></pre></td></tr><tr><td class="code"><pre><span class="line">     &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">     xhr.open(method, url, false)</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">     var data &#x3D; null</span></pre></td></tr><tr><td class="code"><pre><span class="line">     if (method &#x3D;&#x3D;&#x3D; &#39;POST&#39;) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">       xhr.setRequestHeader(&#39;Content-Type&#39;, &#39;application&#x2F;x-www-form-urlencoded&#39;)</span></pre></td></tr><tr><td class="code"><pre><span class="line">       data &#x3D; params</span></pre></td></tr><tr><td class="code"><pre><span class="line">     &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">     xhr.onreadystatechange &#x3D; function () &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">       if (this.readyState !&#x3D;&#x3D; 4) return</span></pre></td></tr><tr><td class="code"><pre><span class="line">       &#x2F;&#x2F; 不应该在封装的函数中主观的处理响应结果</span></pre></td></tr><tr><td class="code"><pre><span class="line">       &#x2F;&#x2F; console.log(this.responseText)</span></pre></td></tr><tr><td class="code"><pre><span class="line">       &#x2F;&#x2F; 你说我太主观，那么你告诉我应该做什么</span></pre></td></tr><tr><td class="code"><pre><span class="line">       done(this.responseText)</span></pre></td></tr><tr><td class="code"><pre><span class="line">     &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">     xhr.send(data)</span></pre></td></tr><tr><td class="code"><pre><span class="line">   &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">   &#x2F;&#x2F; 调用者</span></pre></td></tr><tr><td class="code"><pre><span class="line">   &#x2F;&#x2F; &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">   var onDone &#x3D; function (res) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">     console.log(&#39;hahahahaha&#39;)</span></pre></td></tr><tr><td class="code"><pre><span class="line">     console.log(&#39;hohohohoho&#39;)</span></pre></td></tr><tr><td class="code"><pre><span class="line">     console.log(res)</span></pre></td></tr><tr><td class="code"><pre><span class="line">     console.log(&#39;做完了&#39;)</span></pre></td></tr><tr><td class="code"><pre><span class="line">   &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">   ajax(&#39;get&#39;, &#39;time.php&#39;, &#123;&#125;, onDone)</span></pre></td></tr></table></figure>
+
+<h2 id="2-3-jq中的ajax"><a href="#2-3-jq中的ajax" class="headerlink" title="2.3 jq中的ajax"></a>2.3 jq中的ajax</h2><p>参考</p>
+<ul>
+<li><a href="http://www.jquery123.com/category/ajax/" target="_blank" rel="noopener">http://www.jquery123.com/category/ajax/</a></li>
+<li><a href="http://www.w3school.com.cn/jquery/jquery_ref_ajax.asp" target="_blank" rel="noopener">http://www.w3school.com.cn/jquery/jquery_ref_ajax.asp</a></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">最底层</span></pre></td></tr><tr><td class="code"><pre><span class="line"> $.ajax(&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">      url: &#39;json.php&#39;,</span></pre></td></tr><tr><td class="code"><pre><span class="line">      type: &#39;get&#39;,</span></pre></td></tr><tr><td class="code"><pre><span class="line">      &#x2F;&#x2F; 设置的是请求参数</span></pre></td></tr><tr><td class="code"><pre><span class="line">      data: &#123; id: 1, name: &#39;张三&#39; &#125;,</span></pre></td></tr><tr><td class="code"><pre><span class="line">      &#x2F;&#x2F; 用于设置响应体的类型 注意 跟 data 参数没关系！！！</span></pre></td></tr><tr><td class="code"><pre><span class="line">      dataType: &#39;json&#39;,</span></pre></td></tr><tr><td class="code"><pre><span class="line">      success: function (res) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#x2F;&#x2F; 一旦设置的 dataType 选项，就不再关心 服务端 响应的 Content-Type 了</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#x2F;&#x2F; 客户端会主观认为服务端返回的就是 JSON 格式的字符串</span></pre></td></tr><tr><td class="code"><pre><span class="line">        console.log(res)</span></pre></td></tr><tr><td class="code"><pre><span class="line">      &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;)</span></pre></td></tr><tr><td class="code"><pre><span class="line">    </span></pre></td></tr><tr><td class="code"><pre><span class="line">    常用</span></pre></td></tr><tr><td class="code"><pre><span class="line">     $.get(&#39;http:&#x2F;&#x2F;locally.uieee.com&#x2F;categories&#39;, function (res) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">      console.log(res)</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;)</span></pre></td></tr><tr><td class="code"><pre><span class="line">    </span></pre></td></tr><tr><td class="code"><pre><span class="line">    </span></pre></td></tr><tr><td class="code"><pre><span class="line"> 常见参数   </span></pre></td></tr><tr><td class="code"><pre><span class="line">    </span></pre></td></tr><tr><td class="code"><pre><span class="line">url：请求地址</span></pre></td></tr><tr><td class="code"><pre><span class="line">type：请求方法，默认为 get </span></pre></td></tr><tr><td class="code"><pre><span class="line">dataType：服务端响应数据类型</span></pre></td></tr><tr><td class="code"><pre><span class="line">contentType：请求体内容类型，默认 application&#x2F;x-www-form-urlencoded </span></pre></td></tr><tr><td class="code"><pre><span class="line">data：需要传递到服务端的数据，如果 GET 则通过 URL 传递，如果 POST 则通过请求体传递 </span></pre></td></tr><tr><td class="code"><pre><span class="line">timeout：请求超时时间 </span></pre></td></tr><tr><td class="code"><pre><span class="line">beforeSend：请求发起之前触发 </span></pre></td></tr><tr><td class="code"><pre><span class="line">success：请求成功之后触发（响应状态码 200） </span></pre></td></tr><tr><td class="code"><pre><span class="line">error：请求失败触发 </span></pre></td></tr><tr><td class="code"><pre><span class="line">complete：请求完成触发（不管成功与否）</span></pre></td></tr></table></figure>
+
+<h2 id="2-4-综合应用"><a href="#2-4-综合应用" class="headerlink" title="2.4 综合应用"></a>2.4 综合应用</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&lt;head&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  &lt;title&gt;text14&lt;&#x2F;title&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  &lt;style&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">      #demo&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        width: 500px;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        height: 500px;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        color: #fff;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        background-color: #111;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        display: none;</span></pre></td></tr><tr><td class="code"><pre><span class="line">      &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  &lt;&#x2F;style&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  &lt;script src&#x3D;&quot;jq.js&quot;&gt;&lt;&#x2F;script&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&lt;&#x2F;head&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&lt;body&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  &lt;div id&#x3D;&quot;demo&quot;&gt;正在加载&lt;&#x2F;div&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  &lt;button id&#x3D;&quot;bu1&quot;&gt;登录&lt;&#x2F;button&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  &lt;script&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    $(document).ajaxStart(function()&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        $(&quot;#demo&quot;).fadeIn()</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;)</span></pre></td></tr><tr><td class="code"><pre><span class="line">    $(document).ajaxStop(function()&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        $(&quot;#demo&quot;).fadeOut()</span></pre></td></tr><tr><td class="code"><pre><span class="line">      &#125;)</span></pre></td></tr><tr><td class="code"><pre><span class="line">    $(&quot;#bu1&quot;).on(&quot;click&quot;,function()&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">      $.get(&quot;text.php&quot;)</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;)</span></pre></td></tr><tr><td class="code"><pre><span class="line">  &lt;&#x2F;script&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&lt;&#x2F;body&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&lt;&#x2F;html&gt;</span></pre></td></tr></table></figure>
+
+<h2 id="2-5-跨域"><a href="#2-5-跨域" class="headerlink" title="2.5 跨域"></a>2.5 跨域</h2><ul>
+<li>相关概念</li>
+</ul>
+<ol>
+<li>同源策略是浏览器的一种安全策略，所谓同源是指域名，协议，端口完全相同，只有同源的地址才可以相互通过 AJAX 的方式请求。</li>
+<li>同源或者不同源说的是两个地址之间的关系，不同源地址之间请求我们称之为跨域请求</li>
+</ol>
+<h4 id="解决方案（JSONP）"><a href="#解决方案（JSONP）" class="headerlink" title="解决方案（JSONP）"></a>解决方案（JSONP）</h4><p>JSON with Padding，是一种借助于 script 标签发送跨域请求的技巧。 其原理就是在客户端借助 script 标签请求服务端的一个动态网页（php 文件），服务端的这个动态网页返回一 段带有函数调用的 JavaScript 全局函数调用的脚本，将原本需要返回给客户端的数据传递进去。</p>
+<h2 id="扩展-一-（箭头函数）"><a href="#扩展-一-（箭头函数）" class="headerlink" title="扩展 一 （箭头函数）"></a>扩展 一 （箭头函数）</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">代码实例</span></pre></td></tr><tr><td class="code"><pre><span class="line">在我们正常开发是，可能会写到这样的代码</span></pre></td></tr><tr><td class="code"><pre><span class="line">const Person &#x3D; &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#39;name&#39;: &#39;little bear&#39;,</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#39;age&#39;: 18,</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#39;sayHello&#39;: function () &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">      setInterval(function () &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        console.log(&#39;我叫&#39; + this.name + &#39;我今年&#39; + this.age + &#39;岁!&#39;)</span></pre></td></tr><tr><td class="code"><pre><span class="line">      &#125;, 1000)</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  Person.sayHello()</span></pre></td></tr><tr><td class="code"><pre><span class="line">  但是，如果细心观察的话便会发现。他是肯定不会按照我们的想法来输出的，他的输出结果应为undefined</span></pre></td></tr><tr><td class="code"><pre><span class="line">  原因setInterval执行的时候，是在全局作用域下的，所有this指向的是全局window,而window上没有name和age，所以当然输出的是undefined</span></pre></td></tr></table></figure>
+
+<h4 id="1-箭头函数基本语法"><a href="#1-箭头函数基本语法" class="headerlink" title="1 箭头函数基本语法"></a>1 箭头函数基本语法</h4><p>箭头函数的语法非常简单，看一下最简单的箭头函数表示法</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">() &#x3D;&gt; console.log(&#39;Hello&#39;)</span></pre></td></tr><tr><td class="code"><pre><span class="line">对比没有箭头函数之前</span></pre></td></tr><tr><td class="code"><pre><span class="line">function()&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">console.log(&#39;hello&#39;)</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<h4 id="2-他和普通函数的区别"><a href="#2-他和普通函数的区别" class="headerlink" title="2 他和普通函数的区别"></a>2 他和普通函数的区别</h4><ul>
+<li>不绑定this，arguments</li>
+<li>更简化的代码语法</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">理解体会</span></pre></td></tr><tr><td class="code"><pre><span class="line">function Person () &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  this.name &#x3D; &#39;little bear&#39;,</span></pre></td></tr><tr><td class="code"><pre><span class="line">  this.age &#x3D; 18</span></pre></td></tr><tr><td class="code"><pre><span class="line">  setInterval(() &#x3D;&gt; &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    console.log(&#39;我叫&#39; + this.name + &#39;我今年&#39; + this.age + &#39;岁&#39;)</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;,1000)</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">let p &#x3D; new Person()</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">不绑定arguments</span></pre></td></tr><tr><td class="code"><pre><span class="line">例如如下代码</span></pre></td></tr><tr><td class="code"><pre><span class="line">let arrowfunc &#x3D; () &#x3D;&gt; console.log(arguments.length)</span></pre></td></tr><tr><td class="code"><pre><span class="line">arrowfunc()</span></pre></td></tr><tr><td class="code"><pre><span class="line">输出结果为</span></pre></td></tr><tr><td class="code"><pre><span class="line">arguments is not defined</span></pre></td></tr><tr><td class="code"><pre><span class="line">故我们在箭头函数中不能直接使用arguments对象，但我们又想获得函数的参数怎么办，这里我们可以使用剩余函数来取代arguments</span></pre></td></tr></table></figure>
+
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters" target="_blank" rel="noopener">剩余函数参看链接</a></p>
+<h4 id="3-什么时候不能使用箭头函数"><a href="#3-什么时候不能使用箭头函数" class="headerlink" title="3 什么时候不能使用箭头函数"></a>3 什么时候不能使用箭头函数</h4><p>现在能力实在有限，以后再来总结</p>
+<h2 id="扩展-二-（-JSON-parse-函数和JSON-stringify-函数）"><a href="#扩展-二-（-JSON-parse-函数和JSON-stringify-函数）" class="headerlink" title="扩展 二 （ JSON.parse 函数和JSON.stringify()函数）"></a>扩展 二 （ JSON.parse 函数和JSON.stringify()函数）</h2><ul>
+<li>JSON.parse函数。语法JSON.parse(text [, reviver])，text：一个有效的json字符串。作用，将json字符串转换成json对象</li>
+<li>JSON.stringify()函数，语法JSON.stringify( value [, replacer] [, space])。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">参数：</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">value　　必需，通常为需要转换的JavaScript值（通常为对象或者数组）</span></pre></td></tr><tr><td class="code"><pre><span class="line">replacer　　可选，用于转换结果的函数或者数组</span></pre></td></tr><tr><td class="code"><pre><span class="line">space　　可选。向返回值 JSON 文本添加缩进、空格和换行符以使其更易于读取。</span></pre></td></tr></table></figure>
+
+<p>作用将json对象转换为json字符串</p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>ajax</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>javaWeb</title>
+    <url>/2019/12/09/javaWeb/</url>
+    <content><![CDATA[<h1 id="第一章-XML和Tomcat"><a href="#第一章-XML和Tomcat" class="headerlink" title="第一章 XML和Tomcat"></a>第一章 XML和Tomcat</h1><h2 id="XML"><a href="#XML" class="headerlink" title="XML"></a>XML</h2><blockquote>
+<p>XML全称eXtendsible markup language，可扩展的标记语言</p>
+</blockquote>
+<h3 id="XML的作用"><a href="#XML的作用" class="headerlink" title="XML的作用"></a>XML的作用</h3><ul>
+<li>可以用来保存数据</li>
+<li>可以用来做配置文件</li>
+<li>数据传输载体</li>
+</ul>
+<h2 id="怎样定义xml"><a href="#怎样定义xml" class="headerlink" title="怎样定义xml"></a>怎样定义xml</h2><blockquote>
+<p>其实他就是一个文件，文件的后缀为.xml</p>
+</blockquote>
+<h3 id="1-xml-文件的文档声明"><a href="#1-xml-文件的文档声明" class="headerlink" title="1 xml 文件的文档声明"></a>1 xml 文件的文档声明</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">简单声明， version : 解析这个xml的时候，使用什么版本的解析器解析</span></pre></td></tr><tr><td class="code"><pre><span class="line">	&lt;?xml version&#x3D;&quot;1.0&quot; ?&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	</span></pre></td></tr><tr><td class="code"><pre><span class="line">	encoding : 解析xml中的文字的时候，使用什么编码来翻译</span></pre></td></tr><tr><td class="code"><pre><span class="line">	&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;gbk&quot; ?&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	</span></pre></td></tr><tr><td class="code"><pre><span class="line">	standalone  : no - 该文档会依赖关联其他文档 ，  yes-- 这是一个独立的文档</span></pre></td></tr><tr><td class="code"><pre><span class="line">	&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;gbk&quot; standalone&#x3D;&quot;no&quot; ?&gt;</span></pre></td></tr></table></figure>
+
+<h3 id="2-encoding详解"><a href="#2-encoding详解" class="headerlink" title="2 encoding详解"></a>2 encoding详解</h3><ul>
+<li>作用：再解析这个xml文件时，指定用什么编码去解析</li>
+<li>默认的文件保存的时候使用的是GBK编码保存的</li>
+<li>使用什么编码保存就应该是用什么编码解析</li>
+</ul>
+<h3 id="3-xml-中标签的定义规则"><a href="#3-xml-中标签的定义规则" class="headerlink" title="3 xml 中标签的定义规则"></a>3 xml 中标签的定义规则</h3><ul>
+<li>名称可以含字码数字以及其他字符</li>
+<li>名称不能以数字和标点符号开始</li>
+<li>名称中不允许有空格</li>
+<li>名称不能以字符 “xml”（或者 XML、Xml）开始</li>
+</ul>
+<h3 id="3-简单元素与复杂元素"><a href="#3-简单元素与复杂元素" class="headerlink" title="3 简单元素与复杂元素"></a>3 简单元素与复杂元素</h3><ul>
+<li>简单元素<ul>
+<li>元素里面只包含普通的text</li>
+</ul>
+</li>
+<li>复杂标签<ul>
+<li>元素里面可以嵌套其他元素</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-xml中的属性"><a href="#4-xml中的属性" class="headerlink" title="4 xml中的属性"></a>4 xml中的属性</h3><blockquote>
+<p>格式 ：&lt;元素名称 属性名称=”属性的值”&gt;&lt;/元素名称&gt;</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;stus&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">		&lt;stu id&#x3D;&quot;10086&quot;&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">			&lt;name&gt;张三&lt;&#x2F;name&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">			&lt;age&gt;18&lt;&#x2F;age&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">		&lt;&#x2F;stu&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">		&lt;stu id&#x3D;&quot;10087&quot;&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">			&lt;name&gt;李四&lt;&#x2F;name&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">			&lt;age&gt;28&lt;&#x2F;age&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">		&lt;&#x2F;stu&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	&lt;&#x2F;stus&gt;</span></pre></td></tr></table></figure>
+
+<h3 id="5-字符转译"><a href="#5-字符转译" class="headerlink" title="5 字符转译"></a>5 字符转译</h3><ul>
+<li><p>非法字符</p>
+<p>严格地讲，在 XML 中仅有字符 “&lt;”和”&amp;” 是非法的。省略号、引号和大于号是合法的，但是把它们替换为实体引用是个好的习惯。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;   &lt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  &amp;   &amp;</span></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="6-xml的解析"><a href="#6-xml的解析" class="headerlink" title="6 xml的解析"></a>6 xml的解析</h3><blockquote>
+<p>其实就是获取标签里面的数据</p>
+</blockquote>
+<h4 id="6-1-xml的几种解析方式"><a href="#6-1-xml的几种解析方式" class="headerlink" title="6.1 xml的几种解析方式"></a>6.1 xml的几种解析方式</h4><p>常用的有两种</p>
+<ul>
+<li>DOM</li>
+<li>SAX</li>
+</ul>
+<h5 id="6-1-1-Dom4j-的基本用法"><a href="#6-1-1-Dom4j-的基本用法" class="headerlink" title="6.1.1 Dom4j 的基本用法"></a>6.1.1 Dom4j 的基本用法</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">element.element(&quot;stu&quot;) : 返回该元素下的第一个stu元素</span></pre></td></tr><tr><td class="code"><pre><span class="line">    element.elements(); 返回该元素下的所有子元素。</span></pre></td></tr></table></figure>
+
+<ul>
+<li><p>创建SaxReader对象</p>
+</li>
+<li><p>指定解析的xml</p>
+</li>
+<li><p>获取根元素</p>
+</li>
+<li><p>根据根元素获取子元素</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">try &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	&#x2F;&#x2F;1. 创建sax读取对象</span></pre></td></tr><tr><td class="code"><pre><span class="line">	SAXReader reader &#x3D; new SAXReader(); &#x2F;&#x2F;jdbc -- classloader</span></pre></td></tr><tr><td class="code"><pre><span class="line">	&#x2F;&#x2F;2. 指定解析的xml源</span></pre></td></tr><tr><td class="code"><pre><span class="line">	Document  document  &#x3D; reader.read(new File(&quot;src&#x2F;xml&#x2F;stus.xml&quot;));</span></pre></td></tr><tr><td class="code"><pre><span class="line">	</span></pre></td></tr><tr><td class="code"><pre><span class="line">	&#x2F;&#x2F;3. 得到元素、</span></pre></td></tr><tr><td class="code"><pre><span class="line">	&#x2F;&#x2F;得到根元素</span></pre></td></tr><tr><td class="code"><pre><span class="line">	Element rootElement&#x3D; document.getRootElement();</span></pre></td></tr><tr><td class="code"><pre><span class="line">	</span></pre></td></tr><tr><td class="code"><pre><span class="line">	&#x2F;&#x2F;获取根元素下面的子元素 age</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;rootElement.element(&quot;age&quot;) </span></pre></td></tr><tr><td class="code"><pre><span class="line">	&#x2F;&#x2F;System.out.println(rootElement.element(&quot;stu&quot;).element(&quot;age&quot;).getText());</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">	&#x2F;&#x2F;获取根元素下面的所有子元素 。 stu元素</span></pre></td></tr><tr><td class="code"><pre><span class="line">	List&lt;Element&gt; elements &#x3D; rootElement.elements();</span></pre></td></tr><tr><td class="code"><pre><span class="line">	&#x2F;&#x2F;遍历所有的stu元素</span></pre></td></tr><tr><td class="code"><pre><span class="line">	for (Element element : elements) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">		&#x2F;&#x2F;获取stu元素下面的name元素</span></pre></td></tr><tr><td class="code"><pre><span class="line">		String name &#x3D; element.element(&quot;name&quot;).getText();</span></pre></td></tr><tr><td class="code"><pre><span class="line">		String age &#x3D; element.element(&quot;age&quot;).getText();</span></pre></td></tr><tr><td class="code"><pre><span class="line">		String address &#x3D; element.element(&quot;address&quot;).getText();</span></pre></td></tr><tr><td class="code"><pre><span class="line">		System.out.println(&quot;name&#x3D;&quot;+name+&quot;&#x3D;&#x3D;age+&quot;+age+&quot;&#x3D;&#x3D;address&#x3D;&quot;+address);</span></pre></td></tr><tr><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125; catch (Exception e) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	e.printStackTrace();</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h5 id="6-1-2-Dom4j-的-Xpath使用"><a href="#6-1-2-Dom4j-的-Xpath使用" class="headerlink" title="6.1.2 Dom4j 的 Xpath使用"></a>6.1.2 Dom4j 的 Xpath使用</h5><blockquote>
+<p>dom4j里面支持Xpath的写法。 xpath其实是xml的路径语言，支持我们在解析xml的时候，能够快速的定位到具体的某一个元素。</p>
+</blockquote>
+<h6 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h6><ul>
+<li><p>添加jar包依赖</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">jaxen-1.1-beta-6.jar</span></pre></td></tr></table></figure>
+</li>
+<li><p>在查找指定节点的时候，根据XPath语法规则来查找</p>
+</li>
+<li><p>后续代码同以前一样</p>
+</li>
+<li><pre><code>//要想使用Xpath， 还得添加支持的jar 
+    //获取的是第一个 只返回一个。 
+    Element nameElement = (Element) rootElement.selectSingleNode(&quot;//name&quot;);
+    System.out.println(nameElement.getText());
+
+</code></pre></li>
+</ul>
+<pre><code>System.out.println(&quot;----------------&quot;);
+
+//获取文档里面的所有name元素 
+List&lt;Element&gt; list = rootElement.selectNodes(&quot;//name&quot;);
+for (Element element : list) {
+    System.out.println(element.getText());
+}</code></pre>  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">### 1.7 xml约束（了解即可，这里我照搬博客）</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">如下的文档， 属性的ID值是一样的。 这在生活中是不可能出现的。 并且第二个学生的姓名有好几个。 一般也很少。那么怎么规定ID的值唯一， 或者是元素只能出现一次，不能出现多次？ 甚至是规定里面只能出现具体的元素名字。</span></pre></td></tr></table></figure>
+<stus>
+        <stu id="10086">
+            <name>张三</name>
+            <age>18</age>
+            <address>深圳</address>
+        </stu>
+        <stu id="10086">
+            <name>李四</name>
+            <name>李五</name>
+            <name>李六</name>
+            <age>28</age>
+            <address>北京</address>
+        </stu>
+    </stus>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">#### DTD</span></pre></td></tr></table></figure>
+语法自成一派， 早起就出现的。 可读性比较差。
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">1. 引入网络上的DTD</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">   1. 引入本地的DTD</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">2. 直接在XML里面嵌入DTD的约束规则</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">   &lt;!DOCTYPE stus [ &lt;!ELEMENT stus (stu)&gt;</span></pre></td></tr></table></figure>
+   <!ELEMENT stu (name,age)>
+   <!ELEMENT name (#PCDATA)>
+   <!ELEMENT age (#PCDATA)>
+   <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">]&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">&lt;stus&gt; &lt;stu&gt; &lt;name&gt;张三&lt;&#x2F;name&gt; &lt;age&gt;18&lt;&#x2F;age&gt; &lt;&#x2F;stu&gt; &lt;&#x2F;stus&gt;</span></pre></td></tr></table></figure>
+<!ELEMENT stus (stu)>  : stus 下面有一个元素 stu  ， 但是只有一个
+    <!ELEMENT stu (name , age)>  stu下面有两个元素 name  ,age  顺序必须name-age
+    <!ELEMENT name (#PCDATA)> 
+    <!ELEMENT age (#PCDATA)>
+    <!ATTLIST stu id CDATA #IMPLIED> stu有一个属性 文本类型， 该属性可有可无
+
+
+<pre><code>元素的个数：
+
+    ＋　一个或多个
+    *  零个或多个
+    ? 零个或一个
+
+属性的类型定义 
+
+    CDATA : 属性是普通文字
+    ID : 属性的值必须唯一
+
+
+&lt;!ELEMENT stu (name , age)&gt;        按照顺序来 
+
+&lt;!ELEMENT stu (name | age)&gt;   两个中只能包含一个子元素</code></pre><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">#### Schema</span></pre></td></tr></table></figure>
+<p>其实就是一个xml ， 使用xml的语法规则， xml解析器解析起来比较方便 ， 是为了替代DTD 。<br>但是Schema 约束文本内容比DTD的内容还要多。 所以目前也没有真正意义上的替代DTD</p>
+<p>约束文档：<br>    <!-- xmlns  :  xml namespace : 名称空间 /  命名空间
+    targetNamespace :  目标名称空间 。 下面定义的那些元素都与这个名称空间绑定上。 
+    elementFormDefault ： 元素的格式化情况。  --><br>    <schema xmlns="http://www.w3.org/2001/XMLSchema" targetnamespace="http://www.itheima.com/teacher" elementformdefault="qualified"></schema></p>
+<pre><code>    &lt;element name=&quot;teachers&quot;&gt;
+        &lt;complexType&gt;
+            &lt;sequence maxOccurs=&quot;unbounded&quot;&gt;
+                &lt;!-- 这是一个复杂元素 --&gt;
+                &lt;element name=&quot;teacher&quot;&gt;
+                    &lt;complexType&gt;
+                        &lt;sequence&gt;
+                            &lt;!-- 以下两个是简单元素 --&gt;
+                            &lt;element name=&quot;name&quot; type=&quot;string&quot;&gt;&lt;/element&gt;
+                            &lt;element name=&quot;age&quot; type=&quot;int&quot;&gt;&lt;/element&gt;
+                        &lt;/sequence&gt;
+                    &lt;/complexType&gt;
+                &lt;/element&gt;
+            &lt;/sequence&gt;
+        &lt;/complexType&gt;
+    &lt;/element&gt;
+&lt;/schema&gt;</code></pre><p>实例文档：<br>    <?xml version="1.0" encoding="UTF-8"?><br>    <!-- xmlns:xsi : 这里必须是这样的写法，也就是这个值已经固定了。
+    xmlns : 这里是名称空间，也固定了，写的是schema里面的顶部目标名称空间
+    xsi:schemaLocation : 有两段： 前半段是名称空间，也是目标空间的值 ， 后面是约束文档的路径。
+     --><br>    <teachers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.itheima.com/teacher" xsi:schemalocation="http://www.itheima.com/teacher teacher.xsd"><br>        <teacher><br>            <name>zhangsan</name><br>            <age>19</age><br>        </teacher><br>        <teacher><br>            <name>lisi</name><br>            <age>29</age><br>        </teacher><br>        <teacher><br>            <name>lisi</name><br>            <age>29</age><br>        </teacher><br>    </teachers></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">#### 名称空间的作用</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">一个xml如果想指定它的约束规则， 假设使用的是DTD ，那么这个xml只能指定一个DTD ， 不能指定多个DTD 。 但是如果一个xml的约束是定义在schema里面，并且是多个schema，那么是可以的。简单的说： 一个xml 可以引用多个schema约束。 但是只能引用一个DTD约束。</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">名称空间的作用就是在 写元素的时候，可以指定该元素使用的是哪一套约束规则。 默认情况下 ，如果只有一套规则，那么都可以这么写</span></pre></td></tr></table></figure>
+<p><name>张三</name></p>
+<p><a href="aa:name" target="_blank" rel="noopener">aa:name</a><br><a href="bb:name" target="_blank" rel="noopener">bb:name</a></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">### 1.8 程序的架构</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- cs</span></pre></td></tr></table></figure>
+<p>  定义：服务器到客户端。<br>   例如qq，微信等<br>   优点：有一部分代码写在客户端， 用户体验比较好。<br>   缺点： 服务器更新，客户端也要随着更新。 占用资源大。<br>  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- bs</span></pre></td></tr></table></figure><br>  定义：服务器到浏览器<br>    优点：客户端只要有浏览器就可以了。     占用资源小， 不用更新。<br>    缺点： 用户体验不佳。<br>  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">### 1.9 服务器</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">&gt; 本质：就是一台配置较好的电脑</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">#### 1.9.1 Web服务器软件</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- 功能：接收请求，响应消息</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- 种类： Tomcat apache</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">  WebLogic BEA Websphere IBM</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">### 1.10 Tomcat的安装及配置</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- 直接解压，找到bin&#x2F;startup.bat</span></pre></td></tr><tr><td class="code"><pre><span class="line">- 启动</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">#### 1.10.1 Tomcat目录</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- bin</span></pre></td></tr></table></figure><br>包含了一些jar，bat文件。 startup.bat</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- conf</span></pre></td></tr></table></figure>
+<p>tomcat的配置文件 server.xml  web.xml</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- lib</span></pre></td></tr></table></figure>
+<p>tomcat运行所需要的jar文件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- logs</span></pre></td></tr></table></figure>
+<p>运行的日志文件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- temp</span></pre></td></tr></table></figure>
+<p>临时文件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- webapps</span></pre></td></tr></table></figure>
+<p>这里面装载着，发布到tomcat服务器上的文件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- work</span></pre></td></tr></table></figure>
+<p>jsp翻译成class文件存放地</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">#### 1.10.2 如何把一把项目发布到Tomcat中</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">##### 1</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- 拷贝这个文件到webapps&#x2F;ROOT底下， 在浏览器里面访问： http:&#x2F;&#x2F;localhost:8080&#x2F;stu.xml</span></pre></td></tr><tr><td class="code"><pre><span class="line">- 在webaps下面新建一个文件夹xml , 然后拷贝文件放置到这个文件夹中 http:&#x2F;&#x2F;localhost:8080&#x2F;xml&#x2F;stu.xml</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">##### 2 配置虚拟路径</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">使用localhost：8080 打开tomcat首页， 在左侧找到tomcat的文档入口， 点击进去后， 在左侧接着找到 Context入口，点击进入。 http:&#x2F;&#x2F;localhost:8080&#x2F;docs&#x2F;config&#x2F;context.html</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- 在conf&#x2F;server.xml 找到host元素节点。</span></pre></td></tr><tr><td class="code"><pre><span class="line">- 加入以下内容。</span></pre></td></tr></table></figure>
+<!-- docBase ：  项目的路径地址 如： D:\xml02\person.xml
+           path : 对应的虚拟路径 一定要以/打头。
+           对应的访问方式为： http://localhost:8080/a/person.xml -->
+<pre><code>&lt;Context docBase=&quot;D:\xml02&quot; path=&quot;/a&quot;&gt;&lt;/Context&gt;</code></pre><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">##### 3 配置虚拟路径2</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- 在tomcat&#x2F;conf&#x2F;catalina&#x2F;localhost&#x2F; 文件夹下新建一个xml文件，名字可以自己定义。 person.xml</span></pre></td></tr><tr><td class="code"><pre><span class="line">- 在这个文件里面写入以下内容</span></pre></td></tr></table></figure>
+<pre><code>&lt;?xml version=&apos;1.0&apos; encoding=&apos;utf-8&apos;?&gt;
+&lt;Context docBase=&quot;D:\xml02&quot;&gt;&lt;/Context&gt;</code></pre><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- 访问</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">#### 1.10.3 给Eclipse配置Tomcat</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- 在server里面 右键新建一个服务器， 选择到apache分类， 找到对应的tomcat版本， 接着一步一步配置即可。</span></pre></td></tr><tr><td class="code"><pre><span class="line">- 配置完毕后， 在server 里面， 右键刚才的服务器，然后open ， 找到上面的Server Location , 选择中间的 Use Tomcat installation...</span></pre></td></tr><tr><td class="code"><pre><span class="line">- 创建web工程， 在WebContent下定义html文件， 右键工程， run as server</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">## 第二章 Http协议和Servlet</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">### 2.1 Http协议</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- 什么是协议 双方在交互、通讯的时候，遵守的一种规则</span></pre></td></tr><tr><td class="code"><pre><span class="line">- http协议 针对客户端与服务器端在执行http请求的时候，遵守的一种规范。规定了客户端在访问服务端的时候，要有哪些东西。服务端返回数据的时候，有哪些东西</span></pre></td></tr><tr><td class="code"><pre><span class="line">- 版本号</span></pre></td></tr><tr><td class="code"><pre><span class="line">  - 1.0 服务器响应数据之后，将会断开与客户端的连接</span></pre></td></tr><tr><td class="code"><pre><span class="line">  - 1.1 服务器响应数据之后。连接还会保持。除非是服务器或者客户端关掉。或者在一段时间都空着这个连接，那么在后面会自己断掉</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">### 2.2 Http请求数据解释</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">&gt; 数据里面包含三部分内容：请求行，请求头，请求体</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- 请求行</span></pre></td></tr></table></figure>
+<p>POST /examples/servlets/servlet/RequestParamExample HTTP/1.1</p>
+<p>POST ： 请求方式 ，以post去提交数据</p>
+<p>/examples/servlets/servlet/RequestParamExample<br>请求的地址路径 ， 就是要访问哪个地方。</p>
+<p>HTTP/1.1 协议版本</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- 请求头</span></pre></td></tr></table></figure>
+<p>Accept: application/x-ms-application, image/jpeg, application/xaml+xml, image/gif, image/pjpeg, application/x-ms-xbap, <em>/</em><br>Referer: <a href="http://localhost:8080/examples/servlets/servlet/RequestParamExample" target="_blank" rel="noopener">http://localhost:8080/examples/servlets/servlet/RequestParamExample</a><br>Accept-Language: zh-CN<br>User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)<br>Content-Type: application/x-www-form-urlencoded<br>Accept-Encoding: gzip, deflate<br>Host: localhost:8080<br>Content-Length: 31<br>Connection: Keep-Alive<br>Cache-Control: no-cache</p>
+<p>Accept: 客户端向服务器端表示，我能支持什么类型的数据。<br>Referer ： 真正请求的地址路径，全路径<br>Accept-Language: 支持语言格式<br>User-Agent: 用户代理 向服务器表明，当前来访的客户端信息。<br>Content-Type： 提交的数据类型。经过urlencoding编码的form表单的数据<br>Accept-Encoding： gzip, deflate ： 压缩算法 。<br>Host ： 主机地址<br>Content-Length： 数据长度<br>Connection : Keep-Alive 保持连接<br>Cache-Control ： 对缓存的操作</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- 请求体</span></pre></td></tr></table></figure>
+<p>发送的数据呈现的是key=value ,如果存在多个数据，那么使用 &amp;<br>firstname=zhang&amp;lastname=sansan</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">### 2.3 Http响应数据解析</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- 响应行</span></pre></td></tr></table></figure>
+<p>HTTP/1.1 200 OK<br>Server: Apache-Coyote/1.1<br>Content-Type: text/html;charset=ISO-8859-1<br>Content-Length: 673<br>Date: Fri, 17 Feb 2017 02:53:02 GMT</p>
+<p>…这里还有很多数据…</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- 响应头</span></pre></td></tr></table></figure>
+<p>HTTP/1.1 200 OK</p>
+<p>协议版本</p>
+<p>状态码</p>
+<pre><code>咱们这次交互到底是什么样结果的一个code.
+
+200 : 成功，正常处理，得到数据。
+
+403  : for bidden  拒绝
+404 ： Not Found
+500 ： 服务器异常</code></pre><p>OK</p>
+<pre><code>对应前面的状态码</code></pre><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- 响应体</span></pre></td></tr></table></figure>
+<p>Server:  服务器是哪一种类型。  Tomcat</p>
+<p>Content-Type ： 服务器返回给客户端你的内容类型</p>
+<p>Content-Length ： 返回的数据长度</p>
+<p>Date ： 通讯的日期，响应的时间</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">### 2.4 GET与POST请求的区别</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">![img04](file:&#x2F;&#x2F;&#x2F;C:&#x2F;Users&#x2F;gongzhen&#x2F;AppData&#x2F;Local&#x2F;YNote&#x2F;data&#x2F;qqE209F268DD747D4A89BC47CA5D5E55D1&#x2F;f043ed0530294bbe8cd7ef5306591fbe&#x2F;img04.png?ynotemdtimestamp&#x3D;1536914908187)</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- POST</span></pre></td></tr></table></figure>
+<ol>
+<li><p>数据是以流的方式写过去的，不会在地址栏上面显示，现在一般提交数据到服务器的方式都是POST</p>
+</li>
+<li><p>以流的方式写数据，所以数据没有大小限制</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- GET</span></pre></td></tr></table></figure></li>
+<li><p>数据是拼接在地址栏后面的，所以具有安全隐患<br>一般去服务器上拿东西，并且不用向服务器传输数据的时候可以选择GET方式</p>
+</li>
+<li><p>能带的数据有限，仅有1kb左右</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">### 2.5 web资源</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">&gt; 在http协议中，规定了请求和响应双方，客户端和服务器端。与web相关的资源有俩种分类</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- 静态资源</span></pre></td></tr><tr><td class="code"><pre><span class="line">- 动态资源</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">### 2.6 什么是servlet</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">&gt; 本质就是一个java程序，运行在服务器端，用来接收和响应客户端的http请求</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">&gt; 更多的是配合动态资源</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">##### 2.6.1 书写第一个servlet</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- 创建一个web工程</span></pre></td></tr><tr><td class="code"><pre><span class="line">- 测试运行web工程</span></pre></td></tr><tr><td class="code"><pre><span class="line">  - 新建一个类实现Servlet接口</span></pre></td></tr><tr><td class="code"><pre><span class="line">  - 在web-xml中配置servlet</span></pre></td></tr></table></figure>
+<p>具体代码如下</p>
+<pre><code>注册
+&lt;servlet&gt;
+      &lt;servlet-name&gt;HelloServlet&lt;/servlet-name&gt;
+      &lt;servlet-class&gt;com.itheima.servlet.HelloServlet&lt;/servlet-class&gt;
+  &lt;/servlet&gt;
+
+  映射
+  &lt;servlet-mapping&gt;
+      &lt;servlet-name&gt;HelloServlet&lt;/servlet-name&gt;
+      &lt;url-pattern&gt;/a&lt;/url-pattern&gt;
+  &lt;/servlet-mapping&gt;</code></pre><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- 在浏览器中访问项目</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">##### 2.6.2 servlet的通用写法</span></pre></td></tr></table></figure>
+<p>Servlet (接口)</p>
+<pre><code>|
+|</code></pre><p> GenericServlet</p>
+<pre><code>|
+|</code></pre><p> HttpServlet （用于处理http的请求）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- 定义一个类，继承HttpSetrvlet，重写doGet和doPost方法 ![img06](file:&#x2F;&#x2F;&#x2F;C:&#x2F;Users&#x2F;gongzhen&#x2F;AppData&#x2F;Local&#x2F;YNote&#x2F;data&#x2F;qqE209F268DD747D4A89BC47CA5D5E55D1&#x2F;10d3c63b5b0241088d86d8b93904920a&#x2F;img06.png?ynotemdtimestamp&#x3D;1536914908187)</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">### 2.7 servlet的生命周期</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">###### 生命周期的定义：从创建到销毁</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">###### 生命周期方法：从创建到销毁所调用的那些方法。生命周期方法从对象的创建到销毁一定会执行</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- init</span></pre></td></tr></table></figure>
+<pre><code>在创建该servlet的实例时，就执行该方法。
+一个servlet只会初始化一次， init方法只会执行一次
+默认情况下是 ： 初次访问该servlet，才会创建实例。</code></pre><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- service</span></pre></td></tr></table></figure>
+<pre><code>只要客户端来了一个请求，那么就执行这个方法了。
+  该方法可以被执行很多次。 一次请求，对应一次service方法的调用</code></pre><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- destroy</span></pre></td></tr></table></figure>
+<pre><code>servlet销毁的时候，就会执行该方法
+
+    1. 该项目从tomcat的里面移除。
+    2. 正常关闭tomcat就会执行 shutdown.bat</code></pre><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">##### 2.7.1 在servlet创建实例前执行init方法</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">1. 默认情况下，只有在初次访问servlet的时候，才会执行init方法。 有的时候，我们可能需要在这个方法里面执行一些初始化工作，甚至是做一些比较耗时的逻辑。</span></pre></td></tr><tr><td class="code"><pre><span class="line">2. 那么这个时候，初次访问，可能会在init方法中逗留太久的时间。 那么有没有方法可以让这个初始化的时机提前一点。</span></pre></td></tr><tr><td class="code"><pre><span class="line">3. 在配置的时候， 使用load-on-startup元素来指定， 给定的数字越小，启动的时机就越早。 一般不写负数， 从2开始即可。</span></pre></td></tr></table></figure>
+<servlet>
+       <servlet-name>HelloServlet04</servlet-name>
+       <servlet-class>com.itheima.servlet.HelloServlet04</servlet-class>
+       <load-on-startup>2</load-on-startup>
+   </servlet>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">### 2.8 ServletConfig</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">&gt; servlet的配置，通过这个对象，可以获取servlet在配置中的一些信息</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">###### 主要方法</span></pre></td></tr></table></figure>
+     //1. 得到servlet配置对象 专门用于在配置servlet的信息
+     ServletConfig config = getServletConfig();
+
+<pre><code>//获取到的是配置servlet里面servlet-name 的文本内容
+String servletName = config.getServletName();
+System.out.println(&quot;servletName=&quot;+servletName);</code></pre></li>
+</ol>
+<pre><code>//2、。 可以获取具体的某一个参数。 
+String address = config.getInitParameter(&quot;address&quot;);
+System.out.println(&quot;address=&quot;+address);
+
+
+//3.获取所有的参数名称
+Enumeration&lt;String&gt; names = config.getInitParameterNames();
+//遍历取出所有的参数名称
+while (names.hasMoreElements()) {
+    String key = (String) names.nextElement();
+    String value = config.getInitParameter(key);
+    System.out.println(&quot;key===&quot;+key + &quot;   value=&quot;+value);
+
+}</code></pre><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">##### 2.8.1 用处</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">1. 未来我们自己开发的一些应用，使用到了一些技术，或者一些代码，我们不会。 但是有人写出来了。它的代码放置在了自己的servlet类里面。</span></pre></td></tr><tr><td class="code"><pre><span class="line">2. 刚好这个servlet 里面需要一个数字或者叫做变量值。 但是这个值不能是固定了。 所以要求使用到这个servlet的公司，在注册servlet的时候，必须要在web.xml里面，声明init-params</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- 在开发当中比较少用。</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">## 第三章 ServletContext、HttpServletRequest 和 HttpServletResponse</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">### 3.1 servlet的 3种配置方式</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- 1 全路径匹配</span></pre></td></tr></table></figure>
+<p>  以”/“开始的后面所有进行匹配<br>  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- 2 路径匹配，前半段匹配</span></pre></td></tr></table></figure><br>  以”/“开始，以”*”结束，可以把<em>看做一个通配符<br>  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- 3 以扩展名匹配</span></pre></td></tr></table></figure><br>  以”</em>“开始，后面随便，就是把*看做一个通配符<br>  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">### 3.2 ServletContext</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">&gt; servlet上下文</span></pre></td></tr><tr><td class="code"><pre><span class="line">&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&gt; 并且每个web工程都只有一个servletcontext对象。意思就是说不管在此工程的那个servlet类下，获取到的这个servletcontext都是同一个对象</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">##### 3.2.1 如何调用</span></pre></td></tr></table></figure><br>获取对象<br>ServletContext context=getServletContext();</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">##### 3.2.2 servletcontext的作用</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- 获取全局配置参数</span></pre></td></tr><tr><td class="code"><pre><span class="line">- 获取web工程中的资源</span></pre></td></tr><tr><td class="code"><pre><span class="line">- 存取数据</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">##### 3.2.3 获取全局配置参数demo</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">##### 3.2.4 获取web应用中资源</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- 先来解释一波properties类</span></pre></td></tr></table></figure>
+<p>  Properties类<br>  java中提供了配置文件的操作类Properties类（java.util.Properties）：<br>  public class Properties extends Hashtable.可见Properties类继承了Hashtable，而HashTable又实现了Map接口，所以可对 Properties 对象应用 put 和 putAll 方法。但不建议使用这两个方法，因为它们允许调用者插入其键或值不是 String 的项。相反，应该使用 setProperty 方法。如果在“不安全”的 Properties 对象（即包含非 String 的键或值）上调用 store 或 save 方法，则该调用将失败。</p>
+<p>  Properties的常用方法：<br>  1.setProperty(String key, String value)<br>  调用 Hashtable 的方法 put。<br>  2.<br>  getProperty(String key)<br>  用指定的键在此属性列表中搜索属性<br>  3.<br>  getProperty(String key, String defaultValue)<br>  用指定的键在属性列表中搜索属性。<br>  4.<br>  load(InputStream inStream)<br>  从输入流中读取属性列表（键和元素对）。<br>  5.<br>  load(Reader reader)<br>  按简单的面向行的格式从输入字符流中读取属性列表（键和元素对）。<br>  6.<br>  loadFromXML(InputStream in)<br>  将指定输入流中由 XML 文档所表示的所有属性加载到此属性表中。<br>  7.store(OutputStream out, String comments)<br>  以适合使用 load(InputStream) 方法加载到 Properties 表中的格式，将此 Properties 表中的属性列表（键和元素对）写入输出流。<br>  8.store(Writer writer, String comments)<br>  以适合使用 load(Reader) 方法的格式，将此 Properties 表中的属性列表（键和元素对）写入输出字符。<br>  9.storeToXML(OutputStream os, String comment)<br>  发出一个表示此表中包含的所有属性的 XML 文档。<br>  10.storeToXML(OutputStream os, String comment, String encoding)<br>  使用指定的编码发出一个表示此表中包含的所有属性的 XML 文档。<br>  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- 普通方式进行拿取数据(此方法是行不通的)</span></pre></td></tr></table></figure><br>  public class Demo02 extends HttpServlet {<br>      protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {</p>
+<pre><code>    //1. 创建属性对象
+    Properties properties = new Properties();
+
+    //2. 指定载入的数据源
+    /*
+     * 此处，如果想获取web工程下的资源，用普通的FileInputStream 写法是不OK 的。
+     * 因为路径不对了。  这里相对的路径，其实是根据jre来确定的。 但是我们这是一个web工程，
+     * jre 后面会由tomcat管理，所以这里真正相对的路径是 tomcat里面的bin目录
+     */
+    InputStream is = new FileInputStream(&quot;classes/config.properties&quot;);
+    properties.load(is);
+
+    //3. 获取name属性的值
+    String name = properties.getProperty(&quot;name&quot;);
+
+    System.out.println(&quot;name=&quot;+name);
+}
+
+protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    doGet(request, response);
+}</code></pre>  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- 利用ServletContext 提供的方法，改进上述代码</span></pre></td></tr></table></figure>
+<pre><code>Properties properties=new Properties();
+ServletContext context=getServletContext();
+//ServletContext提供了一种方法可以获取到文件的绝对路径
+//context.getRealPath()获得的项目根目录
+//然后根据一般流的方式进行编译
+
+
+String path = context.getRealPath(&quot;file/text.txt&quot;);
+
+
+FileInputStream is=new FileInputStream(path);
+
+properties.load(is);
+
+String usename = properties.getProperty(&quot;usename&quot;);
+System.out.println(usename);</code></pre>  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- 再次改进</span></pre></td></tr></table></figure>
+<p>  利用ServletContext方法getResourceAsStream，<br>  getResourceAsStream（），他的参数是接收一个路径，直接将其装换成流对象<br>  可以直接将下面一行代码<br>  FileInputStream is=new FileInputStream(path);<br>  转换为<br>  InputStream is=getResourceAsStream（path）；<br>  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- 通过classloader获取</span></pre></td></tr></table></figure><br>  InputStream is =this.getClass().getClassLoader().getResourceAsStream(../../)<br>  这里俩次上退之后才可以到达项目根目录<br>  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">##### 3.2.5 ServletContext在web项目中共享数据</span></pre></td></tr></table></figure><br>  代码demo<br>  <!DOCTYPE html><br>  <html><br>  <head><br>  <meta charset="UTF-8"><br>  <title>Insert title here</title><br>  <meta name="generator" content="Hexo 4.0.0"></head><br>  <body><br>      <form action="Login" method="GET"></form></body></html></p>
+<pre><code>名字 &lt;input type=&quot;text&quot; name=&quot;username&quot;&gt;
+密码&lt;input type=&quot;text&quot; name=&quot;password&quot;&gt;
+&lt;input type=&quot;submit&quot; value=&quot;登录&quot;&gt;</code></pre>  
+
+  
+  
+
+
+
+<p>  servert<br>      String username=request.getParameter(“username”);<br>          String password=request.getParameter(“password”);</p>
+<pre><code>if(&quot;admin&quot;.equals(username) &amp;&amp; &quot;123&quot;.equals(password)) {
+
+
+    Object obj=getServletContext().getAttribute(&quot;count&quot;);
+    int tcount=0;
+    if(obj!=null) {
+        tcount=(int)obj;
+    }
+    System.out.println(&quot;已知登录成功的次数是：&quot;+tcount);
+    getServletContext().setAttribute(&quot;count&quot;,tcount+1);
+
+
+
+
+
+
+
+    response.setStatus(302);
+    response.setHeader(&quot;Location&quot;,&quot;success.html&quot;);
+
+
+
+
+
+
+}else {
+    response.getWriter().write(&quot;shibai&quot;);
+}</code></pre>  <!DOCTYPE html>
+  <html>
+  <head>
+  <meta charset="UTF-8">
+  <title>Insert title here</title>
+  </head>
+  <body>
+  <h1>登录成功</h1>
+  <a href="success">点我看登录过的次数</a>
+
+  </body>
+  </html>
+
+
+<p>  servlet</p>
+<p>  int count=(int) getServletContext().getAttribute(“count”);<br>  System.out.println(count);</p>
+<p>  response.getWriter().write(“chulai”+count);<br>  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">### 3.3 解决中文乱码</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">##### 3.3.1 GET</span></pre></td></tr></table></figure><br>因为get方式是把数据先拼接到url中，再转发的时候进行了编码。所以在服务器端得先转成tomcat默认的的  ISO-8859-1  格式<br>代码demo<br>username.getBytes(“ISO-8859-1”)<br>再用jdk的String的   new String（“字节”，“编码”）<br>username = new String(username.getBytes(“ISO-8859-1”) , “UTF-8”);</p>
+<p>方法二<br>直接在tomcat里面做配置，加上上URIEncoding=”utf-8”</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">##### 3.3.2 POST</span></pre></td></tr></table></figure>
+<p>POST方式是通过请求体进行传送数据的<br>故可直接设置请求体编码<br>request.setCharacterEncoding(“UTF-8”);</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">##### 3.3.3 响应的数据中存在中文（直接设置response.setContentType(&quot;text&#x2F;html;charset&#x3D;UTF-8&quot;);</span></pre></td></tr></table></figure>
+<p>1 以字符流输出<br>    //1. 指定输出到客户端的时候，这些文字使用UTF-8编码<br>    response.setCharacterEncoding(“UTF-8”);</p>
+<pre><code>//2. 直接规定浏览器看这份数据的时候，使用什么编码来看。
+response.setHeader(&quot;Content-Type&quot;, &quot;text/html; charset=UTF-8&quot;);
+
+response.getWriter().write(&quot;没问题了...&quot;);</code></pre><p>2 以字节流输出<br>    //1. 指定浏览器看这份数据使用的码表<br>    response.setHeader(“Content-Type”, “text/html;charset=UTF-8”);</p>
+<pre><code>//2. 指定输出的中文用的码表
+response.getOutputStream().write(&quot;没问题了..&quot;.getBytes(&quot;UTF-8&quot;));</code></pre><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">### 3.4 本章代码案例</span></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">## 第四章 cookie和Session</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">### 4.1 servlet中关于跳转页面</span></pre></td></tr></table></figure>
+<p>之前的写法<br>response.setStatus(302);<br>response.setHeader(“location”,”demo.html”);</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">#### 4.1.2 重定向和请求转发</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">##### 重定向</span></pre></td></tr></table></figure>
+<p>写法<br>response.sendRedirect(“demo.html”);</p>
+<ol>
+<li><p>地址栏显示的是最后访问到的那个页面的地址<br>2  请求次数至少有俩次，在第一次请求之后。服务器会返回一个302的状态码和一个新的地址。浏览器会根据这个地址执行第二次访问<br>3  可以访问到任意的路径，不是自己工程的路径也能访问到<br>4  效率会低一些，因为他执行了俩次请求<br>5  后续请求，没法再使用request中储存的数据，因为是俩次请求。不是同一个request对象</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">##### 请求转发</span></pre></td></tr></table></figure>
+<p>写法<br>request.getRequestDispatcher(“demo.html”).forward(request,response);<br>1  地址栏上显示的是请求servlet那个页面的地址<br>2  只请求了一次，后续操作是服务器帮其完成的。返回的状态码为200；<br>3  只能访问到本项目工程下的路径<br>4  效率高些，因为只请求了一次<br>5  可以使用request中储存的东西</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">![img](http:&#x2F;&#x2F;null&#x2F;)</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">### 4.2 Cookie</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">&gt; 简介：cookie，翻译为饼干。是服务器给客户端并且保存在客户端的一份小数据</span></pre></td></tr><tr><td class="code"><pre><span class="line">&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&gt; 应用：自动登录、浏览记录、购物车等</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">##### 4.2.1 为什么会出现cookie</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">&gt; http请求是无状态的。所以客户端和服务器端交流的时候也是无状态的。就是说在客户端第二次访问服务器的时候，服务器根本不知道他原来是来过的。为了更好的客户体验。cookie应运而生</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">##### 4.2.2 简单使用</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- 添加Cookie给客户端</span></pre></td></tr></table></figure>
+<p>Cookie cookie = new Cookie(“key”,”value”);<br>response.add(cookie);</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- 获取客服端带过来的Cookie</span></pre></td></tr></table></figure>
+<p>Cookie[] cookies =request.getCookie();<br>if(cookies!=null){<br>   for(Cookie c:cookies){</p>
+<pre><code>String cookiename=c.getName();
+String cookievalue=c.getValue();</code></pre><p>   }<br>}</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- Cookie的其他常用方法</span></pre></td></tr></table></figure>
+<p>1 设置cookie的有效期，参数为秒。cookie的生命周期，在浏览器关闭的时候就会失效。</p>
+<p>cookie.setMaxAge(60<em>60</em>24);</p>
+<p>2 改变value值<br>cookie.setValue(新);</p>
+<p>3 指定请求了指定的域名的时候，才会带上cookie<br>cookie.setDomain(“域名”);</p>
+<p>4 访问指定路径<br>cookie.setPath(“路径”);</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">### 4.3 demo 1，显示最近一次访问时间</span></pre></td></tr></table></figure>
+<p>login.html</p>
+</li>
+</ol>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+    <form method="POST" action="Demo01">
+        姓名：
+        <input type="text" name="username"><br>
+        密码：
+        <input type="password" name="password"><br>
+        <input type="submit" value="登录">
+
+
+<pre><code>&lt;/form&gt;</code></pre></form></body>
+</html>
+
+
+<p>处理的Servlet</p>
+<pre><code>protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+    response.setContentType(&quot;text/html;charset=UTF-8&quot;);
+    request.setCharacterEncoding(&quot;UTF-8&quot;);
+
+
+
+    String username=request.getParameter(&quot;username&quot;);
+    String password =request.getParameter(&quot;password&quot;);
+
+    if(&quot;admin&quot;.equals(username) &amp;&amp; &quot;123&quot;.equals(password)){
+        Cookie[] cookies = request.getCookies();
+        Cookie cookie=new CookieUtil().find(cookies, &quot;last&quot;);
+        if(cookie==null) {
+            Cookie c =new Cookie(&quot;last&quot;,System.currentTimeMillis()+&quot;&quot;);//将cookie的value设置为时间戳
+            c.setMaxAge(60*60);
+            response.addCookie(c);
+            response.getWriter().write(&quot;欢迎&quot;+username);
+        }else {
+
+            Long lastTime=Long.parseLong(cookie.getValue());
+            response.getWriter().write(&quot;欢迎您，你上次登录的时间为&quot;+new Date(lastTime));
+            cookie.setValue(System.currentTimeMillis()+&quot;&quot;);//将上次的cookie的value值更新
+            response.addCookie(cookie);
+        }
+    }else {
+        response.getWriter().write(&quot;登录失败&quot;);
+    }
+
+
+}</code></pre><p>Util</p>
+<p>package Util;</p>
+<p>import javax.servlet.http.Cookie;</p>
+<p>public class CookieUtil {</p>
+<pre><code>public Cookie find(Cookie[] cookies,String name) {
+    if(cookies!=null) {
+        for(Cookie c:cookies) {
+            if(name.equals(c.getName())) {
+                return c;
+            }
+        }
+    }
+    return null;
+
+
+}</code></pre><p>}</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">### 4.4 demo 2，显示商品浏览记录</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">### 4.5 Session</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">&gt; 由于Cookie是保存在客户端上的，所以会存在安全隐患。并且Cookie的大小和个数有限制</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">&gt; 引出了Session ，Session是基于Cookie的一种会话机制，Cookie是服务器返回给客户端上的一个小数据，Session是，所有数据都保存在服务器上的</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">##### 4.5.1 常用方法</span></pre></td></tr></table></figure>
+<p>1 得到会话id<br>String id=session.getId();<br>2 存值<br>sesion.setAttribute(name,value);<br>3 取值<br>session.getAttribute(name);<br>4 移除值<br>session.removeAttribute(name);</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">##### 4.5.2 Sesstion 创建和销毁的时间</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- 创建：</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">  &gt; 在Servlet里面调用了request。getSesstion()方法时。Sesstion被创建。</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- 销毁：</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">  &gt; 1 关闭浏览器。</span></pre></td></tr><tr><td class="code"><pre><span class="line">  &gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  &gt; 2 等Session会话的有效期过期。一般默认的有效期为：30分钟。</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">### 4.6 demo 3 购物车案例</span></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">## 第五章 jsp EL JSTL</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">### 5.1 jsp 简介</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">##### 5.1.1 什么是jsp</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">jsp全程 java Server Page</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">从用户的角度来看，jsp就是一个页面；从程序员角度看，其实他就是一个java类，并且继承了servlet。所以可以说jsp就是一个servlet类</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">##### 5.1.2 为什么会出现jsp</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">htmi多数情况下显示的是静态内容，但是有时候我们需要页面显示一些动态的东西。如查询储存在数据库中的学生成绩等等。所以出现了jsp</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">### 5.2 jsp 三大指令</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">&gt; 指令的用法 &lt;%@指令名字 %&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">##### 5.2.1 page指令</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">&lt;%@page %&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- language</span></pre></td></tr></table></figure>
+<p>  表明jsp中可以写java代码<br>  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- contentType</span></pre></td></tr></table></figure><br>  告诉浏览器文件类型，编码</p>
+<p>  contentType=”text/html; charset=UTF-8”</p>
+<p>  text/html  MIMEType 这是一个文本，html网页<br>  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- pageEncoding</span></pre></td></tr></table></figure><br>  jsp内容编码<br>  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- extends</span></pre></td></tr></table></figure><br>  用于指定jsp翻译成java文件之后，继承的父类是谁，一般不用改<br>  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- import</span></pre></td></tr></table></figure><br>  用于导包<br>  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- sesstion</span></pre></td></tr></table></figure><br>  可选值 true  or  false<br>  用于控制这个jsp页面里能否使用Sesstion对象<br>  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- errorPage</span></pre></td></tr></table></figure><br>  指的是错误的页面，值需要给错误的页面地址<br>  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- isErrorPage</span></pre></td></tr></table></figure><br>  声明这个页面是不是错误页面<br>  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">##### 5.2.2 include指令</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">用法</span></pre></td></tr></table></figure><br> &lt;%@ include file=”demo.jsp”%&gt;</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">&gt; 包含另一个jsp的内容进来</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">##### 5.2.3 tablib指令</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">用法</span></pre></td></tr></table></figure>
+<p>&lt;%@ taglib prefix=””  uri=””%&gt;</p>
+<p>uri: 标签库路径<br>prefix : 标签库的别名</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">### 5.3 jsp 动作标签</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">##### 5.3.1 jsp：include</span></pre></td></tr></table></figure>
+<p>用法<br>&lt;jsp:include page=””&gt;</p>
+<p>包含指定的页面，这里是动态包含。不把包含的页面所有元素标签拿过来输出。而是只拿他们的运行结果</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">##### 5.3.2 jsp：forward</span></pre></td></tr></table></figure>
+<p>用法<br>&lt;jsp:forward page=””&gt;</p>
+<p>前往哪一个页面</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">##### 5.3.3 jsp：param</span></pre></td></tr></table></figure>
+<p>用法<br>&lt;jsp:param value=”” name=””/&gt;</p>
+<p>在包含某个页面或跳转到某个页面的时候加入这个参数</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">### 5.4 jsp 内置对象</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">&gt; 所谓内置对象，就是我们可以直接在jsp页面中直接使用这些对象不用创建</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">##### 5.4.1 四个作用域对象</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">&gt; 对作用域对象的理解：这些对象可以存值。但他们的取值是有范围限定的</span></pre></td></tr></table></figure>
+<p>  使用作用域来存储数据<br></p>
+<pre><code>&lt;%
+    pageContext.setAttribute(&quot;name&quot;, &quot;page&quot;);
+    request.setAttribute(&quot;name&quot;, &quot;request&quot;);
+    session.setAttribute(&quot;name&quot;, &quot;session&quot;);
+    application.setAttribute(&quot;name&quot;, &quot;application&quot;);
+%&gt;
+
+取出四个作用域中的值&lt;br&gt;
+
+&lt;%=pageContext.getAttribute(&quot;name&quot;)%&gt;
+&lt;%=request.getAttribute(&quot;name&quot;)%&gt;
+&lt;%=session.getAttribute(&quot;name&quot;)%&gt;
+&lt;%=application.getAttribute(&quot;name&quot;)%&gt;</code></pre><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">&gt; 作用范围（由低到高）</span></pre></td></tr><tr><td class="code"><pre><span class="line">&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&gt;</span></pre></td></tr></table></figure>
+<blockquote>
+<p>pageContext – request — session – application<br>1 pageContext【pageContext】<br>作用域仅限于当前页面<br>还可以获得其他八个内置对象</p>
+<p>2 request【HttpServletRequest】<br>作用域仅限于一次请求，只要服务器做出相应。这个request里面存的值就没有了</p>
+<p>3 sesstion 【HTTPSesstion】<br>作用域仅限于一次会话</p>
+<p>4  application【ServletContext】<br>在整个工程中都可以访问，只有当服务器关闭之后不能继续访问</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">##### 5.4.2 out和response</span></pre></td></tr><tr><td class="code"><pre><span class="line">- out【JspWriter】</span></pre></td></tr><tr><td class="code"><pre><span class="line">- response【HttpServletResponse】</span></pre></td></tr><tr><td class="code"><pre><span class="line">![img](http:&#x2F;&#x2F;null&#x2F;)</span></pre></td></tr><tr><td class="code"><pre><span class="line">##### 5.4.3 其他（不常用）</span></pre></td></tr><tr><td class="code"><pre><span class="line">- exception 【Throwable】</span></pre></td></tr><tr><td class="code"><pre><span class="line">- page 【Object】</span></pre></td></tr><tr><td class="code"><pre><span class="line">jsp翻译成java类的实例对象</span></pre></td></tr><tr><td class="code"><pre><span class="line">- config 【ServletConfig】</span></pre></td></tr><tr><td class="code"><pre><span class="line">### 5.5 EL表达式</span></pre></td></tr><tr><td class="code"><pre><span class="line">作用：简化jsp代码，其实就简化在jsp中书写的那些Java代码</span></pre></td></tr><tr><td class="code"><pre><span class="line">写法 </span></pre></td></tr></table></figure>
+<p>${ 表达式  }</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">##### 5.5.1 简单使用</span></pre></td></tr></table></figure>
+<p> &lt;%<br>        pageContext.setAttribute(“name”, “page”);<br>        request.setAttribute(“name”, “request”);<br>        session.setAttribute(“name”, “session”);<br>        application.setAttribute(“name”, “application”);<br>    %&gt;</p>
+<pre><code>按普通手段取值&lt;br&gt;
+
+&lt;%= pageContext.getAttribute(&quot;name&quot;)%&gt;
+&lt;%= request.getAttribute(&quot;name&quot;)%&gt;
+&lt;%= session.getAttribute(&quot;name&quot;)%&gt;
+&lt;%= application.getAttribute(&quot;name&quot;)%&gt;
+
+&lt;br&gt;使用EL表达式取出作用域中的值&lt;br&gt;
+
+${ pageScope.name }
+${ requestScope.name }
+${ sessionScope.name }
+${ applicationScope.name }
+
+
+如果从作用域中取值，会先从小的作用域开始取，如果没有，就往下一个作用域取。 一直把四个作用域取完都没有， 就没有显示。</code></pre><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">##### 5.5.2 进阶之域中所存为数组</span></pre></td></tr></table></figure>
+<p>&lt;%<br>    String [] a = {“aa”,”bb”,”cc”,”dd”};<br>    pageContext.setAttribute(“array”, a);<br>%&gt;</p>
+<p>使用EL表达式取出作用域中数组的值<br></p>
+<p>${array[0] } , ${array[1] },${array[2] },${array[3] }</p>
+<p>demo:</p>
+<p>&lt;%<br>    String[] a={“1”,”2”,”3”};<br>    pageContext.setAttribute(“age”, a);</p>
+<p>%&gt;<br>${pageScope.age[0] },${pageScope.age[1] },${pageScope.age[2] }<br></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">##### 5.5.3 进阶之域中所存为集合</span></pre></td></tr></table></figure>
+<p>&lt;%<br>Map map = new HashMap();<br>map.put(“name”, “zhangsna”);<br>map.put(“age”,18);<br>map.put(“address”,”北京..”);</p>
+<p>map.put(“address”,”深圳..”);</p>
+<p>pageContext.setAttribute(“map”, map);<br>%&gt;<br>${map.name } , ${map.age } ,${map.address } , ${map.address}</p>
+<p>demo:</p>
+<pre><code>&lt;%
+
+    Map map =new HashMap();
+    map.put(&quot;name&quot;, &quot;zhangsan&quot;);
+    map.put(&quot;age&quot;, &quot;13&quot;);
+
+    pageContext.setAttribute(&quot;list&quot;, map);
+
+
+%&gt;
+${pageScope.list.name }
+${pageScope.list.age }</code></pre><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">##### 5.5.4 细节</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">1 取值方式（如果这份值是有下标 的，直接用[]）</span></pre></td></tr></table></figure>
+<p>&lt;%<br>    String [] array = {“aa”,”bb”,”cc”}<br>    session.setAttribute(“array”,array);<br>%&gt;</p>
+<p>${ array[1] }</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">2 如果没有下标，直接使用 . 的方式去取</span></pre></td></tr></table></figure>
+<p>&lt;%<br>    User user = new User(“zhangsan”,18);</p>
+<pre><code>session.setAttribute(&quot;u&quot;, user);</code></pre><p>%&gt;</p>
+<p>${ u.name }  , ${ u.age }</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">总结：一般使用EL表达式，用的比较多的。都是从一个对象中取出他的属性值</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">### 5.6 EL表达式的11个内置对象</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">用法</span></pre></td></tr></table></figure>
+<p>${ 对象名.成员 }</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- pageContext</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">作用域相关的对象</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- pageScope</span></pre></td></tr><tr><td class="code"><pre><span class="line">- requestScope</span></pre></td></tr><tr><td class="code"><pre><span class="line">- sessionScope</span></pre></td></tr><tr><td class="code"><pre><span class="line">- applicationScope</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">头信息相关的对象</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- header</span></pre></td></tr><tr><td class="code"><pre><span class="line">- headerValues</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">参数信息相关的对象</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- param</span></pre></td></tr><tr><td class="code"><pre><span class="line">- paramValues</span></pre></td></tr><tr><td class="code"><pre><span class="line">- cookie</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">全局初始化参数</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- initParam</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">### 5.7 JSTL</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">&gt; 全称 ： JSP Standard Tag Library jsp标准标签库</span></pre></td></tr><tr><td class="code"><pre><span class="line">&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&gt; 作用： 简化jsp的代码编写，替换&lt;%%&gt;的写法格式。一般与EL表达式配合</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">##### 5.7.1 如何使用</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- 写前工作</span></pre></td></tr></table></figure>
+<p>1 导入jar文件到工程中<br>2 在jsp页面上，使用taglib指令，来引入标签库<br>3 值得注意的是，如果想支持EL表达式，那么必须引入的标签库为1.1的版本，1.0的不支持EL表达式<br>&lt;%@ taglib prefix=”c” uri=”<a href="http://java.sun.com/jsp/jstl/core”" target="_blank" rel="noopener">http://java.sun.com/jsp/jstl/core”</a> %&gt;</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- 常用标签</span></pre></td></tr></table></figure>
+<p>  1 c:set<br>  <!-- 声明一个对象name， 对象的值 zhangsan , 存储到了page（默认） ， 指定是session --><br>  &lt;c:set var=”name” value=”zhangsan” scope=”session”&gt;</p>
+<p>  ${sessionScope.name }</p>
+<p>  2 c:if<br>  &lt;c:set var=”age” value=”18” &gt;<br>      &lt;c:if test=”${ age &gt; 26 }”&gt;<br>          年龄大于了26岁…<br>      </p>
+<pre><code>&lt;c:if test=&quot;${ age &lt;= 26 }&quot;&gt;
+    年龄小于了26岁...
+&lt;/c:if&gt;
+
+定义一个变量名 flag  去接收前面表达式的值，然后存在session域中
+
+&lt;c:if test=&quot;${ age &gt; 26 }&quot; var=&quot;flag&quot; scope=&quot;session&quot;&gt;
+    年龄大于了26岁...
+&lt;/c:if&gt;</code></pre><p>  3 c:forEach<br>  从1 开始遍历到10 ，得到的结果 ，赋值给 i ,并且会存储到page域中， step , 增幅为2，<br>  &lt;c:forEach begin=”1” end=”10” var=”i” step=”2”&gt;<br>      ${i }<br>  </p>
+<hr>
+  <!-- items : 表示遍历哪一个对象，注意，这里必须写EL表达式。 
+  var: 遍历出来的每一个元素用user 去接收。 -->
+<p>  &lt;c:forEach var=”user” items=”${list }”&gt;<br>      ${user.name } —-${user.age }<br>  <br>  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">### 5.8 章节案例（学生管理系统初级）</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">## 第六章 事务 数据库连接池 DBUtiles</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">### 6.1 事务</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">##### 6.1.1 简介</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">&gt; 事务 Transaction其实指的是一组操作，里面包含许多单一的逻辑，如果有一个逻辑没有执行成功，那么久算是失败。所有的数据都回到最初的状态（回滚）</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">##### 6.1.2 为什么会有事务</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">为了确保逻辑得成功。例如银行转账</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">### 6.2 相关演示</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">一些操作事务的方法</span></pre></td></tr></table></figure><br>通过conn.setAutoCommit（false ）来关闭自动提交的设置。</p>
+<p>提交事务 conn.commit();</p>
+<p>回滚事务 conn.rollback();</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">演示</span></pre></td></tr></table></figure>
+<p>@Test<br>public void testTransaction(){</p>
+<pre><code>Connection conn = null;
+PreparedStatement ps = null;
+ResultSet rs = null;
+try {
+    conn = JDBCUtil.getConn();
+
+    //连接，事务默认就是自动提交的。 关闭自动提交。
+    conn.setAutoCommit(false);
+
+    String sql = &quot;update account set money = money - ? where id = ?&quot;;
+    ps = conn.prepareStatement(sql);
+
+    //扣钱， 扣ID为1 的100块钱
+    ps.setInt(1, 100);
+    ps.setInt(2, 1);
+    ps.executeUpdate();
+
+
+    int a = 10 /0 ;
+
+    //加钱， 给ID为2 加100块钱
+    ps.setInt(1, -100);
+    ps.setInt(2, 2);
+    ps.executeUpdate();
+
+    //成功： 提交事务。
+    conn.commit();
+
+} catch (SQLException e) {
+    try {
+        //事变： 回滚事务
+        conn.rollback();
+    } catch (SQLException e1) {
+        e1.printStackTrace();
+    }
+    e.printStackTrace();
+
+}finally {
+    JDBCUtil.release(conn, ps, rs);
+}</code></pre><p>}</p>
+<p>```</p>
+<h3 id="6-3-事务的特性"><a href="#6-3-事务的特性" class="headerlink" title="6.3 事务的特性"></a>6.3 事务的特性</h3><ul>
+<li><p>原子性</p>
+<blockquote>
+<p>指的是，事务中的逻辑不可分割</p>
+</blockquote>
+</li>
+<li><p>一致性</p>
+<blockquote>
+<p>指的是，事务执行前后，数据的完整性</p>
+</blockquote>
+</li>
+<li><p>隔离性</p>
+<blockquote>
+<p>指的是，一个事务在执行期间，不应该受到其他事务的影响</p>
+</blockquote>
+</li>
+<li><p>持久性</p>
+<blockquote>
+<p>指的是，事务执行成功。数据应该持久的保存在磁盘上</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="6-4-事务的安全隐患"><a href="#6-4-事务的安全隐患" class="headerlink" title="6.4 事务的安全隐患"></a>6.4 事务的安全隐患</h3><ol>
+<li><p>在不考虑隔离级别的设置，会出现一下问题</p>
+<ul>
+<li>读<ul>
+<li>脏读</li>
+<li>不可重复读</li>
+<li>幻读</li>
+</ul>
+</li>
+<li>写<ul>
+<li>丢失更新</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>隔离级别</p>
+<ul>
+<li><p>按效率划分，从高到低</p>
+<blockquote>
+<p>读未提交 读已提交 可重复读 可串行化</p>
+</blockquote>
+</li>
+<li><p>按拦截程度，从高到低</p>
+<blockquote>
+<p>可串行化 可重复度 读已提交 读未提交</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ol>
+<h5 id="解决丢失更新"><a href="#解决丢失更新" class="headerlink" title="解决丢失更新"></a>解决丢失更新</h5><ul>
+<li>悲观锁</li>
+<li>乐观锁‘</li>
+</ul>
+<h3 id="6-5-数据库连接池"><a href="#6-5-数据库连接池" class="headerlink" title="6.5 数据库连接池"></a>6.5 数据库连接池</h3><h5 id="6-5-1-简介"><a href="#6-5-1-简介" class="headerlink" title="6.5.1 简介"></a>6.5.1 简介</h5><ol>
+<li>数据库的连接创建工作，比较消耗性能。</li>
+<li>一开始在内存中开辟一块空间，一开始先往池子里放置多个连接对象。后面需要连接的话，可以直接去池子中取。不用再自己创建。使用完毕，记得归还。以保障连接对象能循环利用</li>
+</ol>
+<h5 id="6-5-2-自定义数据库连接池"><a href="#6-5-2-自定义数据库连接池" class="headerlink" title="6.5.2 自定义数据库连接池"></a>6.5.2 自定义数据库连接池</h5><h5 id="6-5-3-开源数据库连接池"><a href="#6-5-3-开源数据库连接池" class="headerlink" title="6.5.3 开源数据库连接池"></a>6.5.3 开源数据库连接池</h5><ul>
+<li>DBCP</li>
+<li>C3PO</li>
+</ul>
+<h3 id="6-6-DBUtils"><a href="#6-6-DBUtils" class="headerlink" title="6.6 DBUtils"></a>6.6 DBUtils</h3><h2 id="第七章-MVC设计模式"><a href="#第七章-MVC设计模式" class="headerlink" title="第七章 MVC设计模式"></a>第七章 MVC设计模式</h2><h2 id="第八章-Ajax（java版）"><a href="#第八章-Ajax（java版）" class="headerlink" title="第八章 Ajax（java版）"></a>第八章 Ajax（java版）</h2><h2 id="第九章-Listener-amp-Filter"><a href="#第九章-Listener-amp-Filter" class="headerlink" title="第九章 Listener &amp; Filter"></a>第九章 Listener &amp; Filter</h2>]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>JavaWeb</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>c/c+</title>
+    <url>/2019/12/09/c-c/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>c/c+</category>
+      </categories>
+      <tags>
+        <tag>c</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>mysql</title>
+    <url>/2019/12/09/mysql/</url>
+    <content><![CDATA[<h1 id="mysql笔记"><a href="#mysql笔记" class="headerlink" title="mysql笔记"></a>mysql笔记</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">这里我只要针对mysql的用法</span></pre></td></tr></table></figure>
+
+<h2 id="1-命令行连接数据库"><a href="#1-命令行连接数据库" class="headerlink" title="1 命令行连接数据库"></a>1 命令行连接数据库</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mysql -uroot -proot</span></pre></td></tr><tr><td class="code"><pre><span class="line">这里-u和-p之后紧的都是数据库的用户名和密码</span></pre></td></tr></table></figure>
+
+<h2 id="2-数据库的增删改查"><a href="#2-数据库的增删改查" class="headerlink" title="2 数据库的增删改查"></a>2 数据库的增删改查</h2><h3 id="2-1-数据库的创建"><a href="#2-1-数据库的创建" class="headerlink" title="2.1 数据库的创建"></a>2.1 数据库的创建</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1 create database 数据库名；</span></pre></td></tr><tr><td class="code"><pre><span class="line">2 create database 数据库名 character set 编码（eg：utf8）；</span></pre></td></tr><tr><td class="code"><pre><span class="line">3 create database 数据库名 character set utf8 collate utf8-bin；（校对规则）</span></pre></td></tr></table></figure>
+
+<h3 id="2-2-数据库的查看"><a href="#2-2-数据库的查看" class="headerlink" title="2.2 数据库的查看"></a>2.2 数据库的查看</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1 查看所有数据库</span></pre></td></tr><tr><td class="code"><pre><span class="line">show databases；</span></pre></td></tr><tr><td class="code"><pre><span class="line">2 查看指定</span></pre></td></tr><tr><td class="code"><pre><span class="line">show create database 数据库名；</span></pre></td></tr></table></figure>
+
+<h3 id="2-3-数据库的修改"><a href="#2-3-数据库的修改" class="headerlink" title="2.3 数据库的修改"></a>2.3 数据库的修改</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">alter database 数据库名 character set 字符</span></pre></td></tr></table></figure>
+
+<h3 id="2-4-数据库的删除"><a href="#2-4-数据库的删除" class="headerlink" title="2.4 数据库的删除"></a>2.4 数据库的删除</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">drop database 数据库名</span></pre></td></tr></table></figure>
+
+<h3 id="2-5-数据库的切换"><a href="#2-5-数据库的切换" class="headerlink" title="2.5 数据库的切换"></a>2.5 数据库的切换</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">select database（）；</span></pre></td></tr><tr><td class="code"><pre><span class="line">查看当前数据库</span></pre></td></tr><tr><td class="code"><pre><span class="line">use 数据库名；</span></pre></td></tr><tr><td class="code"><pre><span class="line">切换到指定数据库下</span></pre></td></tr></table></figure>
+
+<h2 id="3-table-的相关操作"><a href="#3-table-的相关操作" class="headerlink" title="3 table 的相关操作"></a>3 table 的相关操作</h2><h3 id="3-1-创建表"><a href="#3-1-创建表" class="headerlink" title="3.1 创建表"></a>3.1 创建表</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">create table 表名（列名 列的类型 约束）；</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">列的类型</span></pre></td></tr><tr><td class="code"><pre><span class="line">1 int</span></pre></td></tr><tr><td class="code"><pre><span class="line">2 char</span></pre></td></tr><tr><td class="code"><pre><span class="line">3 varchar</span></pre></td></tr><tr><td class="code"><pre><span class="line">4 double</span></pre></td></tr><tr><td class="code"><pre><span class="line">5 float</span></pre></td></tr><tr><td class="code"><pre><span class="line">6 boolean</span></pre></td></tr><tr><td class="code"><pre><span class="line">7 data（格式YYYY-MM-DD）</span></pre></td></tr><tr><td class="code"><pre><span class="line">8 time（格式 hh：mm：ss）</span></pre></td></tr><tr><td class="code"><pre><span class="line">9 datetime</span></pre></td></tr><tr><td class="code"><pre><span class="line">10 timestamp</span></pre></td></tr><tr><td class="code"><pre><span class="line">11 text</span></pre></td></tr><tr><td class="code"><pre><span class="line">12 blob</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">其中char与varchar的区别在于，char的长度是固定的而varchar是不固定的。所以varchar比较节省资源</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">列的约束</span></pre></td></tr><tr><td class="code"><pre><span class="line">1 主键约束  primary key</span></pre></td></tr><tr><td class="code"><pre><span class="line">2 唯一约束  unique</span></pre></td></tr><tr><td class="code"><pre><span class="line">3 非空约束  not null</span></pre></td></tr></table></figure>
+
+<h3 id="3-2-查看表"><a href="#3-2-查看表" class="headerlink" title="3.2 查看表"></a>3.2 查看表</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1 查看所有</span></pre></td></tr><tr><td class="code"><pre><span class="line">show tables</span></pre></td></tr><tr><td class="code"><pre><span class="line">2 自定义查看表的创建过程</span></pre></td></tr><tr><td class="code"><pre><span class="line">show create table 表名</span></pre></td></tr><tr><td class="code"><pre><span class="line">3 查看表的结构</span></pre></td></tr><tr><td class="code"><pre><span class="line">desc 表名</span></pre></td></tr></table></figure>
+
+<h3 id="3-3-修改表"><a href="#3-3-修改表" class="headerlink" title="3.3 修改表"></a>3.3 修改表</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1 添加列</span></pre></td></tr><tr><td class="code"><pre><span class="line">alter table 表名 add 列名 类型 约束</span></pre></td></tr><tr><td class="code"><pre><span class="line">2 修改列类型</span></pre></td></tr><tr><td class="code"><pre><span class="line">alter table 表名 modify 列名 类型</span></pre></td></tr><tr><td class="code"><pre><span class="line">3 修改列名</span></pre></td></tr><tr><td class="code"><pre><span class="line">alter table 表名 change 列名旧 列名新 类型</span></pre></td></tr><tr><td class="code"><pre><span class="line">4 删除列</span></pre></td></tr><tr><td class="code"><pre><span class="line">alter table 表名 drop 列名</span></pre></td></tr><tr><td class="code"><pre><span class="line">5 修改表名</span></pre></td></tr><tr><td class="code"><pre><span class="line">rename table 表名旧 to 表名新</span></pre></td></tr><tr><td class="code"><pre><span class="line">6 修改字符集</span></pre></td></tr><tr><td class="code"><pre><span class="line">alter table 表名 character set 字符集；</span></pre></td></tr></table></figure>
+
+<h3 id="3-4-删除表"><a href="#3-4-删除表" class="headerlink" title="3.4 删除表"></a>3.4 删除表</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">drop table 表名</span></pre></td></tr></table></figure>
+
+<h2 id="4-数据操控"><a href="#4-数据操控" class="headerlink" title="4 数据操控"></a>4 数据操控</h2><h3 id="4-1-表中插入数据"><a href="#4-1-表中插入数据" class="headerlink" title="4.1 表中插入数据"></a>4.1 表中插入数据</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">insert into 表名（列名1，列名2···） values（值1，值2···）；</span></pre></td></tr><tr><td class="code"><pre><span class="line">如果是向所有列中插入数据的话（列名）可以省略</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">批量插入</span></pre></td></tr><tr><td class="code"><pre><span class="line">inset into 表名 values（），（），（），·····</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">单条与批量插入的优缺点</span></pre></td></tr><tr><td class="code"><pre><span class="line">1 单条易查错</span></pre></td></tr><tr><td class="code"><pre><span class="line">2 批量效率高</span></pre></td></tr></table></figure>
+
+<h3 id="4-2-删除数据"><a href="#4-2-删除数据" class="headerlink" title="4.2 删除数据"></a>4.2 删除数据</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">delete from 表名【where 条件】   &#x2F;&#x2F;【】为可选内容</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">常遇见的问题</span></pre></td></tr><tr><td class="code"><pre><span class="line">delete 和truncate 删除数据的区别</span></pre></td></tr><tr><td class="code"><pre><span class="line">1 delete 是一条条删除数据</span></pre></td></tr><tr><td class="code"><pre><span class="line">2 truncate是先将表删除再创建表</span></pre></td></tr></table></figure>
+
+<h3 id="4-3-更新表中数据"><a href="#4-3-更新表中数据" class="headerlink" title="4.3 更新表中数据"></a>4.3 更新表中数据</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">update 表名 set 列名&#x3D;列值 【where 条件】</span></pre></td></tr></table></figure>
+
+<h3 id="4-4-查询表中数据"><a href="#4-4-查询表中数据" class="headerlink" title="4.4 查询表中数据"></a>4.4 查询表中数据</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">select 【distinct】【列名···】 from 表名 【where】</span></pre></td></tr></table></figure>
+
+<h2 id="5-解决中文乱码的问题"><a href="#5-解决中文乱码的问题" class="headerlink" title="5 解决中文乱码的问题"></a>5 解决中文乱码的问题</h2><ol>
+<li>暂停mysql服务</li>
+<li>找到mysql文件的my.ini文件</li>
+<li>改其编码为gbk</li>
+</ol>
+]]></content>
+      <categories>
+        <category>mysql</category>
+      </categories>
+      <tags>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>php基础语法</title>
+    <url>/2019/12/09/php/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>php</category>
+      </categories>
+      <tags>
+        <tag>php</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java</title>
+    <url>/2019/12/09/java/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python基础语法</title>
+    <url>/2019/12/09/python/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>py</category>
+      </categories>
+      <tags>
+        <tag>py</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>linux常用命令</title>
+    <url>/2019/12/09/linux/</url>
+    <content><![CDATA[<h1 id="常用-Linux-命令的基本使用"><a href="#常用-Linux-命令的基本使用" class="headerlink" title="常用 Linux 命令的基本使用"></a>常用 Linux 命令的基本使用</h1><h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><ul>
+<li>理解学习 Linux 终端命令的原因</li>
+<li>常用 Linux 命令体验</li>
+</ul>
+<h2 id="01-学习-Linux-终端命令的原因"><a href="#01-学习-Linux-终端命令的原因" class="headerlink" title="01. 学习 Linux 终端命令的原因"></a>01. 学习 Linux 终端命令的原因</h2><ul>
+<li>Linux 刚面世时并没有图形界面，所有的操作全靠命令完成，如 <strong>磁盘操作</strong>、<strong>文件存取</strong>、<strong>目录操作</strong>、<strong>进程管理</strong>、<strong>文件权限</strong> 设定等</li>
+<li>在职场中，大量的 <strong>服务器维护工作</strong> 都是在 <strong>远程</strong> 通过 <strong>SSH 客户端</strong> 来完成的，并没有图形界面，所有的维护工作都需要通过命令来完成</li>
+<li>在职场中，作为后端程序员，必须要或多或少的掌握一些 Linux 常用的终端命令</li>
+<li>Linux 发行版本的命令大概有 200 多个，但是常用的命令只有 10 多个而已</li>
+</ul>
+<blockquote>
+<p>学习终端命令的技巧：</p>
+<ul>
+<li>不需要死记硬背，对于常用命令，用的多了，自然就记住了</li>
+<li>不要尝试一次学会所有的命令，有些命令是非常不常用的，临时遇到，临时百度就可以</li>
+</ul>
+</blockquote>
+<h2 id="02-常用-Linux-命令的基本使用"><a href="#02-常用-Linux-命令的基本使用" class="headerlink" title="02. 常用 Linux 命令的基本使用"></a>02. 常用 Linux 命令的基本使用</h2><table>
+<thead>
+<tr>
+<th align="left">序号</th>
+<th align="left">命令</th>
+<th align="left">对应英文</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">01</td>
+<td align="left">ls</td>
+<td align="left">list</td>
+<td align="left">查看当前文件夹下的内容</td>
+</tr>
+<tr>
+<td align="left">02</td>
+<td align="left">pwd</td>
+<td align="left">print wrok directory</td>
+<td align="left">查看当前所在文件夹</td>
+</tr>
+<tr>
+<td align="left">03</td>
+<td align="left">cd [目录名]</td>
+<td align="left">change directory</td>
+<td align="left">切换文件夹</td>
+</tr>
+<tr>
+<td align="left">04</td>
+<td align="left">touch [文件名]</td>
+<td align="left">touch</td>
+<td align="left">如果文件不存在，新建文件</td>
+</tr>
+<tr>
+<td align="left">05</td>
+<td align="left">mkdir [目录名]</td>
+<td align="left">make directory</td>
+<td align="left">创建目录</td>
+</tr>
+<tr>
+<td align="left">06</td>
+<td align="left">rm [文件名]</td>
+<td align="left">remove</td>
+<td align="left">删除指定的文件名</td>
+</tr>
+<tr>
+<td align="left">07</td>
+<td align="left">clear</td>
+<td align="left">clear</td>
+<td align="left">清屏</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>小技巧</p>
+<ul>
+<li><code>ctrl + shift + =</code> <strong>放大</strong>终端窗口的字体显示</li>
+<li><code>ctrl + -</code> <strong>缩小</strong>终端窗口的字体显示</li>
+</ul>
+</blockquote>
+<h3 id="03-自动补全"><a href="#03-自动补全" class="headerlink" title="03. 自动补全"></a>03. 自动补全</h3><ul>
+<li>在敲出</li>
+</ul>
+<p> 文件／目录／ 命令的前几个字母之后，按下tab键</p>
+<ul>
+<li>如果输入的没有歧义，系统会自动补全</li>
+<li>如果还存在其他 <code>文件</code>／<code>目录</code>／<code>命令</code>，再按一下 <code>tab</code> 键，系统会提示可能存在的命令</li>
+</ul>
+<blockquote>
+<p>小技巧</p>
+<ul>
+<li>按 <code>上</code>／<code>下</code> 光标键可以在曾经使用过的命令之间来回切换</li>
+<li>如果想要退出选择，并且不想执行当前选中的命令，可以按 <code>ctrl + c</code></li>
+</ul>
+</blockquote>
+<h2 id="03-终端命令格式"><a href="#03-终端命令格式" class="headerlink" title="03. 终端命令格式"></a>03. 终端命令格式</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">command</span> [-options] [parameter]</span></pre></td></tr></table></figure>
+
+<p>说明：</p>
+<ul>
+<li><code>command</code>：命令名，相应功能的英文单词或单词的缩写</li>
+<li><code>[-options]</code>：选项，可用来对命令进行控制，也可以省略</li>
+<li><code>parameter</code>：传给命令的参数，可以是 <strong>零个</strong>、<strong>一个</strong> 或者 <strong>多个</strong></li>
+</ul>
+<blockquote>
+<p><code>[]</code> 代表可选</p>
+</blockquote>
+<h2 id="04-查阅命令帮助信息（知道）"><a href="#04-查阅命令帮助信息（知道）" class="headerlink" title="04. 查阅命令帮助信息（知道）"></a>04. 查阅命令帮助信息（知道）</h2><blockquote>
+<p>提示</p>
+<ul>
+<li>现阶段只需要 <strong>知道</strong> 通过以下两种方式可以查询命令的帮助信息</li>
+<li>先学习<strong>常用命令</strong>及<strong>常用选项</strong>的使用即可，工作中如果遇到问题可以借助 <strong>网络搜索</strong></li>
+</ul>
+</blockquote>
+<h3 id="4-1-help"><a href="#4-1-help" class="headerlink" title="4.1 --help"></a>4.1 <code>--help</code></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">command</span> --<span class="built_in">help</span></span></pre></td></tr></table></figure>
+
+<p>说明：</p>
+<ul>
+<li>显示 <code>command</code> 命令的帮助信息</li>
+</ul>
+<h3 id="4-2-man"><a href="#4-2-man" class="headerlink" title="4.2 man"></a>4.2 man</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">man <span class="built_in">command</span></span></pre></td></tr></table></figure>
+
+<p>说明：</p>
+<ul>
+<li>查阅 <code>command</code> 命令的使用手册</li>
+</ul>
+<blockquote>
+<p><code>man</code> 是 <strong>manual</strong> 的缩写，是 Linux 提供的一个 <strong>手册</strong>，包含了绝大部分的命令、函数的详细使用说明</p>
+</blockquote>
+<p>使用 <code>man</code> 时的操作键：</p>
+<table>
+<thead>
+<tr>
+<th align="left">操作键</th>
+<th align="left">功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">空格键</td>
+<td align="left">显示手册页的下一屏</td>
+</tr>
+<tr>
+<td align="left">Enter 键</td>
+<td align="left">一次滚动手册页的一行</td>
+</tr>
+<tr>
+<td align="left">b</td>
+<td align="left">回滚一屏</td>
+</tr>
+<tr>
+<td align="left">f</td>
+<td align="left">前滚一屏</td>
+</tr>
+<tr>
+<td align="left">q</td>
+<td align="left">退出</td>
+</tr>
+<tr>
+<td align="left">/word</td>
+<td align="left">搜索 <strong>word</strong> 字符串</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端中</title>
+    <url>/2019/12/09/%E5%89%8D%E7%AB%AF%E4%B8%AD/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端基础</title>
+    <url>/2019/12/09/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>os</title>
+    <url>/2019/12/09/os/</url>
+    <content><![CDATA[<h1 id="C的结构体"><a href="#C的结构体" class="headerlink" title="C的结构体"></a>C的结构体</h1><p> C数组作用储存了一组相同类型的变量，但是想一张学生表的数据元素可不是同一类型。这里就需要用到了我们的结构体。</p>
+<ul>
+<li>定义结构：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Struct [structure tag]&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">member a;</span></pre></td></tr><tr><td class="code"><pre><span class="line">member b;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;一个或多个结构变量</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">demo：</span></pre></td></tr><tr><td class="code"><pre><span class="line">strut Books&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">char title[30];</span></pre></td></tr><tr><td class="code"><pre><span class="line">int id;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;book</span></pre></td></tr><tr><td class="code"><pre><span class="line">访问结构的成员直接可用.  ，可以用struct来定义结构类型的变量</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">demo：</span></pre></td></tr><tr><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">#include &lt;string.h&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">struct Book&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    char name[50];</span></pre></td></tr><tr><td class="code"><pre><span class="line">    int id;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;;</span></pre></td></tr><tr><td class="code"><pre><span class="line">void main()&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    Book book;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    strcpy(book.name,&quot;this is a demo&quot;);</span></pre></td></tr><tr><td class="code"><pre><span class="line">    book.id&#x3D;1;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    printf(&quot;%s\n&quot;,book.name);</span></pre></td></tr><tr><td class="code"><pre><span class="line">    printf(&quot;%d\n&quot;,book.id);</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>408</category>
+      </categories>
+      <tags>
+        <tag>os</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据结构</title>
+    <url>/2019/12/09/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>408</category>
+      </categories>
+      <tags>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计网</title>
+    <url>/2019/12/09/%E8%AE%A1%E7%BD%91/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>408</category>
+      </categories>
+      <tags>
+        <tag>计网</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>组原</title>
+    <url>/2019/12/09/%E7%BB%84%E5%8E%9F/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>408</category>
+      </categories>
+      <tags>
+        <tag>组原</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo博客优化</title>
+    <url>/2019/12/09/hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/</url>
+    <content><![CDATA[<h2 id="博文压缩"><a href="#博文压缩" class="headerlink" title="博文压缩"></a>博文压缩</h2><ul>
+<li>gitbash，cd到blog文件下安装插件。命令<code>$ npm install gulp -g</code>，接着安装，命令<code>$ npm install gulp-minify-css gulp-uglify gulp-htmlmin gulp-htmlclean gulp --save</code></li>
+<li>在blog文件下新建 gulpfile.js 。填入以下内容：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var gulp &#x3D; require(&#39;gulp&#39;);</span></pre></td></tr><tr><td class="code"><pre><span class="line">var minifycss &#x3D; require(&#39;gulp-minify-css&#39;);</span></pre></td></tr><tr><td class="code"><pre><span class="line">var uglify &#x3D; require(&#39;gulp-uglify&#39;);</span></pre></td></tr><tr><td class="code"><pre><span class="line">var htmlmin &#x3D; require(&#39;gulp-htmlmin&#39;);</span></pre></td></tr><tr><td class="code"><pre><span class="line">var htmlclean &#x3D; require(&#39;gulp-htmlclean&#39;);</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 压缩 public 目录 css</span></pre></td></tr><tr><td class="code"><pre><span class="line">gulp.task(&#39;minify-css&#39;, function() &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    return gulp.src(&#39;.&#x2F;public&#x2F;**&#x2F;*.css&#39;)</span></pre></td></tr><tr><td class="code"><pre><span class="line">        .pipe(minifycss())</span></pre></td></tr><tr><td class="code"><pre><span class="line">        .pipe(gulp.dest(&#39;.&#x2F;public&#39;));</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;);</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 压缩 public 目录 html</span></pre></td></tr><tr><td class="code"><pre><span class="line">gulp.task(&#39;minify-html&#39;, function() &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  return gulp.src(&#39;.&#x2F;public&#x2F;**&#x2F;*.html&#39;)</span></pre></td></tr><tr><td class="code"><pre><span class="line">    .pipe(htmlclean())</span></pre></td></tr><tr><td class="code"><pre><span class="line">    .pipe(htmlmin(&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">         removeComments: true,</span></pre></td></tr><tr><td class="code"><pre><span class="line">         minifyJS: true,</span></pre></td></tr><tr><td class="code"><pre><span class="line">         minifyCSS: true,</span></pre></td></tr><tr><td class="code"><pre><span class="line">         minifyURLs: true,</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;))</span></pre></td></tr><tr><td class="code"><pre><span class="line">    .pipe(gulp.dest(&#39;.&#x2F;public&#39;))</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;);</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 压缩 public&#x2F;js 目录 js</span></pre></td></tr><tr><td class="code"><pre><span class="line">gulp.task(&#39;minify-js&#39;, function() &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    return gulp.src(&#39;.&#x2F;public&#x2F;**&#x2F;*.js&#39;)</span></pre></td></tr><tr><td class="code"><pre><span class="line">        .pipe(uglify())</span></pre></td></tr><tr><td class="code"><pre><span class="line">        .pipe(gulp.dest(&#39;.&#x2F;public&#39;));</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;);</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 执行 gulp 命令时执行的任务</span></pre></td></tr><tr><td class="code"><pre><span class="line">gulp.task(&#39;default&#39;, [</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#39;minify-html&#39;,&#39;minify-css&#39;,&#39;minify-js&#39;</span></pre></td></tr><tr><td class="code"><pre><span class="line">]);</span></pre></td></tr></table></figure>
+
+<h2 id="图片懒加载"><a href="#图片懒加载" class="headerlink" title="图片懒加载"></a>图片懒加载</h2><p> 在你使用的主题文件夹找到 layout &gt; _partial &gt; footer.ejs 文件（或者 head.ejs也可以），在后面加入以下代码 </p>
+]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>next主题个性化</title>
+    <url>/2019/12/09/next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96/</url>
+    <content><![CDATA[<h2 id="实现点击出现桃心效果"><a href="#实现点击出现桃心效果" class="headerlink" title="实现点击出现桃心效果"></a>实现点击出现桃心效果</h2><p>实现方法：</p>
+<ul>
+<li>在 /themes/next/source/js/src 新建love.js。将下面代码导入：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">!function(e,t,a)&#123;function n()&#123;c(&quot;.heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: &#39;&#39;;width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;&quot;),o(),r()&#125;function r()&#123;for(var e&#x3D;0;e&lt;d.length;e++)d[e].alpha&lt;&#x3D;0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+&#x3D;.004,d[e].alpha-&#x3D;.013,d[e].el.style.cssText&#x3D;&quot;left:&quot;+d[e].x+&quot;px;top:&quot;+d[e].y+&quot;px;opacity:&quot;+d[e].alpha+&quot;;transform:scale(&quot;+d[e].scale+&quot;,&quot;+d[e].scale+&quot;) rotate(45deg);background:&quot;+d[e].color+&quot;;z-index:99999&quot;);requestAnimationFrame(r)&#125;function o()&#123;var t&#x3D;&quot;function&quot;&#x3D;&#x3D;typeof e.onclick&amp;&amp;e.onclick;e.onclick&#x3D;function(e)&#123;t&amp;&amp;t(),i(e)&#125;&#125;function i(e)&#123;var a&#x3D;t.createElement(&quot;div&quot;);a.className&#x3D;&quot;heart&quot;,d.push(&#123;el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()&#125;),t.body.appendChild(a)&#125;function c(e)&#123;var a&#x3D;t.createElement(&quot;style&quot;);a.type&#x3D;&quot;text&#x2F;css&quot;;try&#123;a.appendChild(t.createTextNode(e))&#125;catch(t)&#123;a.styleSheet.cssText&#x3D;e&#125;t.getElementsByTagName(&quot;head&quot;)[0].appendChild(a)&#125;function s()&#123;return&quot;rgb(&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;)&quot;&#125;var d&#x3D;[];e.requestAnimationFrame&#x3D;function()&#123;return e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e)&#123;setTimeout(e,1e3&#x2F;60)&#125;&#125;(),n()&#125;(window,document);</span></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>打开 \themes\next 下的layout_layout.swig 文件。在其末尾添加</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!-- 页面点击小红心 --&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;js&#x2F;src&#x2F;clicklove.js&quot;&gt;&lt;&#x2F;script&gt;</span></pre></td></tr></table></figure>
+
+
+
+<p><img src="/2019/12/09/next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96/02.png" alt></p>
+<p>效果：</p>
+<p><img src="/2019/12/09/next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96/01.png" alt></p>
+<h2 id="添加顶部加载条"><a href="#添加顶部加载条" class="headerlink" title="添加顶部加载条"></a>添加顶部加载条</h2><p> 打开<code>/themes/next/layout/_partials/head.swig</code>文件， 添加</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script src&#x3D;&quot;&#x2F;&#x2F;cdn.bootcss.com&#x2F;pace&#x2F;1.0.2&#x2F;pace.min.js&quot;&gt;&lt;&#x2F;script&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&lt;link href&#x3D;&quot;&#x2F;&#x2F;cdn.bootcss.com&#x2F;pace&#x2F;1.0.2&#x2F;themes&#x2F;pink&#x2F;pace-theme-flash.css&quot; rel&#x3D;&quot;stylesheet&quot;&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;应为默认为粉红色,修个样式</span></pre></td></tr><tr><td class="code"><pre><span class="line">&lt;style&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    .pace .pace-progress &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        background: #1E92FB; &#x2F;*进度条颜色*&#x2F;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        height: 3px;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    .pace .pace-progress-inner &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; &#x2F;*阴影颜色*&#x2F;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    .pace .pace-activity &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        border-top-color: #1E92FB;    &#x2F;*上边框颜色*&#x2F;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        border-left-color: #1E92FB;    &#x2F;*左边框颜色*&#x2F;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&lt;&#x2F;style&gt;</span></pre></td></tr></table></figure>
+
+<p>修改next主题下的_config.yml:</p>
+<p><img src="/2019/12/09/next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96/04.png" alt></p>
+<p>(上述红为可修改样式，图片手残了)</p>
+<h2 id="在文章底部增加版权信息"><a href="#在文章底部增加版权信息" class="headerlink" title="在文章底部增加版权信息"></a>在文章底部增加版权信息</h2><p>效果图：</p>
+<p><img src="/2019/12/09/next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96/07.png" alt></p>
+<ul>
+<li>在目录 <code>next/layout/_macro/下</code>添加 <code>my-copyright.swig</code>，代码如下：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% if page.copyright %&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&lt;div class&#x3D;&quot;my_post_copyright&quot;&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  &lt;script src&#x3D;&quot;&#x2F;&#x2F;cdn.bootcss.com&#x2F;clipboard.js&#x2F;1.5.10&#x2F;clipboard.min.js&quot;&gt;&lt;&#x2F;script&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  </span></pre></td></tr><tr><td class="code"><pre><span class="line">  &lt;!-- JS库 sweetalert 可修改路径 --&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.bootcss.com&#x2F;jquery&#x2F;2.0.0&#x2F;jquery.min.js&quot;&gt;&lt;&#x2F;script&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;sweetalert&#x2F;dist&#x2F;sweetalert.min.js&quot;&gt;&lt;&#x2F;script&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  &lt;p&gt;&lt;span&gt;本文标题:&lt;&#x2F;span&gt;&lt;a href&#x3D;&quot;&#123;&#123; url_for(page.path) &#125;&#125;&quot;&gt;&#123;&#123; page.title &#125;&#125;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  &lt;p&gt;&lt;span&gt;文章作者:&lt;&#x2F;span&gt;&lt;a href&#x3D;&quot;&#x2F;&quot; title&#x3D;&quot;访问 &#123;&#123; theme.author &#125;&#125; 的个人博客&quot;&gt;&#123;&#123; theme.author &#125;&#125;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  &lt;p&gt;&lt;span&gt;发布时间:&lt;&#x2F;span&gt;&#123;&#123; page.date.format(&quot;YYYY年MM月DD日 - HH:MM&quot;) &#125;&#125;&lt;&#x2F;p&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  &lt;p&gt;&lt;span&gt;最后更新:&lt;&#x2F;span&gt;&#123;&#123; page.updated.format(&quot;YYYY年MM月DD日 - HH:MM&quot;) &#125;&#125;&lt;&#x2F;p&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  &lt;p&gt;&lt;span&gt;原始链接:&lt;&#x2F;span&gt;&lt;a href&#x3D;&quot;&#123;&#123; url_for(page.path) &#125;&#125;&quot; title&#x3D;&quot;&#123;&#123; page.title &#125;&#125;&quot;&gt;&#123;&#123; page.permalink &#125;&#125;&lt;&#x2F;a&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &lt;span class&#x3D;&quot;copy-path&quot;  title&#x3D;&quot;点击复制文章链接&quot;&gt;&lt;i class&#x3D;&quot;fa fa-clipboard&quot; data-clipboard-text&#x3D;&quot;&#123;&#123; page.permalink &#125;&#125;&quot;  aria-label&#x3D;&quot;复制成功！&quot;&gt;&lt;&#x2F;i&gt;&lt;&#x2F;span&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  &lt;&#x2F;p&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  &lt;p&gt;&lt;span&gt;许可协议:&lt;&#x2F;span&gt;&lt;i class&#x3D;&quot;fa fa-creative-commons&quot;&gt;&lt;&#x2F;i&gt; &lt;a rel&#x3D;&quot;license&quot; href&#x3D;&quot;https:&#x2F;&#x2F;creativecommons.org&#x2F;licenses&#x2F;by-nc-nd&#x2F;4.0&#x2F;&quot; target&#x3D;&quot;_blank&quot; title&#x3D;&quot;Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)&quot;&gt;署名-非商业性使用-禁止演绎 4.0 国际&lt;&#x2F;a&gt; 转载请保留原文链接及作者。&lt;&#x2F;p&gt;  </span></pre></td></tr><tr><td class="code"><pre><span class="line">&lt;&#x2F;div&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&lt;script&gt; </span></pre></td></tr><tr><td class="code"><pre><span class="line">    var clipboard &#x3D; new Clipboard(&#39;.fa-clipboard&#39;);</span></pre></td></tr><tr><td class="code"><pre><span class="line">	  $(&quot;.fa-clipboard&quot;).click(function()&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">      clipboard.on(&#39;success&#39;, function()&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        swal(&#123;   </span></pre></td></tr><tr><td class="code"><pre><span class="line">          title: &quot;&quot;,   </span></pre></td></tr><tr><td class="code"><pre><span class="line">          text: &#39;复制成功&#39;,</span></pre></td></tr><tr><td class="code"><pre><span class="line">          icon: &quot;success&quot;, </span></pre></td></tr><tr><td class="code"><pre><span class="line">          showConfirmButton: true</span></pre></td></tr><tr><td class="code"><pre><span class="line">          &#125;);</span></pre></td></tr><tr><td class="code"><pre><span class="line">	    &#125;);</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;);  </span></pre></td></tr><tr><td class="code"><pre><span class="line">&lt;&#x2F;script&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#123;% endif %&#125;</span></pre></td></tr></table></figure>
+
+<ul>
+<li>在目录<code>next/source/css/_common/components/post/</code>下添加<code>my-post-copyright.styl</code> 。代码如下：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.my_post_copyright &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  width: 85%;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  max-width: 45em;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  margin: 2.8em auto 0;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  padding: 0.5em 1.0em;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  border: 1px solid #d3d3d3;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  font-size: 0.93rem;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  line-height: 1.6em;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  word-break: break-all;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  background: rgba(255,255,255,0.4);</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">.my_post_copyright p&#123;margin:0;&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">.my_post_copyright span &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  display: inline-block;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  width: 5.2em;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  color: #b5b5b5;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  font-weight: bold;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">.my_post_copyright .raw &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  margin-left: 1em;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  width: 5em;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">.my_post_copyright a &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  color: #808080;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  border-bottom:0;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">.my_post_copyright a:hover &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  color: #a3d2a3;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  text-decoration: underline;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">.my_post_copyright:hover .fa-clipboard &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  color: #000;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">.my_post_copyright .post-url:hover &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  font-weight: normal;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">.my_post_copyright .copy-path &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  margin-left: 1em;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  width: 1em;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  +mobile()&#123;display:none;&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">.my_post_copyright .copy-path:hover &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  color: #808080;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  cursor: pointer;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<ul>
+<li>修改 <code>themes/next/layout/_macro/post.swig</code> ，如下： </li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在代码</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#123;% if theme.wechat_subscriber.enabled and not is_index %&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &lt;div&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#123;% include &#39;wechat-subscriber.swig&#39; %&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &lt;&#x2F;div&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#123;% endif %&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">之前添加代码</span></pre></td></tr><tr><td class="code"><pre><span class="line">&lt;div&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#123;% if not is_index %&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#123;% include &#39;my-copyright.swig&#39; %&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#123;% endif %&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&lt;&#x2F;div&gt;</span></pre></td></tr></table></figure>
+
+<p><img src="/2019/12/09/next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96/06.png" alt></p>
+<ul>
+<li>打开 <code>themes/next/source/css/_common/components/post/post.styl</code> 文件，在最后一行增加代码 </li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@import &quot;my-post-copyright&quot;</span></pre></td></tr></table></figure>
+
+<ul>
+<li>新建博文的时候手动开启 copyright  操作如下</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">例如：</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">title: hexo博客搭建插件问题</span></pre></td></tr><tr><td class="code"><pre><span class="line">date: 2019-12-09 11:22:36</span></pre></td></tr><tr><td class="code"><pre><span class="line">tags: [hexo]</span></pre></td></tr><tr><td class="code"><pre><span class="line">categories: 博客搭建</span></pre></td></tr><tr><td class="code"><pre><span class="line">copyright: true  #开启</span></pre></td></tr></table></figure>
+
+<p><img src="/2019/12/09/next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96/08.png" alt></p>
+<h2 id="实现统计功能"><a href="#实现统计功能" class="headerlink" title="实现统计功能"></a>实现统计功能</h2><p>效果：</p>
+<p><img src="/2019/12/09/next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96/10.png" alt></p>
+<ul>
+<li>在gitbash   cd到blog根目录，安装插件 hexo-wordcount 。命令<code>$ npm install hexo-wordcount --save</code></li>
+<li>然后在主题的配置文件中，配置如下： </li>
+</ul>
+<p><img src="/2019/12/09/next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96/11.png" alt></p>
+<p>(打开字数和阅读时间)</p>
+]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo博客搭建插件问题</title>
+    <url>/2019/12/09/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8F%92%E4%BB%B6%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h1><h2 id="菜单栏链接问题"><a href="#菜单栏链接问题" class="headerlink" title="菜单栏链接问题"></a>菜单栏链接问题</h2><p>问题描述如图：</p>
+<p><img src="/2019/12/09/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8F%92%E4%BB%B6%E9%97%AE%E9%A2%98/01.png" alt></p>
+<p><img src="/2019/12/09/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8F%92%E4%BB%B6%E9%97%AE%E9%A2%98/02.png" alt></p>
+<p><img src="/2019/12/09/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8F%92%E4%BB%B6%E9%97%AE%E9%A2%98/03.png" alt></p>
+<p>解决：文件格式转码所致，空格转码为%20。故查看主题配置文件。可发现</p>
+<p><img src="/2019/12/09/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8F%92%E4%BB%B6%E9%97%AE%E9%A2%98/04.png" alt></p>
+<p>或字符两面存在空格。消除即可：</p>
+<p><img src="/2019/12/09/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8F%92%E4%BB%B6%E9%97%AE%E9%A2%98/05.png" alt></p>
+<p>保存，<code>hexo clean</code>，<code>hexo gen</code>，<code>hexo s</code>。浏览器刷新页面</p>
+<h2 id="解决添加了valine之后，访站速度问题"><a href="#解决添加了valine之后，访站速度问题" class="headerlink" title="解决添加了valine之后，访站速度问题"></a>解决添加了valine之后，访站速度问题</h2><p>原因，valine评论系统默认的CDN地址<code>unpkg.com/valine/dist/Valine.min.js</code>加载过慢</p>
+<p>解决方法：找到对应地址。文件路径 \themes\next\layout_third-party\comments\valine.swig ，</p>
+<p>替换它的默认地址为最新</p>
+<p>地址获取：  <a href="https://links.jianshu.com/go?to=https%3A%2F%2Fwww.jsdelivr.com%2Fpackage%2Fnpm%2Fvaline" target="_blank" rel="noopener">https://www.jsdelivr.com/package/npm/valine</a> 打开网址，获取操作如下图</p>
+<p><img src="/2019/12/09/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8F%92%E4%BB%B6%E9%97%AE%E9%A2%98/06.png" alt></p>
+<p>替换如下：</p>
+<p><img src="/2019/12/09/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8F%92%E4%BB%B6%E9%97%AE%E9%A2%98/07.png" alt></p>
+<p>完成。</p>
+]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo-github博客搭建</title>
+    <url>/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
+    <content><![CDATA[<h1 id="搭建hexo博客"><a href="#搭建hexo博客" class="headerlink" title="搭建hexo博客"></a>搭建hexo博客</h1><h2 id="安装gitbash"><a href="#安装gitbash" class="headerlink" title="安装gitbash"></a>安装gitbash</h2><p>（相似于cmd，只不过我偏爱这个）</p>
+<ul>
+<li><p>下载地址：<a href="https://git-for-windows.github.io/" target="_blank" rel="noopener">https://git-for-windows.github.io/</a></p>
+</li>
+<li><p>安装步骤：傻瓜式下一步</p>
+</li>
+<li><p>完成之后，检验打开gitbash。输入命令<code>git version</code>查看版本</p>
+</li>
+</ul>
+<h2 id="安装nodeJs"><a href="#安装nodeJs" class="headerlink" title="安装nodeJs"></a>安装nodeJs</h2><p>hexo是基于nodeJs环境下的静态博客</p>
+<ul>
+<li>下载地址：<a href="https://nodejs.org/en/（LTS为长期维护版本，Current为最新版）" target="_blank" rel="noopener">https://nodejs.org/en/（LTS为长期维护版本，Current为最新版）</a></li>
+<li>也是一路next ， 过在Custom Setup这一步记得选 <code>Add to PATH</code> ,这样你就不用自己去配置电脑上环境变量了 ， 装完在按 <code>win + r</code> 快捷键调出运行，然后输入cmd确定，在cmd中输入node。检查环境，如果指令有反应。显示如图： <img src="/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/09.png" alt></li>
+</ul>
+<p>成功</p>
+<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><h3 id="创建一个文件夹用来存放blog的相关东西"><a href="#创建一个文件夹用来存放blog的相关东西" class="headerlink" title="创建一个文件夹用来存放blog的相关东西"></a>创建一个文件夹用来存放blog的相关东西</h3><h3 id="安装hexo，命令：nmp-i-g-hexo"><a href="#安装hexo，命令：nmp-i-g-hexo" class="headerlink" title="安装hexo，命令：nmp i -g hexo"></a>安装hexo，命令：nmp i -g hexo</h3><h3 id="安装完成之后，用于检测是否安装成功。可查看其版本。命令hexo-v"><a href="#安装完成之后，用于检测是否安装成功。可查看其版本。命令hexo-v" class="headerlink" title="安装完成之后，用于检测是否安装成功。可查看其版本。命令hexo -v"></a>安装完成之后，用于检测是否安装成功。可查看其版本。命令hexo -v</h3><h3 id="初始化，命令：hexo-init-（稍作等待）-初始化完成之后打开文件可有如下"><a href="#初始化，命令：hexo-init-（稍作等待）-初始化完成之后打开文件可有如下" class="headerlink" title="初始化，命令：hexo init  （稍作等待）   初始化完成之后打开文件可有如下"></a>初始化，命令：hexo init  （稍作等待）   初始化完成之后打开文件可有如下</h3><p> <img src="/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/01.png" alt></p>
+<h3 id="搭桥到github"><a href="#搭桥到github" class="headerlink" title="搭桥到github"></a>搭桥到github</h3><ul>
+<li><p>没有账号创建一个即可</p>
+</li>
+<li><p>获得账号，创建一个repo，名称规则  yourname.github.io。其中yourname是你的github名称</p>
+</li>
+<li><p>回到gitbash中，配置github的账户信息。命令  <code>git config --global user.name &quot;YourName&quot;</code> 回车，接着再输入命令 <code>git config --global user.email &quot;YourEmail&quot;</code>。（其中引号中均是你的信息）</p>
+<p><img src="/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/02.png" alt></p>
+</li>
+</ul>
+<h3 id="创建SSH"><a href="#创建SSH" class="headerlink" title="创建SSH"></a>创建SSH</h3><pre><code>在gitbash中输入：`ssh-keygen -t rsa -C &quot;youremail@example.com&quot;`，生成ssh 。回车回车即可</code></pre><p>   紧接着，输入命令<code>cd ~/.ssh</code>回车。<code>cat id_rsa.pub</code>回车。</p>
+<p>   如图： <img src="/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/03.png" alt></p>
+<p>​         将上所得放置github的SSH keys中。title随便，key即为上所得</p>
+<h3 id="打开你的blog项目，找到-config-yml文件。修改："><a href="#打开你的blog项目，找到-config-yml文件。修改：" class="headerlink" title="打开你的blog项目，找到_config.yml文件。修改："></a>打开你的blog项目，找到_config.yml文件。修改：</h3>   <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy: </span></pre></td></tr><tr><td class="code"><pre><span class="line">type: git  </span></pre></td></tr><tr><td class="code"><pre><span class="line">repo:https:&#x2F;&#x2F;github.com&#x2F;YourgithubName&#x2F;YourgithubName.github.io.git </span></pre></td></tr><tr><td class="code"><pre><span class="line">branch: master</span></pre></td></tr></table></figure>
+
+<h3 id="回到gitbash中，进入blog目录。分别执行以下命令：hexo-clean-hexo-generate-hexo-server"><a href="#回到gitbash中，进入blog目录。分别执行以下命令：hexo-clean-hexo-generate-hexo-server" class="headerlink" title="回到gitbash中，进入blog目录。分别执行以下命令：hexo clean,hexo generate,hexo server."></a>回到gitbash中，进入blog目录。分别执行以下命令：<code>hexo clean</code>,<code>hexo generate</code>,<code>hexo server</code>.</h3><p><img src="/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/04.png" alt></p>
+<h3 id="打开浏览器输入本地网址-http-localhost-4000"><a href="#打开浏览器输入本地网址-http-localhost-4000" class="headerlink" title="打开浏览器输入本地网址 http://localhost:4000/"></a>打开浏览器输入本地网址 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a></h3><p> <img src="/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/05.png" alt></p>
+<h2 id="修改主题及主题优化"><a href="#修改主题及主题优化" class="headerlink" title="修改主题及主题优化"></a>修改主题及主题优化</h2><h3 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a>修改主题</h3><p>我比较喜欢next主题，所以在这里以他为例：</p>
+<h6 id="下载主题："><a href="#下载主题：" class="headerlink" title="下载主题："></a>下载主题：</h6><p>gitbash命令cd到blog文件下，（推荐小白直接到blog文件夹下打开gitbash）。输入命令<code>git clone https://github.com/iissnan/hexo-theme-next themes/next</code>。过程有些慢，稍等片刻即可。完成之后你将会在blog的theme文件夹下发现多出的next主题文件</p>
+<p><img src="/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/06.png" alt></p>
+<h6 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h6><p>打开blog的_config.yml文件，找到theme。将其默认的landscape改为next。</p>
+<p> <img src="/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/07.png" alt></p>
+<h6 id="—-config-yml文件详解"><a href="#—-config-yml文件详解" class="headerlink" title="—_config.yml文件详解"></a>—_config.yml文件详解</h6><ol>
+<li>site</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Site</span></pre></td></tr><tr><td class="code"><pre><span class="line">title: 宫家小屋    网站标题</span></pre></td></tr><tr><td class="code"><pre><span class="line">subtitle: &#39;&#39;    网站副标题</span></pre></td></tr><tr><td class="code"><pre><span class="line">description: &#39;&#39;			网站描述</span></pre></td></tr><tr><td class="code"><pre><span class="line">keywords:				网站关键字</span></pre></td></tr><tr><td class="code"><pre><span class="line">author: gong		网站作者</span></pre></td></tr><tr><td class="code"><pre><span class="line">language: en			网站语言，默认为en，中文写zh-Hans</span></pre></td></tr><tr><td class="code"><pre><span class="line">timezone: &#39;&#39;		网站时区</span></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>URL（一般不用修改）</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"> URL</span></pre></td></tr><tr><td class="code"><pre><span class="line">## If your site is put in a subdirectory, set url as &#39;http:&#x2F;&#x2F;yoursite.com&#x2F;child&#39; and root as &#39;&#x2F;child&#x2F;&#39;</span></pre></td></tr><tr><td class="code"><pre><span class="line">url: http:&#x2F;&#x2F;yoursite.com   网站的地址</span></pre></td></tr><tr><td class="code"><pre><span class="line">root: &#x2F;		网站的根目录，存放文章</span></pre></td></tr><tr><td class="code"><pre><span class="line">permalink: :year&#x2F;:month&#x2F;:day&#x2F;:title&#x2F;		文章的链接格式</span></pre></td></tr><tr><td class="code"><pre><span class="line">permalink_defaults:				永久链接中每个段的默认值</span></pre></td></tr><tr><td class="code"><pre><span class="line">pretty_urls:</span></pre></td></tr><tr><td class="code"><pre><span class="line">  trailing_index: true # Set to false to remove trailing index.html from permalinks</span></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>Directory(关于文件夹的一些设置，一般也不用修改)</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"> Directory</span></pre></td></tr><tr><td class="code"><pre><span class="line">source_dir: source   资源文件夹 ，存放用户的资源文件，默认为 source</span></pre></td></tr><tr><td class="code"><pre><span class="line">public_dir: public   公用文件夹 ，存放生成的静态文件，默认为 public</span></pre></td></tr><tr><td class="code"><pre><span class="line">tag_dir: tags       标签目录 ，默认为 tags</span></pre></td></tr><tr><td class="code"><pre><span class="line">archive_dir: archives   档案目录 ，默认为 archives</span></pre></td></tr><tr><td class="code"><pre><span class="line">category_dir: categories   分类目录 ，默认为 categories</span></pre></td></tr><tr><td class="code"><pre><span class="line">code_dir: downloads&#x2F;code   代码目录 ，默认为 downloads&#x2F;code</span></pre></td></tr><tr><td class="code"><pre><span class="line">i18n_dir: :lang   i18n目录 ，默认为 :lang</span></pre></td></tr><tr><td class="code"><pre><span class="line">skip_render:     储存站长验证文件，跳过指定文件的渲染</span></pre></td></tr></table></figure>
+
+<p>参考资料 <a href="https://blog.csdn.net/wsmrzx/article/details/81477926" target="_blank" rel="noopener">https://blog.csdn.net/wsmrzx/article/details/81477926</a> </p>
+<h3 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h3><p>经过上述修改完毕时候，gitbash命令：<code>hexo clean</code>,<code>hexo gen</code>,<code>hexo s</code>（这里可简写）</p>
+<h3 id="发表自己第一篇博文"><a href="#发表自己第一篇博文" class="headerlink" title="发表自己第一篇博文"></a>发表自己第一篇博文</h3><p>命令<code>$ hexo new &quot;hexo-github博客搭建&quot;</code>，打开文件如图：</p>
+<p><img src="/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/08.png" alt></p>
+<p>可以看到刚创建的文档，均是md格式。打开即可进行编辑。</p>
+<h3 id="最后发到远端"><a href="#最后发到远端" class="headerlink" title="最后发到远端"></a>最后发到远端</h3><ul>
+<li>先安装插件，gitbash命令<code>npm install hexo-deployer-git --save</code></li>
+<li>执行命令</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span></pre></td></tr><tr><td class="code"><pre><span class="line">hexo generate</span></pre></td></tr><tr><td class="code"><pre><span class="line">hexo deploy</span></pre></td></tr></table></figure>
+
+
+
+<p>接下来你就可以通过https：//yourname.github.io 进行访问了</p>
+<p><img src="/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/10.png" alt></p>
+<h3 id="使得博文支持图片"><a href="#使得博文支持图片" class="headerlink" title="使得博文支持图片"></a>使得博文支持图片</h3><ul>
+<li>设置站点配置文件_config.yml中 post_asset_folder:true。 （ Hexo 提供了一种更方便管理 Asset 的设定：post_asset_folder当您设置post_asset_folder为true参数后，在建立文件时，Hexo会自动建立一个与文章同名的文件夹，您可以把与该文章相关的所有资源都放到那个文件夹。 ）</li>
+<li>安装插件：blog目录下gitbash命令<code>npm install https://github.com/CodeFalling/hexo-asset-image --save</code></li>
+<li>安装完成之后，新建博文。打开博文文件。发现如图：</li>
+</ul>
+<p><img src="/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/11.png" alt></p>
+<ul>
+<li>文章插入图片格式推荐</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![](hexo-github博客搭建&#x2F;10.png)  括号内为其相对地址，小白可直接写文件名字+图片名字</span></pre></td></tr></table></figure>
+
+<h3 id="设置背景图"><a href="#设置背景图" class="headerlink" title="设置背景图"></a>设置背景图</h3><p> 在 themes/*/source/css/_custom/custom.styl 中添加如下代码： </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">body&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    background:url(&#x2F;images&#x2F;bg.jpg);</span></pre></td></tr><tr><td class="code"><pre><span class="line">    background-size:cover;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    background-repeat:no-repeat;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    background-attachment:fixed;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    background-position:center;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<p>同时找一张图片放入images文件内，记得与上述url对应名字</p>
+<p><img src="/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/12.png" alt></p>
+<h3 id="设置评论功能"><a href="#设置评论功能" class="headerlink" title="设置评论功能"></a>设置评论功能</h3><p>因为多个 论系统已经下线或者是外国网站，容易被墙，所有这里选择valine </p>
+<p>操作</p>
+<ul>
+<li>打开next文件夹的_config.yml文件，找到valine字段  。设置enable字段值为true </li>
+<li>然后前往<a href="https://leancloud.cn/" target="_blank" rel="noopener">leancloud</a>注册账号，随意注册一个应用 。根据下图，打开设置.复制Appid和APPkey</li>
+</ul>
+<p><img src="/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/16.png" alt></p>
+<p><img src="/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/17.png" alt></p>
+<ul>
+<li>到主题下的valine字段配置文件中</li>
+</ul>
+<p><img src="/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/13.png" alt></p>
+<ul>
+<li>完成效果图：</li>
+</ul>
+<p><img src="/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/15.png" alt></p>
+]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+</search>
