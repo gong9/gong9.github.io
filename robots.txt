@@ -1,0 +1,10 @@
+User-agent: * Allow: /
+Allow: /archives/
+Allow: /tags/ 
+Allow: /categories/
+Disallow: /vendors/
+
+
+
+Sitemap: http://www.gongzhijia/sitemap.xml
+Sitemap: http://www.gongzhijia/baidusitemap.xml
