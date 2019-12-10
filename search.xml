@@ -2,9 +2,9 @@
 <search>
   <entry>
     <title>hexo-next 添加搜索功能</title>
-    <url>/hexo-next-%E6%B7%BB%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD.html</url>
+    <url>/2019/12/10/hexo-next-%E6%B7%BB%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/</url>
     <content><![CDATA[<p>预览：</p>
-<p><img src="/hexo-next-%E6%B7%BB%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD.htm/02.png" alt></p>
+<p><img src="/2019/12/10/hexo-next-%E6%B7%BB%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/02.png" alt></p>
 <p>正题：</p>
 <ul>
 <li>安装插件，在blog的目录下执行。命令：</li>
@@ -19,7 +19,7 @@
 <li>修改主题配置文件</li>
 </ul>
 <p>找到 local_search 项，将它的enable修改为true。</p>
-<p><img src="/hexo-next-%E6%B7%BB%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD.htm/01.png" alt></p>
+<p><img src="/2019/12/10/hexo-next-%E6%B7%BB%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/01.png" alt></p>
 ]]></content>
       <categories>
         <category>博客搭建</category>
@@ -30,23 +30,23 @@
   </entry>
   <entry>
     <title>hexo博客域名绑定与SEO</title>
-    <url>/hexo%E5%8D%9A%E5%AE%A2%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A%E4%B8%8ESEO.html</url>
+    <url>/2019/12/10/hexo%E5%8D%9A%E5%AE%A2%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A%E4%B8%8ESEO/</url>
     <content><![CDATA[<h2 id="域名绑定"><a href="#域名绑定" class="headerlink" title="域名绑定"></a>域名绑定</h2><h3 id="1-获得域名及实名"><a href="#1-获得域名及实名" class="headerlink" title="1. 获得域名及实名"></a>1. 获得域名及实名</h3><p>首先要去搞一个域名，阿里云、腾讯云都ok。我是买了个百度云的</p>
-<p><img src="/hexo%E5%8D%9A%E5%AE%A2%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A%E4%B8%8ESEO.htm/02.png" alt></p>
+<p><img src="/2019/12/10/hexo%E5%8D%9A%E5%AE%A2%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A%E4%B8%8ESEO/02.png" alt></p>
 <p>我这里是已经经过实名认证的，图标变绿了。当然你也要和我一样</p>
 <h3 id="2-解析"><a href="#2-解析" class="headerlink" title="2. 解析"></a>2. 解析</h3><p>实名认证完成之后，便可以解析了。点击操作那的解析，如图增加俩条</p>
-<p><img src="/hexo%E5%8D%9A%E5%AE%A2%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A%E4%B8%8ESEO.htm/03.png" alt></p>
+<p><img src="/2019/12/10/hexo%E5%8D%9A%E5%AE%A2%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A%E4%B8%8ESEO/03.png" alt></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">解释： </span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- 记录类型一定要选择CNAME这种类型，只有这样你的域名才能只向你的github。</span></pre></td></tr><tr><td class="code"><pre><span class="line">- 记录值为你的仓库地址</span></pre></td></tr><tr><td class="code"><pre><span class="line">- 主机记录www,可以用www.gongzhijia.cn；@,可以用gongzhijia.cn</span></pre></td></tr></table></figure>
 
 <h3 id="3-新建CNAME文件"><a href="#3-新建CNAME文件" class="headerlink" title="3. 新建CNAME文件"></a>3. 新建CNAME文件</h3><p>到你的站点文件的source文件下，新建CNAME文件(写搞个名字就CNAME的记事本写完后重命名一下没有任何后缀)。里面内容为你的域名。如：<a href="http://www.gongzhijia.cn" target="_blank" rel="noopener">www.gongzhijia.cn</a></p>
-<p><img src="/hexo%E5%8D%9A%E5%AE%A2%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A%E4%B8%8ESEO.htm/05.png" alt></p>
+<p><img src="/2019/12/10/hexo%E5%8D%9A%E5%AE%A2%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A%E4%B8%8ESEO/05.png" alt></p>
 <h3 id="4-到你的github添加自定义域名。"><a href="#4-到你的github添加自定义域名。" class="headerlink" title="4. 到你的github添加自定义域名。"></a>4. 到你的github添加自定义域名。</h3><p>打开你的仓库</p>
-<p><img src="/hexo%E5%8D%9A%E5%AE%A2%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A%E4%B8%8ESEO.htm/06.png" alt></p>
+<p><img src="/2019/12/10/hexo%E5%8D%9A%E5%AE%A2%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A%E4%B8%8ESEO/06.png" alt></p>
 <p>打开下滑找到</p>
-<p><img src="/hexo%E5%8D%9A%E5%AE%A2%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A%E4%B8%8ESEO.htm/07.png" alt></p>
+<p><img src="/2019/12/10/hexo%E5%8D%9A%E5%AE%A2%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A%E4%B8%8ESEO/07.png" alt></p>
 <p>修改保存。</p>
 <h3 id="5-修改站点配置文件"><a href="#5-修改站点配置文件" class="headerlink" title="5. 修改站点配置文件"></a>5. 修改站点配置文件</h3><p>修改url</p>
-<p><img src="/hexo%E5%8D%9A%E5%AE%A2%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A%E4%B8%8ESEO.htm/08.png" alt></p>
+<p><img src="/2019/12/10/hexo%E5%8D%9A%E5%AE%A2%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A%E4%B8%8ESEO/08.png" alt></p>
 <h3 id="6-完毕"><a href="#6-完毕" class="headerlink" title="6. 完毕"></a>6. 完毕</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span></pre></td></tr><tr><td class="code"><pre><span class="line">hexo g</span></pre></td></tr><tr><td class="code"><pre><span class="line">hexo d</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">打开浏览器输入域名</span></pre></td></tr></table></figure>
 
 ]]></content>
@@ -59,8 +59,8 @@
   </entry>
   <entry>
     <title>悟空传摘抄笔记</title>
-    <url>/%E6%82%9F%E7%A9%BA%E4%BC%A0%E6%91%98%E6%8A%84%E7%AC%94%E8%AE%B0.html</url>
-    <content><![CDATA[<p><img src="/%E6%82%9F%E7%A9%BA%E4%BC%A0%E6%91%98%E6%8A%84%E7%AC%94%E8%AE%B0.htm/01.png" alt></p>
+    <url>/2019/12/09/%E6%82%9F%E7%A9%BA%E4%BC%A0%E6%91%98%E6%8A%84%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<p><img src="/2019/12/09/%E6%82%9F%E7%A9%BA%E4%BC%A0%E6%91%98%E6%8A%84%E7%AC%94%E8%AE%B0/01.png" alt></p>
 <p>人生最有价值的时刻，不是最后的功成名就，而是对未来正充满期待与不安之时。 有未来是件很开心的事。我愿意和大家一起去见证这个未来，见证我们走过的路。</p>
 <p>​    成败，其实并不是最重要的。因为你去追求理想时你就会明白，你很可能不会成功</p>
 <p>​    最关键就在于，当你深知这一点时，你还要不要去追求。 我没有答案，也不需要答案。 </p>
@@ -75,7 +75,7 @@
   </entry>
   <entry>
     <title>ajax</title>
-    <url>/ajax.html</url>
+    <url>/2019/12/09/ajax/</url>
     <content><![CDATA[<h2 id="我将他们分为俩章"><a href="#我将他们分为俩章" class="headerlink" title="# 我将他们分为俩章"></a># 我将他们分为俩章</h2><ul>
 <li>ajax定义：其实他就是浏览器提供的一套 API，可以通过 JavaScript 调用，从而实现通过代码控制请求与响应。实现 网络编程。</li>
 <li>api的含义，API（Application Programming Interface,应用程序编程接口）是一些预先定义的函数，目的是提供应用程序与开发人员基于某软件或硬件得以访问一组例程的能力，而又无需访问源码，或理解内部工作机制的细节。（类似于DOM，浏览器为我们提供这种api，方便我们控制其节点），ajax这种api的作用方便我们进行网络编程。</li>
@@ -227,7 +227,7 @@
   </entry>
   <entry>
     <title>javaWeb</title>
-    <url>/javaWeb.html</url>
+    <url>/2019/12/09/javaWeb/</url>
     <content><![CDATA[<h1 id="第一章-XML和Tomcat"><a href="#第一章-XML和Tomcat" class="headerlink" title="第一章 XML和Tomcat"></a>第一章 XML和Tomcat</h1><h2 id="XML"><a href="#XML" class="headerlink" title="XML"></a>XML</h2><blockquote>
 <p>XML全称eXtendsible markup language，可扩展的标记语言</p>
 </blockquote>
@@ -932,7 +932,7 @@ try {
   </entry>
   <entry>
     <title>c/c+</title>
-    <url>/c-c.html</url>
+    <url>/2019/12/09/c-c/</url>
     <content><![CDATA[]]></content>
       <categories>
         <category>c/c+</category>
@@ -943,7 +943,7 @@ try {
   </entry>
   <entry>
     <title>mysql</title>
-    <url>/mysql.html</url>
+    <url>/2019/12/09/mysql/</url>
     <content><![CDATA[<h1 id="mysql笔记"><a href="#mysql笔记" class="headerlink" title="mysql笔记"></a>mysql笔记</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">这里我只要针对mysql的用法</span></pre></td></tr></table></figure>
 
 <h2 id="1-命令行连接数据库"><a href="#1-命令行连接数据库" class="headerlink" title="1 命令行连接数据库"></a>1 命令行连接数据库</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mysql -uroot -proot</span></pre></td></tr><tr><td class="code"><pre><span class="line">这里-u和-p之后紧的都是数据库的用户名和密码</span></pre></td></tr></table></figure>
@@ -989,7 +989,7 @@ try {
   </entry>
   <entry>
     <title>php基础语法</title>
-    <url>/php.html</url>
+    <url>/2019/12/09/php/</url>
     <content><![CDATA[]]></content>
       <categories>
         <category>php</category>
@@ -1000,7 +1000,7 @@ try {
   </entry>
   <entry>
     <title>java</title>
-    <url>/java.html</url>
+    <url>/2019/12/09/java/</url>
     <content><![CDATA[]]></content>
       <categories>
         <category>Java</category>
@@ -1011,7 +1011,7 @@ try {
   </entry>
   <entry>
     <title>python基础语法</title>
-    <url>/python.html</url>
+    <url>/2019/12/09/python/</url>
     <content><![CDATA[]]></content>
       <categories>
         <category>py</category>
@@ -1022,7 +1022,7 @@ try {
   </entry>
   <entry>
     <title>linux常用命令</title>
-    <url>/linux.html</url>
+    <url>/2019/12/09/linux/</url>
     <content><![CDATA[<h1 id="常用-Linux-命令的基本使用"><a href="#常用-Linux-命令的基本使用" class="headerlink" title="常用 Linux 命令的基本使用"></a>常用 Linux 命令的基本使用</h1><h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><ul>
 <li>理解学习 Linux 终端命令的原因</li>
 <li>常用 Linux 命令体验</li>
@@ -1190,7 +1190,7 @@ try {
   </entry>
   <entry>
     <title>前端中</title>
-    <url>/%E5%89%8D%E7%AB%AF%E4%B8%AD.html</url>
+    <url>/2019/12/09/%E5%89%8D%E7%AB%AF%E4%B8%AD/</url>
     <content><![CDATA[]]></content>
       <categories>
         <category>前端</category>
@@ -1201,7 +1201,7 @@ try {
   </entry>
   <entry>
     <title>前端基础</title>
-    <url>/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80.html</url>
+    <url>/2019/12/09/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/</url>
     <content><![CDATA[]]></content>
       <categories>
         <category>前端</category>
@@ -1212,7 +1212,7 @@ try {
   </entry>
   <entry>
     <title>os</title>
-    <url>/os.html</url>
+    <url>/2019/12/09/os/</url>
     <content><![CDATA[<h1 id="C的结构体"><a href="#C的结构体" class="headerlink" title="C的结构体"></a>C的结构体</h1><p> C数组作用储存了一组相同类型的变量，但是想一张学生表的数据元素可不是同一类型。这里就需要用到了我们的结构体。</p>
 <ul>
 <li>定义结构：</li>
@@ -1229,7 +1229,7 @@ try {
   </entry>
   <entry>
     <title>数据结构</title>
-    <url>/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.html</url>
+    <url>/2019/12/09/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</url>
     <content><![CDATA[]]></content>
       <categories>
         <category>408</category>
@@ -1240,7 +1240,7 @@ try {
   </entry>
   <entry>
     <title>计网</title>
-    <url>/%E8%AE%A1%E7%BD%91.html</url>
+    <url>/2019/12/09/%E8%AE%A1%E7%BD%91/</url>
     <content><![CDATA[]]></content>
       <categories>
         <category>408</category>
@@ -1251,7 +1251,7 @@ try {
   </entry>
   <entry>
     <title>组原</title>
-    <url>/%E7%BB%84%E5%8E%9F.html</url>
+    <url>/2019/12/09/%E7%BB%84%E5%8E%9F/</url>
     <content><![CDATA[]]></content>
       <categories>
         <category>408</category>
@@ -1262,7 +1262,7 @@ try {
   </entry>
   <entry>
     <title>hexo博客优化</title>
-    <url>/hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96.html</url>
+    <url>/2019/12/09/hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/</url>
     <content><![CDATA[<h2 id="博文压缩"><a href="#博文压缩" class="headerlink" title="博文压缩"></a>博文压缩</h2><ul>
 <li>gitbash，cd到blog文件下安装插件。命令<code>$ npm install gulp -g</code>，接着安装，命令<code>$ npm install gulp-minify-css gulp-uglify gulp-htmlmin gulp-htmlclean gulp --save</code></li>
 <li>在blog文件下新建 gulpfile.js 。填入以下内容：</li>
@@ -1280,7 +1280,7 @@ try {
   </entry>
   <entry>
     <title>next主题个性化</title>
-    <url>/next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96.html</url>
+    <url>/2019/12/09/next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96/</url>
     <content><![CDATA[<h2 id="实现点击出现桃心效果"><a href="#实现点击出现桃心效果" class="headerlink" title="实现点击出现桃心效果"></a>实现点击出现桃心效果</h2><p>实现方法：</p>
 <ul>
 <li>在 /themes/next/source/js/src 新建love.js。将下面代码导入：</li>
@@ -1296,17 +1296,17 @@ try {
 
 
 
-<p><img src="/next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96.htm/02.png" alt></p>
+<p><img src="/2019/12/09/next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96/02.png" alt></p>
 <p>效果：</p>
-<p><img src="/next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96.htm/01.png" alt></p>
+<p><img src="/2019/12/09/next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96/01.png" alt></p>
 <h2 id="添加顶部加载条"><a href="#添加顶部加载条" class="headerlink" title="添加顶部加载条"></a>添加顶部加载条</h2><p> 打开<code>/themes/next/layout/_partials/head.swig</code>文件， 添加</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script src&#x3D;&quot;&#x2F;&#x2F;cdn.bootcss.com&#x2F;pace&#x2F;1.0.2&#x2F;pace.min.js&quot;&gt;&lt;&#x2F;script&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&lt;link href&#x3D;&quot;&#x2F;&#x2F;cdn.bootcss.com&#x2F;pace&#x2F;1.0.2&#x2F;themes&#x2F;pink&#x2F;pace-theme-flash.css&quot; rel&#x3D;&quot;stylesheet&quot;&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;应为默认为粉红色,修个样式</span></pre></td></tr><tr><td class="code"><pre><span class="line">&lt;style&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    .pace .pace-progress &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        background: #1E92FB; &#x2F;*进度条颜色*&#x2F;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        height: 3px;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    .pace .pace-progress-inner &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; &#x2F;*阴影颜色*&#x2F;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    .pace .pace-activity &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        border-top-color: #1E92FB;    &#x2F;*上边框颜色*&#x2F;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        border-left-color: #1E92FB;    &#x2F;*左边框颜色*&#x2F;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&lt;&#x2F;style&gt;</span></pre></td></tr></table></figure>
 
 <p>修改next主题下的_config.yml:</p>
-<p><img src="/next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96.htm/04.png" alt></p>
+<p><img src="/2019/12/09/next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96/04.png" alt></p>
 <p>(上述红为可修改样式，图片手残了)</p>
 <h2 id="在文章底部增加版权信息"><a href="#在文章底部增加版权信息" class="headerlink" title="在文章底部增加版权信息"></a>在文章底部增加版权信息</h2><p>效果图：</p>
-<p><img src="/next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96.htm/07.png" alt></p>
+<p><img src="/2019/12/09/next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96/07.png" alt></p>
 <ul>
 <li>在目录 <code>next/layout/_macro/下</code>添加 <code>my-copyright.swig</code>，代码如下：</li>
 </ul>
@@ -1322,7 +1322,7 @@ try {
 </ul>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在代码</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#123;% if theme.wechat_subscriber.enabled and not is_index %&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &lt;div&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#123;% include &#39;wechat-subscriber.swig&#39; %&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &lt;&#x2F;div&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#123;% endif %&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">之前添加代码</span></pre></td></tr><tr><td class="code"><pre><span class="line">&lt;div&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#123;% if not is_index %&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#123;% include &#39;my-copyright.swig&#39; %&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#123;% endif %&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&lt;&#x2F;div&gt;</span></pre></td></tr></table></figure>
 
-<p><img src="/next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96.htm/06.png" alt></p>
+<p><img src="/2019/12/09/next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96/06.png" alt></p>
 <ul>
 <li>打开 <code>themes/next/source/css/_common/components/post/post.styl</code> 文件，在最后一行增加代码 </li>
 </ul>
@@ -1333,14 +1333,14 @@ try {
 </ul>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">例如：</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">title: hexo博客搭建插件问题</span></pre></td></tr><tr><td class="code"><pre><span class="line">date: 2019-12-09 11:22:36</span></pre></td></tr><tr><td class="code"><pre><span class="line">tags: [hexo]</span></pre></td></tr><tr><td class="code"><pre><span class="line">categories: 博客搭建</span></pre></td></tr><tr><td class="code"><pre><span class="line">copyright: true  #开启</span></pre></td></tr></table></figure>
 
-<p><img src="/next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96.htm/08.png" alt></p>
+<p><img src="/2019/12/09/next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96/08.png" alt></p>
 <h2 id="实现统计功能"><a href="#实现统计功能" class="headerlink" title="实现统计功能"></a>实现统计功能</h2><p>效果：</p>
-<p><img src="/next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96.htm/10.png" alt></p>
+<p><img src="/2019/12/09/next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96/10.png" alt></p>
 <ul>
 <li>在gitbash   cd到blog根目录，安装插件 hexo-wordcount 。命令<code>$ npm install hexo-wordcount --save</code></li>
 <li>然后在主题的配置文件中，配置如下： </li>
 </ul>
-<p><img src="/next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96.htm/11.png" alt></p>
+<p><img src="/2019/12/09/next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96/11.png" alt></p>
 <p>(打开字数和阅读时间)</p>
 ]]></content>
       <categories>
@@ -1352,23 +1352,23 @@ try {
   </entry>
   <entry>
     <title>hexo博客搭建插件问题</title>
-    <url>/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8F%92%E4%BB%B6%E9%97%AE%E9%A2%98.html</url>
+    <url>/2019/12/09/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8F%92%E4%BB%B6%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[<h1 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h1><h2 id="菜单栏链接问题"><a href="#菜单栏链接问题" class="headerlink" title="菜单栏链接问题"></a>菜单栏链接问题</h2><p>问题描述如图：</p>
-<p><img src="/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8F%92%E4%BB%B6%E9%97%AE%E9%A2%98.htm/01.png" alt></p>
-<p><img src="/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8F%92%E4%BB%B6%E9%97%AE%E9%A2%98.htm/02.png" alt></p>
-<p><img src="/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8F%92%E4%BB%B6%E9%97%AE%E9%A2%98.htm/03.png" alt></p>
+<p><img src="/2019/12/09/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8F%92%E4%BB%B6%E9%97%AE%E9%A2%98/01.png" alt></p>
+<p><img src="/2019/12/09/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8F%92%E4%BB%B6%E9%97%AE%E9%A2%98/02.png" alt></p>
+<p><img src="/2019/12/09/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8F%92%E4%BB%B6%E9%97%AE%E9%A2%98/03.png" alt></p>
 <p>解决：文件格式转码所致，空格转码为%20。故查看主题配置文件。可发现</p>
-<p><img src="/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8F%92%E4%BB%B6%E9%97%AE%E9%A2%98.htm/04.png" alt></p>
+<p><img src="/2019/12/09/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8F%92%E4%BB%B6%E9%97%AE%E9%A2%98/04.png" alt></p>
 <p>或字符两面存在空格。消除即可：</p>
-<p><img src="/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8F%92%E4%BB%B6%E9%97%AE%E9%A2%98.htm/05.png" alt></p>
+<p><img src="/2019/12/09/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8F%92%E4%BB%B6%E9%97%AE%E9%A2%98/05.png" alt></p>
 <p>保存，<code>hexo clean</code>，<code>hexo gen</code>，<code>hexo s</code>。浏览器刷新页面</p>
 <h2 id="解决添加了valine之后，访站速度问题"><a href="#解决添加了valine之后，访站速度问题" class="headerlink" title="解决添加了valine之后，访站速度问题"></a>解决添加了valine之后，访站速度问题</h2><p>原因，valine评论系统默认的CDN地址<code>unpkg.com/valine/dist/Valine.min.js</code>加载过慢</p>
 <p>解决方法：找到对应地址。文件路径 \themes\next\layout_third-party\comments\valine.swig ，</p>
 <p>替换它的默认地址为最新</p>
 <p>地址获取：  <a href="https://links.jianshu.com/go?to=https%3A%2F%2Fwww.jsdelivr.com%2Fpackage%2Fnpm%2Fvaline" target="_blank" rel="noopener">https://www.jsdelivr.com/package/npm/valine</a> 打开网址，获取操作如下图</p>
-<p><img src="/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8F%92%E4%BB%B6%E9%97%AE%E9%A2%98.htm/06.png" alt></p>
+<p><img src="/2019/12/09/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8F%92%E4%BB%B6%E9%97%AE%E9%A2%98/06.png" alt></p>
 <p>替换如下：</p>
-<p><img src="/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8F%92%E4%BB%B6%E9%97%AE%E9%A2%98.htm/07.png" alt></p>
+<p><img src="/2019/12/09/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8F%92%E4%BB%B6%E9%97%AE%E9%A2%98/07.png" alt></p>
 <p>完成。</p>
 ]]></content>
       <categories>
@@ -1380,7 +1380,7 @@ try {
   </entry>
   <entry>
     <title>hexo-github博客搭建</title>
-    <url>/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.html</url>
+    <url>/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
     <content><![CDATA[<h1 id="搭建hexo博客"><a href="#搭建hexo博客" class="headerlink" title="搭建hexo博客"></a>搭建hexo博客</h1><h2 id="安装gitbash"><a href="#安装gitbash" class="headerlink" title="安装gitbash"></a>安装gitbash</h2><p>（相似于cmd，只不过我偏爱这个）</p>
 <ul>
 <li><p>下载地址：<a href="https://git-for-windows.github.io/" target="_blank" rel="noopener">https://git-for-windows.github.io/</a></p>
@@ -1393,31 +1393,31 @@ try {
 <h2 id="安装nodeJs"><a href="#安装nodeJs" class="headerlink" title="安装nodeJs"></a>安装nodeJs</h2><p>hexo是基于nodeJs环境下的静态博客</p>
 <ul>
 <li>下载地址：<a href="https://nodejs.org/en/（LTS为长期维护版本，Current为最新版）" target="_blank" rel="noopener">https://nodejs.org/en/（LTS为长期维护版本，Current为最新版）</a></li>
-<li>也是一路next ， 过在Custom Setup这一步记得选 <code>Add to PATH</code> ,这样你就不用自己去配置电脑上环境变量了 ， 装完在按 <code>win + r</code> 快捷键调出运行，然后输入cmd确定，在cmd中输入node。检查环境，如果指令有反应。显示如图： <img src="/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.htm/09.png" alt></li>
+<li>也是一路next ， 过在Custom Setup这一步记得选 <code>Add to PATH</code> ,这样你就不用自己去配置电脑上环境变量了 ， 装完在按 <code>win + r</code> 快捷键调出运行，然后输入cmd确定，在cmd中输入node。检查环境，如果指令有反应。显示如图： <img src="/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/09.png" alt></li>
 </ul>
 <p>成功</p>
-<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><h3 id="创建一个文件夹用来存放blog的相关东西"><a href="#创建一个文件夹用来存放blog的相关东西" class="headerlink" title="创建一个文件夹用来存放blog的相关东西"></a>创建一个文件夹用来存放blog的相关东西</h3><h3 id="安装hexo，命令：nmp-i-g-hexo"><a href="#安装hexo，命令：nmp-i-g-hexo" class="headerlink" title="安装hexo，命令：nmp i -g hexo"></a>安装hexo，命令：nmp i -g hexo</h3><h3 id="安装完成之后，用于检测是否安装成功。可查看其版本。命令hexo-v"><a href="#安装完成之后，用于检测是否安装成功。可查看其版本。命令hexo-v" class="headerlink" title="安装完成之后，用于检测是否安装成功。可查看其版本。命令hexo -v"></a>安装完成之后，用于检测是否安装成功。可查看其版本。命令hexo -v</h3><h3 id="初始化，命令：hexo-init-（稍作等待）-初始化完成之后打开文件可有如下"><a href="#初始化，命令：hexo-init-（稍作等待）-初始化完成之后打开文件可有如下" class="headerlink" title="初始化，命令：hexo init  （稍作等待）   初始化完成之后打开文件可有如下"></a>初始化，命令：hexo init  （稍作等待）   初始化完成之后打开文件可有如下</h3><p> <img src="/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.htm/01.png" alt></p>
+<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><h3 id="创建一个文件夹用来存放blog的相关东西"><a href="#创建一个文件夹用来存放blog的相关东西" class="headerlink" title="创建一个文件夹用来存放blog的相关东西"></a>创建一个文件夹用来存放blog的相关东西</h3><h3 id="安装hexo，命令：nmp-i-g-hexo"><a href="#安装hexo，命令：nmp-i-g-hexo" class="headerlink" title="安装hexo，命令：nmp i -g hexo"></a>安装hexo，命令：nmp i -g hexo</h3><h3 id="安装完成之后，用于检测是否安装成功。可查看其版本。命令hexo-v"><a href="#安装完成之后，用于检测是否安装成功。可查看其版本。命令hexo-v" class="headerlink" title="安装完成之后，用于检测是否安装成功。可查看其版本。命令hexo -v"></a>安装完成之后，用于检测是否安装成功。可查看其版本。命令hexo -v</h3><h3 id="初始化，命令：hexo-init-（稍作等待）-初始化完成之后打开文件可有如下"><a href="#初始化，命令：hexo-init-（稍作等待）-初始化完成之后打开文件可有如下" class="headerlink" title="初始化，命令：hexo init  （稍作等待）   初始化完成之后打开文件可有如下"></a>初始化，命令：hexo init  （稍作等待）   初始化完成之后打开文件可有如下</h3><p> <img src="/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/01.png" alt></p>
 <h3 id="搭桥到github"><a href="#搭桥到github" class="headerlink" title="搭桥到github"></a>搭桥到github</h3><ul>
 <li><p>没有账号创建一个即可</p>
 </li>
 <li><p>获得账号，创建一个repo，名称规则  yourname.github.io。其中yourname是你的github名称</p>
 </li>
 <li><p>回到gitbash中，配置github的账户信息。命令  <code>git config --global user.name &quot;YourName&quot;</code> 回车，接着再输入命令 <code>git config --global user.email &quot;YourEmail&quot;</code>。（其中引号中均是你的信息）</p>
-<p><img src="/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.htm/02.png" alt></p>
+<p><img src="/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/02.png" alt></p>
 </li>
 </ul>
 <h3 id="创建SSH"><a href="#创建SSH" class="headerlink" title="创建SSH"></a>创建SSH</h3><pre><code>在gitbash中输入：`ssh-keygen -t rsa -C &quot;youremail@example.com&quot;`，生成ssh 。回车回车即可</code></pre><p>   紧接着，输入命令<code>cd ~/.ssh</code>回车。<code>cat id_rsa.pub</code>回车。</p>
-<p>   如图： <img src="/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.htm/03.png" alt></p>
+<p>   如图： <img src="/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/03.png" alt></p>
 <p>​         将上所得放置github的SSH keys中。title随便，key即为上所得</p>
 <h3 id="打开你的blog项目，找到-config-yml文件。修改："><a href="#打开你的blog项目，找到-config-yml文件。修改：" class="headerlink" title="打开你的blog项目，找到_config.yml文件。修改："></a>打开你的blog项目，找到_config.yml文件。修改：</h3>   <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy: </span></pre></td></tr><tr><td class="code"><pre><span class="line">type: git  </span></pre></td></tr><tr><td class="code"><pre><span class="line">repo:https:&#x2F;&#x2F;github.com&#x2F;YourgithubName&#x2F;YourgithubName.github.io.git </span></pre></td></tr><tr><td class="code"><pre><span class="line">branch: master</span></pre></td></tr></table></figure>
 
-<h3 id="回到gitbash中，进入blog目录。分别执行以下命令：hexo-clean-hexo-generate-hexo-server"><a href="#回到gitbash中，进入blog目录。分别执行以下命令：hexo-clean-hexo-generate-hexo-server" class="headerlink" title="回到gitbash中，进入blog目录。分别执行以下命令：hexo clean,hexo generate,hexo server."></a>回到gitbash中，进入blog目录。分别执行以下命令：<code>hexo clean</code>,<code>hexo generate</code>,<code>hexo server</code>.</h3><p><img src="/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.htm/04.png" alt></p>
-<h3 id="打开浏览器输入本地网址-http-localhost-4000"><a href="#打开浏览器输入本地网址-http-localhost-4000" class="headerlink" title="打开浏览器输入本地网址 http://localhost:4000/"></a>打开浏览器输入本地网址 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a></h3><p> <img src="/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.htm/05.png" alt></p>
+<h3 id="回到gitbash中，进入blog目录。分别执行以下命令：hexo-clean-hexo-generate-hexo-server"><a href="#回到gitbash中，进入blog目录。分别执行以下命令：hexo-clean-hexo-generate-hexo-server" class="headerlink" title="回到gitbash中，进入blog目录。分别执行以下命令：hexo clean,hexo generate,hexo server."></a>回到gitbash中，进入blog目录。分别执行以下命令：<code>hexo clean</code>,<code>hexo generate</code>,<code>hexo server</code>.</h3><p><img src="/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/04.png" alt></p>
+<h3 id="打开浏览器输入本地网址-http-localhost-4000"><a href="#打开浏览器输入本地网址-http-localhost-4000" class="headerlink" title="打开浏览器输入本地网址 http://localhost:4000/"></a>打开浏览器输入本地网址 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a></h3><p> <img src="/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/05.png" alt></p>
 <h2 id="修改主题及主题优化"><a href="#修改主题及主题优化" class="headerlink" title="修改主题及主题优化"></a>修改主题及主题优化</h2><h3 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a>修改主题</h3><p>我比较喜欢next主题，所以在这里以他为例：</p>
 <h6 id="下载主题："><a href="#下载主题：" class="headerlink" title="下载主题："></a>下载主题：</h6><p>gitbash命令cd到blog文件下，（推荐小白直接到blog文件夹下打开gitbash）。输入命令<code>git clone https://github.com/iissnan/hexo-theme-next themes/next</code>。过程有些慢，稍等片刻即可。完成之后你将会在blog的theme文件夹下发现多出的next主题文件</p>
-<p><img src="/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.htm/06.png" alt></p>
+<p><img src="/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/06.png" alt></p>
 <h6 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h6><p>打开blog的_config.yml文件，找到theme。将其默认的landscape改为next。</p>
-<p> <img src="/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.htm/07.png" alt></p>
+<p> <img src="/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/07.png" alt></p>
 <h6 id="—-config-yml文件详解"><a href="#—-config-yml文件详解" class="headerlink" title="—_config.yml文件详解"></a>—_config.yml文件详解</h6><ol>
 <li>site</li>
 </ol>
@@ -1436,7 +1436,7 @@ try {
 <p>参考资料 <a href="https://blog.csdn.net/wsmrzx/article/details/81477926" target="_blank" rel="noopener">https://blog.csdn.net/wsmrzx/article/details/81477926</a> </p>
 <h3 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h3><p>经过上述修改完毕时候，gitbash命令：<code>hexo clean</code>,<code>hexo gen</code>,<code>hexo s</code>（这里可简写）</p>
 <h3 id="发表自己第一篇博文"><a href="#发表自己第一篇博文" class="headerlink" title="发表自己第一篇博文"></a>发表自己第一篇博文</h3><p>命令<code>$ hexo new &quot;hexo-github博客搭建&quot;</code>，打开文件如图：</p>
-<p><img src="/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.htm/08.png" alt></p>
+<p><img src="/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/08.png" alt></p>
 <p>可以看到刚创建的文档，均是md格式。打开即可进行编辑。</p>
 <h3 id="最后发到远端"><a href="#最后发到远端" class="headerlink" title="最后发到远端"></a>最后发到远端</h3><ul>
 <li>先安装插件，gitbash命令<code>npm install hexo-deployer-git --save</code></li>
@@ -1447,13 +1447,13 @@ try {
 
 
 <p>接下来你就可以通过https：//yourname.github.io 进行访问了</p>
-<p><img src="/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.htm/10.png" alt></p>
+<p><img src="/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/10.png" alt></p>
 <h3 id="使得博文支持图片"><a href="#使得博文支持图片" class="headerlink" title="使得博文支持图片"></a>使得博文支持图片</h3><ul>
 <li>设置站点配置文件_config.yml中 post_asset_folder:true。 （ Hexo 提供了一种更方便管理 Asset 的设定：post_asset_folder当您设置post_asset_folder为true参数后，在建立文件时，Hexo会自动建立一个与文章同名的文件夹，您可以把与该文章相关的所有资源都放到那个文件夹。 ）</li>
 <li>安装插件：blog目录下gitbash命令<code>npm install https://github.com/CodeFalling/hexo-asset-image --save</code></li>
 <li>安装完成之后，新建博文。打开博文文件。发现如图：</li>
 </ul>
-<p><img src="/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.htm/11.png" alt></p>
+<p><img src="/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/11.png" alt></p>
 <ul>
 <li>文章插入图片格式推荐</li>
 </ul>
@@ -1463,23 +1463,23 @@ try {
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">body&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    background:url(&#x2F;images&#x2F;bg.jpg);</span></pre></td></tr><tr><td class="code"><pre><span class="line">    background-size:cover;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    background-repeat:no-repeat;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    background-attachment:fixed;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    background-position:center;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
 
 <p>同时找一张图片放入images文件内，记得与上述url对应名字</p>
-<p><img src="/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.htm/12.png" alt></p>
+<p><img src="/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/12.png" alt></p>
 <h3 id="设置评论功能"><a href="#设置评论功能" class="headerlink" title="设置评论功能"></a>设置评论功能</h3><p>因为多个 论系统已经下线或者是外国网站，容易被墙，所有这里选择valine </p>
 <p>操作</p>
 <ul>
 <li>打开next文件夹的_config.yml文件，找到valine字段  。设置enable字段值为true </li>
 <li>然后前往<a href="https://leancloud.cn/" target="_blank" rel="noopener">leancloud</a>注册账号，随意注册一个应用 。根据下图，打开设置.复制Appid和APPkey</li>
 </ul>
-<p><img src="/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.htm/16.png" alt></p>
-<p><img src="/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.htm/17.png" alt></p>
+<p><img src="/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/16.png" alt></p>
+<p><img src="/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/17.png" alt></p>
 <ul>
 <li>到主题下的valine字段配置文件中</li>
 </ul>
-<p><img src="/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.htm/13.png" alt></p>
+<p><img src="/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/13.png" alt></p>
 <ul>
 <li>完成效果图：</li>
 </ul>
-<p><img src="/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.htm/15.png" alt></p>
+<p><img src="/2019/12/09/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/15.png" alt></p>
 ]]></content>
       <categories>
         <category>博客搭建</category>
