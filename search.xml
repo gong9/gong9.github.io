@@ -31,7 +31,26 @@
   <entry>
     <title>hexo博客域名绑定与SEO</title>
     <url>/2019/12/10/hexo%E5%8D%9A%E5%AE%A2%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A%E4%B8%8ESEO/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<p>title: hexo博客域名绑定与SEO<br>date: 2019-12-10 12:16:35<br>tags: [hexo]<br>categories: 博客搭建<br>copyright: true</p>
+<h2 id="域名绑定"><a href="#域名绑定" class="headerlink" title="域名绑定"></a>域名绑定</h2><h3 id="1-获得域名及实名"><a href="#1-获得域名及实名" class="headerlink" title="1. 获得域名及实名"></a>1. 获得域名及实名</h3><p>首先要去搞一个域名，阿里云、腾讯云都ok。我是买了个百度云的</p>
+<p><img src="/2019/12/10/hexo%E5%8D%9A%E5%AE%A2%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A%E4%B8%8ESEO/02.png" alt></p>
+<p>我这里是已经经过实名认证的，图标变绿了。当然你也要和我一样</p>
+<h3 id="2-解析"><a href="#2-解析" class="headerlink" title="2. 解析"></a>2. 解析</h3><p>实名认证完成之后，便可以解析了。点击操作那的解析，如图增加俩条</p>
+<p><img src="/2019/12/10/hexo%E5%8D%9A%E5%AE%A2%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A%E4%B8%8ESEO/03.png" alt></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">解释： </span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">- 记录类型一定要选择CNAME这种类型，只有这样你的域名才能只向你的github。</span></pre></td></tr><tr><td class="code"><pre><span class="line">- 记录值为你的仓库地址</span></pre></td></tr><tr><td class="code"><pre><span class="line">- 主机记录www,可以用www.gongzhijia.cn；@,可以用gongzhijia.cn</span></pre></td></tr></table></figure>
+
+<h3 id="3-新建CNAME文件"><a href="#3-新建CNAME文件" class="headerlink" title="3. 新建CNAME文件"></a>3. 新建CNAME文件</h3><p>到你的站点文件的source文件下，新建CNAME文件(写搞个名字就CNAME的记事本写完后重命名一下没有任何后缀)。里面内容为你的域名。如：<a href="http://www.gongzhijia.cn" target="_blank" rel="noopener">www.gongzhijia.cn</a></p>
+<p><img src="/2019/12/10/hexo%E5%8D%9A%E5%AE%A2%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A%E4%B8%8ESEO/05.png" alt></p>
+<h3 id="4-到你的github添加自定义域名。"><a href="#4-到你的github添加自定义域名。" class="headerlink" title="4. 到你的github添加自定义域名。"></a>4. 到你的github添加自定义域名。</h3><p>打开你的仓库</p>
+<p><img src="/2019/12/10/hexo%E5%8D%9A%E5%AE%A2%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A%E4%B8%8ESEO/06.png" alt></p>
+<p>打开下滑找到</p>
+<p><img src="/2019/12/10/hexo%E5%8D%9A%E5%AE%A2%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A%E4%B8%8ESEO/07.png" alt></p>
+<p>修改保存。</p>
+<h3 id="5-修改站点配置文件"><a href="#5-修改站点配置文件" class="headerlink" title="5. 修改站点配置文件"></a>5. 修改站点配置文件</h3><p>修改url</p>
+<p><img src="/2019/12/10/hexo%E5%8D%9A%E5%AE%A2%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A%E4%B8%8ESEO/08.png" alt></p>
+<h3 id="6-完毕"><a href="#6-完毕" class="headerlink" title="6. 完毕"></a>6. 完毕</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span></pre></td></tr><tr><td class="code"><pre><span class="line">hexo g</span></pre></td></tr><tr><td class="code"><pre><span class="line">hexo d</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">打开浏览器输入域名</span></pre></td></tr></table></figure>
+
+]]></content>
   </entry>
   <entry>
     <title>悟空传摘抄笔记</title>
