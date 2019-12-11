@@ -1,6 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>三种排序算法</title>
+    <url>/2019/12/11/%E4%B8%89%E7%A7%8D%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h1><h2 id="1-桶排序"><a href="#1-桶排序" class="headerlink" title="1.桶排序"></a>1.桶排序</h2><p>思考：班上有五个人，考试成绩分别是6,4,6,5,9(满分10)。接下来让你把他们按从大到小的顺序排</p>
+<p>分析：</p>
+<ol>
+<li><p>这里我们只需借助一个一维数组，首先我们申请一个长度为11的数组int a[11]。编号a[0]-a[10]。现在你有了11个变量。</p>
+</li>
+<li><p>将他们初始化为0，变量a[0]-a[10]表示0-10分。这样设计a[0]=0,表明没有人得过0分。a[3]=2，表明有两人得了三分</p>
+</li>
+<li><p>下面开始处理，第一人得了6分，即a[6]=1，第二个人得了4分，即a[4]=1。。。如此反复到最后</p>
+</li>
+<li><p>结构数据如下： </p>
+<table>
+<thead>
+<tr>
+<th>a[0]</th>
+<th>a[1]</th>
+<th>a[2]</th>
+<th>a[3]</th>
+<th>a[4]</th>
+<th>a[5]</th>
+<th>a[6]</th>
+<th>a[7]</th>
+<th>a[8]</th>
+<th>a[9]</th>
+<th>a[10]</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>这时便可发现，数组索引的顺序便是成绩从小到大的顺序。而逆序则是最简单的处理。依次打印他的索引</p>
+</li>
+</ol>
+<p>代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># include  &quot;stdio.h&quot;</span></pre></td></tr><tr><td class="code"><pre><span class="line">void main()&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	int a[11];</span></pre></td></tr><tr><td class="code"><pre><span class="line">	int t,i,j,k;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	</span></pre></td></tr><tr><td class="code"><pre><span class="line">	&#x2F;&#x2F;初始化</span></pre></td></tr><tr><td class="code"><pre><span class="line">	for(i&#x3D;0;i&lt;11;i++)&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">		a[i]&#x3D;0;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	&#125; </span></pre></td></tr><tr><td class="code"><pre><span class="line">	&#x2F;&#x2F;填入数据</span></pre></td></tr><tr><td class="code"><pre><span class="line">	for(j&#x3D;0;j&lt;5;j++)&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">		scanf(&quot;%d&quot;,&amp;t);</span></pre></td></tr><tr><td class="code"><pre><span class="line">		a[t]++;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	&#125; </span></pre></td></tr><tr><td class="code"><pre><span class="line">	</span></pre></td></tr><tr><td class="code"><pre><span class="line">	&#x2F;&#x2F;输出</span></pre></td></tr><tr><td class="code"><pre><span class="line">	for(i&#x3D;11;i&gt;&#x3D;0;i--)&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	&#x2F;&#x2F;依次判断</span></pre></td></tr><tr><td class="code"><pre><span class="line">	for(k&#x3D;0;k&lt;a[i];k++)&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">		</span></pre></td></tr><tr><td class="code"><pre><span class="line">		printf(&quot;  %d&quot;,i);</span></pre></td></tr><tr><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">	</span></pre></td></tr><tr><td class="code"><pre><span class="line">	</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<p>输出</p>
+<p><img src="/2019/12/11/%E4%B8%89%E7%A7%8D%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/02.png" alt></p>
+<p> 未完待续…</p>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>排序</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hexo 添加近期文章</title>
     <url>/2019/12/11/hexo-%E6%B7%BB%E5%8A%A0%E8%BF%91%E6%9C%9F%E6%96%87%E7%AB%A0/</url>
     <content><![CDATA[<h1 id="hexo-next主题添加近期文章板块"><a href="#hexo-next主题添加近期文章板块" class="headerlink" title="hexo-next主题添加近期文章板块"></a>hexo-next主题添加近期文章板块</h1><h2 id="1-添加代码"><a href="#1-添加代码" class="headerlink" title="1. 添加代码"></a>1. 添加代码</h2><p>找到 next/layout/_macro/sidebar.swig 中的 if theme.links 。下拉到他的 endif 。添加代码如下：</p>
