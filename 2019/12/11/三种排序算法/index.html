@@ -114,7 +114,7 @@
 <meta property="og:description" content="排序1.桶排序思考：班上有五个人，考试成绩分别是6,4,6,5,9(满分10)。接下来让你把他们按从大到小的顺序排 分析：  这里我们只需借助一个一维数组，首先我们申请一个长度为11的数组int a[11]。编号a[0]-a[10]。现在你有了11个变量。  将他们初始化为0，变量a[0]-a[10]表示0-10分。这样设计a[0]&#x3D;0,表明没有人得过0分。a[3]&#x3D;2，表明有两人得了三分  下面">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http:&#x2F;&#x2F;gongzhijia.cn&#x2F;2019&#x2F;12&#x2F;11&#x2F;%E4%B8%89%E7%A7%8D%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95&#x2F;02.png">
-<meta property="og:updated_time" content="2019-12-11T15:15:58.403Z">
+<meta property="og:updated_time" content="2019-12-12T02:26:07.077Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;gongzhijia.cn&#x2F;2019&#x2F;12&#x2F;11&#x2F;%E4%B8%89%E7%A7%8D%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95&#x2F;02.png">
 
@@ -429,7 +429,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  389
+                  1k
                 </span>
               
 
@@ -445,7 +445,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  4
                 </span>
               
             </div>
@@ -515,7 +515,28 @@
 
 <p>输出</p>
 <p><img src="/2019/12/11/%E4%B8%89%E7%A7%8D%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/02.png" alt></p>
-<p> 未完待续…</p>
+<p>这是一种最为简单的桶排序。</p>
+<p>它就好比，有11个桶编号0-11。没出现一个数，就往对应桶中扔石子。最后只要把有石子的桶的编号输出就ok了 </p>
+<p>如果让你排0-1000,0-10000呢。那么你就得准备1000个10000个桶。接下来考虑时间复杂度的问题了，主要看这句</p>
+<pre><code>//输出
+    for(i=10;i&gt;=0;i--){
+    //依次判断
+    for(k=0;k&lt;a[i];k++){
+
+        printf(&quot;  %d&quot;,i);
+    }
+    }</code></pre><p>假设n个桶，所有桶检查共m。即时间复杂度为O(m+n)。可以看出这个复杂度是相当小的啦，故这是一个非常快的排序算法。桶排序在1956年就开始被使用了，但上述的例子并不是真正的桶排序算法，真正的桶排序要更加复杂（以后我会补充，接下来我会补充）。</p>
+<p>​    这个简单版的桶排序本质还不能算是一个真正的排序算法，比如如下问题：有5个人的名字和分数，a5分，b3分，c5分，d2分，e8分。请按照分数从高到低，输出他们的名字。</p>
+<p>​    经过分析发现上述的算法最终输出的是分数，这次是输出名字。数组的索引名可不是能自定义的，且按照上述算法的思想往下思考你必须是把桶的排列顺序改变。（这怎么可能呢）接下来必须重新思考算法了</p>
+<h2 id="2-冒泡排序"><a href="#2-冒泡排序" class="headerlink" title="2.冒泡排序"></a>2.冒泡排序</h2><p>​    接着回想上述算法，分数在0-1000你就得准备1001个桶。再大呢？这么多变量它的空间复杂度可想而知，且它也不能对小数进行排序。而冒泡则可以很好的解决。</p>
+<p> 冒泡的思想:每次比较俩个相邻的元素。</p>
+<p>例如：</p>
+<p>​    将12 35 99 18 76 这 5 个数进行从大到小的排序。也就是小的往后撤。</p>
+<p>​    第一趟：比较12,35 。12小交换位置这是数组变成了35 12 99 18 76 ，接下来比较12,99 。还是12小交换…如此反复。最后最小的就跑到了数组的最后面    </p>
+<p>​    第二趟：数组元素为_ _ _ _  12，比较35 99,35小交换。。。最后一次比较18 12 。12小位置不变，则元素变成了 _ _ _ 18  12</p>
+<p>   下面也是如此</p>
+<p>​    第三趟：_ _35 18 12</p>
+<p>​    第四趟：_9976 35 18 12(这一趟顺序就已经出来了，很多人为了方便n个数排序让他们走了n趟)</p>
 
       
     </div>
@@ -537,7 +558,7 @@
   <p><span>本文标题:</span>三种排序算法</a></p>
   <p><span>文章作者:</span>gong</a></p>
   <p><span>发布时间:</span>2019年12月11日 - 22:11:58</p>
-  <p><span>最后更新:</span>2019年12月11日 - 23:15:58</p>
+  <p><span>最后更新:</span>2019年12月12日 - 10:26:07</p>
   <p><span>原始链接:</span><a href="/2019/12/11/%E4%B8%89%E7%A7%8D%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" title="三种排序算法">http://gongzhijia.cn/2019/12/11/%E4%B8%89%E7%A7%8D%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://gongzhijia.cn/2019/12/11/%E4%B8%89%E7%A7%8D%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"  aria-label="复制成功！"></i></span>
   </p>
@@ -593,6 +614,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/12/14/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%EF%BC%8801%EF%BC%89/" rel="prev" title="算法设计与分析（01）">
+                算法设计与分析（01） <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -676,7 +701,7 @@
             
               <div class="site-state-item site-state-posts">
            
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">日志</span>
                 
               </div>
@@ -698,7 +723,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/">
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -728,6 +753,14 @@
         
         
           <li>
+            <a href="/2019/12/14/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%EF%BC%8801/" title="算法设计与分析（01）" target="_blank">算法设计与分析（01）</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/14/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%EF%BC%8801%EF%BC%89/" title="算法设计与分析（01）" target="_blank">算法设计与分析（01）</a>
+          </li>
+        
+          <li>
             <a href="/2019/12/11/%E4%B8%89%E7%A7%8D%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" title="三种排序算法" target="_blank">三种排序算法</a>
           </li>
         
@@ -737,14 +770,6 @@
         
           <li>
             <a href="/2019/12/10/hexo-next-%E6%B7%BB%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/" title="hexo-next 添加搜索功能" target="_blank">hexo-next 添加搜索功能</a>
-          </li>
-        
-          <li>
-            <a href="/2019/12/10/hexo%E5%8D%9A%E5%AE%A2%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A%E4%B8%8ESEO/" title="hexo博客域名绑定与SEO" target="_blank">hexo博客域名绑定与SEO</a>
-          </li>
-        
-          <li>
-            <a href="/2019/12/09/%E6%82%9F%E7%A9%BA%E4%BC%A0%E6%91%98%E6%8A%84%E7%AC%94%E8%AE%B0/" title="悟空传摘抄笔记" target="_blank">悟空传摘抄笔记</a>
           </li>
         
       </ul>
@@ -766,7 +791,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#排序"><span class="nav-number">1.</span> <span class="nav-text">排序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-桶排序"><span class="nav-number">1.1.</span> <span class="nav-text">1.桶排序</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#排序"><span class="nav-number">1.</span> <span class="nav-text">排序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-桶排序"><span class="nav-number">1.1.</span> <span class="nav-text">1.桶排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-冒泡排序"><span class="nav-number">1.2.</span> <span class="nav-text">2.冒泡排序</span></a></li></ol></li></ol></div>
             
 
           </div>
